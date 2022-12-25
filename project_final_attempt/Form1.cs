@@ -5,6 +5,7 @@ namespace project_final_attempt
         public Form1()
         {
             InitializeComponent();
+            siticoneShadowForm1.SetShadowForm(this);
         }
     }
 }
