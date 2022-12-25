@@ -5,7 +5,6 @@ C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_att
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\bin\Debug\net6.0-windows\project_final_attempt.pdb
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\bin\Debug\net6.0-windows\Siticone.Desktop.UI.dll
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.csproj.AssemblyReference.cache
-C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.Form1.resources
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.Properties.Resources.resources
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.csproj.GenerateResource.cache
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.GeneratedMSBuildEditorConfig.editorconfig
@@ -18,3 +17,6 @@ C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_att
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.pdb
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.genruntimeconfig.cache
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\ref\project_final_attempt.dll
+C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.Forms.gestion_personajes.resources
+C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.Forms.inicio.resources
+C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.plantilla_inicial.resources
