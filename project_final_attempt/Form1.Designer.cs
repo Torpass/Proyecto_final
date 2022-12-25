@@ -40,9 +40,12 @@
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneHtmlLabel9 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.siticoneHtmlLabel8 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneCustomGradientPanel2 = new Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel();
-            this.siticonePictureBox2 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
+            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneCustomGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel();
+            this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneHtmlLabel6 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel7 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
@@ -56,18 +59,15 @@
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneDragControl2 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneShadowForm1 = new Siticone.Desktop.UI.WinForms.SiticoneShadowForm(this.components);
-            this.siticonePictureBox3 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.LeftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.TopPanel.SuspendLayout();
             this.siticonePanel3.SuspendLayout();
             this.siticoneCustomGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox2)).BeginInit();
             this.siticoneCustomGradientPanel1.SuspendLayout();
             this.siticonePanel4.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // LeftPanel
@@ -227,6 +227,8 @@
             // 
             // siticonePanel3
             // 
+            this.siticonePanel3.Controls.Add(this.siticoneHtmlLabel9);
+            this.siticonePanel3.Controls.Add(this.siticoneHtmlLabel8);
             this.siticonePanel3.Controls.Add(this.siticoneCustomGradientPanel2);
             this.siticonePanel3.Controls.Add(this.siticoneCustomGradientPanel1);
             this.siticonePanel3.Controls.Add(this.siticonePanel4);
@@ -240,46 +242,113 @@
             this.siticonePanel3.Size = new System.Drawing.Size(1039, 725);
             this.siticonePanel3.TabIndex = 2;
             // 
+            // siticoneHtmlLabel9
+            // 
+            this.siticoneHtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel9.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneHtmlLabel9.ForeColor = System.Drawing.Color.White;
+            this.siticoneHtmlLabel9.Location = new System.Drawing.Point(545, 253);
+            this.siticoneHtmlLabel9.Name = "siticoneHtmlLabel9";
+            this.siticoneHtmlLabel9.Size = new System.Drawing.Size(334, 56);
+            this.siticoneHtmlLabel9.TabIndex = 5;
+            this.siticoneHtmlLabel9.Text = "Gestionar Peliculas";
+            // 
+            // siticoneHtmlLabel8
+            // 
+            this.siticoneHtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneHtmlLabel8.ForeColor = System.Drawing.Color.White;
+            this.siticoneHtmlLabel8.Location = new System.Drawing.Point(36, 253);
+            this.siticoneHtmlLabel8.Name = "siticoneHtmlLabel8";
+            this.siticoneHtmlLabel8.Size = new System.Drawing.Size(371, 56);
+            this.siticoneHtmlLabel8.TabIndex = 4;
+            this.siticoneHtmlLabel8.Text = "Gestionar Personajes";
+            // 
             // siticoneCustomGradientPanel2
             // 
             this.siticoneCustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
             this.siticoneCustomGradientPanel2.BorderRadius = 10;
             this.siticoneCustomGradientPanel2.BorderThickness = 5;
-            this.siticoneCustomGradientPanel2.Controls.Add(this.siticonePictureBox2);
+            this.siticoneCustomGradientPanel2.Controls.Add(this.siticoneButton1);
             this.siticoneCustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
             this.siticoneCustomGradientPanel2.FillColor2 = System.Drawing.Color.Black;
             this.siticoneCustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
             this.siticoneCustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticoneCustomGradientPanel2.Location = new System.Drawing.Point(36, 256);
+            this.siticoneCustomGradientPanel2.Location = new System.Drawing.Point(36, 325);
             this.siticoneCustomGradientPanel2.Name = "siticoneCustomGradientPanel2";
-            this.siticoneCustomGradientPanel2.Size = new System.Drawing.Size(459, 437);
+            this.siticoneCustomGradientPanel2.Size = new System.Drawing.Size(459, 368);
             this.siticoneCustomGradientPanel2.TabIndex = 1;
             // 
-            // siticonePictureBox2
+            // siticoneButton1
             // 
-            this.siticonePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("siticonePictureBox2.Image")));
-            this.siticonePictureBox2.ImageRotate = 0F;
-            this.siticonePictureBox2.Location = new System.Drawing.Point(79, 37);
-            this.siticonePictureBox2.Name = "siticonePictureBox2";
-            this.siticonePictureBox2.Size = new System.Drawing.Size(300, 300);
-            this.siticonePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.siticonePictureBox2.TabIndex = 0;
-            this.siticonePictureBox2.TabStop = false;
+            this.siticoneButton1.CausesValidation = false;
+            this.siticoneButton1.CheckedState.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.siticoneButton1.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneButton1.CheckedState.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.siticoneButton1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.siticoneButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.siticoneButton1.CustomBorderThickness = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton1.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton1.HoverState.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.siticoneButton1.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneButton1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.siticoneButton1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneButton1.Image")));
+            this.siticoneButton1.ImageSize = new System.Drawing.Size(380, 380);
+            this.siticoneButton1.Location = new System.Drawing.Point(3, 3);
+            this.siticoneButton1.Name = "siticoneButton1";
+            this.siticoneButton1.PressedColor = System.Drawing.Color.DeepSkyBlue;
+            this.siticoneButton1.PressedDepth = 10;
+            this.siticoneButton1.Size = new System.Drawing.Size(456, 365);
+            this.siticoneButton1.TabIndex = 2;
             // 
             // siticoneCustomGradientPanel1
             // 
             this.siticoneCustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.siticoneCustomGradientPanel1.BorderRadius = 10;
             this.siticoneCustomGradientPanel1.BorderThickness = 5;
-            this.siticoneCustomGradientPanel1.Controls.Add(this.siticonePictureBox3);
+            this.siticoneCustomGradientPanel1.Controls.Add(this.siticoneButton2);
             this.siticoneCustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
             this.siticoneCustomGradientPanel1.FillColor2 = System.Drawing.Color.Black;
             this.siticoneCustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
             this.siticoneCustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(545, 256);
+            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(545, 325);
             this.siticoneCustomGradientPanel1.Name = "siticoneCustomGradientPanel1";
-            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(459, 437);
+            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(459, 368);
             this.siticoneCustomGradientPanel1.TabIndex = 0;
+            // 
+            // siticoneButton2
+            // 
+            this.siticoneButton2.CausesValidation = false;
+            this.siticoneButton2.CheckedState.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.siticoneButton2.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneButton2.CheckedState.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.siticoneButton2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.siticoneButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.siticoneButton2.CustomBorderThickness = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.siticoneButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton2.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneButton2.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton2.HoverState.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.siticoneButton2.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.siticoneButton2.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            this.siticoneButton2.Image = ((System.Drawing.Image)(resources.GetObject("siticoneButton2.Image")));
+            this.siticoneButton2.ImageSize = new System.Drawing.Size(380, 380);
+            this.siticoneButton2.Location = new System.Drawing.Point(0, 0);
+            this.siticoneButton2.Name = "siticoneButton2";
+            this.siticoneButton2.PressedColor = System.Drawing.Color.DeepSkyBlue;
+            this.siticoneButton2.PressedDepth = 10;
+            this.siticoneButton2.Size = new System.Drawing.Size(456, 365);
+            this.siticoneButton2.TabIndex = 3;
             // 
             // siticonePanel4
             // 
@@ -409,17 +478,6 @@
             this.siticoneDragControl2.TargetControl = this.LeftPanel;
             this.siticoneDragControl2.TransparentWhileDrag = false;
             // 
-            // siticonePictureBox3
-            // 
-            this.siticonePictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("siticonePictureBox3.Image")));
-            this.siticonePictureBox3.ImageRotate = 0F;
-            this.siticonePictureBox3.Location = new System.Drawing.Point(79, 37);
-            this.siticonePictureBox3.Name = "siticonePictureBox3";
-            this.siticonePictureBox3.Size = new System.Drawing.Size(300, 300);
-            this.siticonePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.siticonePictureBox3.TabIndex = 1;
-            this.siticonePictureBox3.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -437,17 +495,13 @@
             this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel3.PerformLayout();
             this.siticoneCustomGradientPanel2.ResumeLayout(false);
-            this.siticoneCustomGradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox2)).EndInit();
             this.siticoneCustomGradientPanel1.ResumeLayout(false);
-            this.siticoneCustomGradientPanel1.PerformLayout();
             this.siticonePanel4.ResumeLayout(false);
             this.siticonePanel4.PerformLayout();
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel2.PerformLayout();
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -479,7 +533,9 @@
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel5;
         private Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel siticoneCustomGradientPanel2;
         private Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel siticoneCustomGradientPanel1;
-        private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox2;
-        private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox3;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton2;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel9;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel8;
     }
 }
