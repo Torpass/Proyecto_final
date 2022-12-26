@@ -32,9 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gestion_personajes));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnTrue = new System.Windows.Forms.RadioButton();
             this.siticoneHtmlLabel11 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.btnFalse = new System.Windows.Forms.RadioButton();
             this.txtBuscar = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.btnRegresar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
@@ -73,9 +74,10 @@
             // 
             // insidePanel
             // 
+            this.insidePanel.Controls.Add(this.siticoneButton1);
             this.insidePanel.Controls.Add(this.btnTrue);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel11);
-            this.insidePanel.Controls.Add(this.radioButton1);
+            this.insidePanel.Controls.Add(this.btnFalse);
             this.insidePanel.Controls.Add(this.txtBuscar);
             this.insidePanel.Controls.Add(this.btnRegresar);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel1);
@@ -88,6 +90,22 @@
             this.insidePanel.Name = "insidePanel";
             this.insidePanel.Size = new System.Drawing.Size(1036, 723);
             this.insidePanel.TabIndex = 1;
+            // 
+            // siticoneButton1
+            // 
+            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneButton1.Image")));
+            this.siticoneButton1.Location = new System.Drawing.Point(457, 40);
+            this.siticoneButton1.Name = "siticoneButton1";
+            this.siticoneButton1.Size = new System.Drawing.Size(44, 42);
+            this.siticoneButton1.TabIndex = 40;
+            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
             // 
             // btnTrue
             // 
@@ -116,18 +134,18 @@
             this.siticoneHtmlLabel11.Text = "Actividad del personaje";
             this.siticoneHtmlLabel11.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // radioButton1
+            // btnFalse
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton1.ForeColor = System.Drawing.Color.Silver;
-            this.radioButton1.Location = new System.Drawing.Point(557, 221);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(113, 34);
-            this.radioButton1.TabIndex = 38;
-            this.radioButton1.Text = "Inactivo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.btnFalse.AutoSize = true;
+            this.btnFalse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFalse.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFalse.ForeColor = System.Drawing.Color.Silver;
+            this.btnFalse.Location = new System.Drawing.Point(557, 221);
+            this.btnFalse.Name = "btnFalse";
+            this.btnFalse.Size = new System.Drawing.Size(113, 34);
+            this.btnFalse.TabIndex = 38;
+            this.btnFalse.Text = "Inactivo";
+            this.btnFalse.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
@@ -166,7 +184,7 @@
             this.btnRegresar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageSize = new System.Drawing.Size(60, 60);
-            this.btnRegresar.Location = new System.Drawing.Point(30, 12);
+            this.btnRegresar.Location = new System.Drawing.Point(25, 17);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(74, 84);
             this.btnRegresar.TabIndex = 32;
@@ -552,8 +570,9 @@
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
         private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog dialogImage;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel11;
-        private RadioButton radioButton1;
+        private RadioButton btnFalse;
         private RadioButton btnTrue;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel10;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
     }
 }

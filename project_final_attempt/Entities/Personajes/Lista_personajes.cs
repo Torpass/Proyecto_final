@@ -25,6 +25,30 @@ namespace project_final_attempt.Entities.Personajes
             heroes.Add(x);
         }
 
+        public Personaje buscar(string nombre_personaje)
+        {
+           List<Personaje> Persoanjes = personajes_desceralizados();
+            Personaje Persona_encontrado = new Personaje();
+
+            foreach (Personaje aux in Persoanjes)
+            {
+                if (aux._name == nombre_personaje)
+                {
+                    Persona_encontrado._name = aux._name;
+                    Persona_encontrado._rol = aux._rol;
+                    Persona_encontrado._identity = aux._identity;
+                    Persona_encontrado._activity = aux._activity;
+                    Persona_encontrado._age = aux._age;
+                    Persona_encontrado._img = aux._img;
+                    Persona_encontrado._sex = aux._sex;
+                    Persona_encontrado._universe = aux._universe;   
+                    return Persona_encontrado;
+                }
+            }
+            return null;
+        }
+
+
         //El objeto de tipo Personaje enviado por el form, lo recibe y lo convierte en un string para ser guardado en un archivo de texto
         public void serealizar_personaje()
         {

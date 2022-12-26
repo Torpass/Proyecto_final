@@ -73,5 +73,27 @@ namespace project_final_attempt.Forms
             personajes.serealizar_personaje();
             MessageBox.Show("Datos almacenados en el Archivo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            Personaje persoanje_encontrado = personajes.buscar(txtBuscar.Text);
+
+            if (persoanje_encontrado != null)
+            {
+                string ruta_aux = ruta_imagen + persoanje_encontrado._img;
+                txtNombre.Text = persoanje_encontrado._name;
+                txtEdad.Value = persoanje_encontrado._age;
+                txtIdentidad.Text = persoanje_encontrado._identity;
+                txtSexo.Text = persoanje_encontrado._sex;
+                txtUniverso.Text = persoanje_encontrado._universe;
+                txtActitud.Text = persoanje_encontrado._rol;
+                ImagenPersonaje.Image = Image.FromFile(ruta_aux);
+                if (persoanje_encontrado._activity) { btnTrue.Checked = true; } else { btnFalse.Checked = true;  }
+            }else 
+            { 
+                MessageBox.Show("No se encontró ni pinga"); 
+            }
+        }
     }
 }
