@@ -110,6 +110,7 @@
             this.btnEnviar.Size = new System.Drawing.Size(381, 91);
             this.btnEnviar.TabIndex = 50;
             this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // siticoneHtmlLabel6
             // 
