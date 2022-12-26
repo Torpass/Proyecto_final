@@ -36,7 +36,6 @@
             this.btnPeliculas = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.TopPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.txtBuscar = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
@@ -141,7 +140,6 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.Controls.Add(this.txtBuscar);
             this.TopPanel.Controls.Add(this.siticoneControlBox2);
             this.TopPanel.Controls.Add(this.siticoneControlBox1);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -150,30 +148,6 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1039, 75);
             this.TopPanel.TabIndex = 1;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Animated = true;
-            this.txtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscar.DefaultText = "";
-            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
-            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBuscar.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.IconRight = ((System.Drawing.Image)(resources.GetObject("txtBuscar.IconRight")));
-            this.txtBuscar.Location = new System.Drawing.Point(36, 16);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PasswordChar = '\0';
-            this.txtBuscar.PlaceholderText = "Buscar";
-            this.txtBuscar.SelectedText = "";
-            this.txtBuscar.Size = new System.Drawing.Size(300, 54);
-            this.txtBuscar.Style = Siticone.Desktop.UI.WinForms.Enums.TextBoxStyle.Material;
-            this.txtBuscar.TabIndex = 2;
             // 
             // siticoneControlBox2
             // 
@@ -257,6 +231,5 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnPersonajes;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnPeliculas;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtBuscar;
     }
 }

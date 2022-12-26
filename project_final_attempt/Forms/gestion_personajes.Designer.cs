@@ -32,7 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gestion_personajes));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.txtBuscar = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.btnRegresar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnEnviar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtIdentidad = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -51,7 +53,6 @@
             this.siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.ImagenPersonaje = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
-            this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneShadowForm1 = new Siticone.Desktop.UI.WinForms.SiticoneShadowForm(this.components);
             this.insidePanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
@@ -67,17 +68,42 @@
             // 
             // insidePanel
             // 
+            this.insidePanel.Controls.Add(this.txtBuscar);
             this.insidePanel.Controls.Add(this.btnRegresar);
+            this.insidePanel.Controls.Add(this.siticoneHtmlLabel1);
             this.insidePanel.Controls.Add(this.siticonePanel1);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel4);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel3);
             this.insidePanel.Controls.Add(this.ImagenPersonaje);
             this.insidePanel.Controls.Add(this.siticoneSeparator1);
-            this.insidePanel.Controls.Add(this.siticoneHtmlLabel1);
             this.insidePanel.Location = new System.Drawing.Point(1, 3);
             this.insidePanel.Name = "insidePanel";
             this.insidePanel.Size = new System.Drawing.Size(1036, 723);
             this.insidePanel.TabIndex = 1;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Animated = true;
+            this.txtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.DefaultText = "";
+            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBuscar.ForeColor = System.Drawing.Color.White;
+            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscar.IconRight = ((System.Drawing.Image)(resources.GetObject("txtBuscar.IconRight")));
+            this.txtBuscar.Location = new System.Drawing.Point(152, 26);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.PasswordChar = '\0';
+            this.txtBuscar.PlaceholderText = "Buscar Personaje";
+            this.txtBuscar.SelectedText = "";
+            this.txtBuscar.Size = new System.Drawing.Size(344, 56);
+            this.txtBuscar.Style = Siticone.Desktop.UI.WinForms.Enums.TextBoxStyle.Material;
+            this.txtBuscar.TabIndex = 33;
             // 
             // btnRegresar
             // 
@@ -92,11 +118,23 @@
             this.btnRegresar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageSize = new System.Drawing.Size(60, 60);
-            this.btnRegresar.Location = new System.Drawing.Point(41, 17);
+            this.btnRegresar.Location = new System.Drawing.Point(30, 12);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(74, 84);
-            this.btnRegresar.TabIndex = 14;
+            this.btnRegresar.TabIndex = 32;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // siticoneHtmlLabel1
+            // 
+            this.siticoneHtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneHtmlLabel1.ForeColor = System.Drawing.Color.White;
+            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(671, 26);
+            this.siticoneHtmlLabel1.Name = "siticoneHtmlLabel1";
+            this.siticoneHtmlLabel1.Size = new System.Drawing.Size(329, 56);
+            this.siticoneHtmlLabel1.TabIndex = 31;
+            this.siticoneHtmlLabel1.Text = "Ingresar Personaje";
+            this.siticoneHtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // siticonePanel1
             // 
@@ -388,18 +426,6 @@
             this.siticoneSeparator1.Size = new System.Drawing.Size(985, 14);
             this.siticoneSeparator1.TabIndex = 2;
             // 
-            // siticoneHtmlLabel1
-            // 
-            this.siticoneHtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneHtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(682, 27);
-            this.siticoneHtmlLabel1.Name = "siticoneHtmlLabel1";
-            this.siticoneHtmlLabel1.Size = new System.Drawing.Size(329, 56);
-            this.siticoneHtmlLabel1.TabIndex = 1;
-            this.siticoneHtmlLabel1.Text = "Ingresar Personaje";
-            this.siticoneHtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // siticoneShadowForm1
             // 
             this.siticoneShadowForm1.BorderRadius = 0;
@@ -430,7 +456,6 @@
 
         private Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm siticoneBorderlessForm1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel insidePanel;
-        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
         private Siticone.Desktop.UI.WinForms.SiticoneShadowForm siticoneShadowForm1;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
         private Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox ImagenPersonaje;
@@ -449,7 +474,9 @@
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel9;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox txtSexo;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel8;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnRegresar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnEnviar;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtBuscar;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnRegresar;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
     }
 }

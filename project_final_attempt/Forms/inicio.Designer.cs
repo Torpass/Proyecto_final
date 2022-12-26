@@ -82,7 +82,7 @@
             this.siticoneHtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel9.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel9.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel9.Location = new System.Drawing.Point(545, 257);
+            this.siticoneHtmlLabel9.Location = new System.Drawing.Point(545, 241);
             this.siticoneHtmlLabel9.Name = "siticoneHtmlLabel9";
             this.siticoneHtmlLabel9.Size = new System.Drawing.Size(334, 56);
             this.siticoneHtmlLabel9.TabIndex = 21;
@@ -93,7 +93,7 @@
             this.siticoneHtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel8.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel8.Location = new System.Drawing.Point(36, 257);
+            this.siticoneHtmlLabel8.Location = new System.Drawing.Point(36, 241);
             this.siticoneHtmlLabel8.Name = "siticoneHtmlLabel8";
             this.siticoneHtmlLabel8.Size = new System.Drawing.Size(371, 56);
             this.siticoneHtmlLabel8.TabIndex = 20;
@@ -109,7 +109,7 @@
             this.siticoneCustomGradientPanel2.FillColor2 = System.Drawing.Color.Black;
             this.siticoneCustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
             this.siticoneCustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticoneCustomGradientPanel2.Location = new System.Drawing.Point(36, 329);
+            this.siticoneCustomGradientPanel2.Location = new System.Drawing.Point(36, 313);
             this.siticoneCustomGradientPanel2.Name = "siticoneCustomGradientPanel2";
             this.siticoneCustomGradientPanel2.Size = new System.Drawing.Size(459, 368);
             this.siticoneCustomGradientPanel2.TabIndex = 16;
@@ -153,7 +153,7 @@
             this.siticoneCustomGradientPanel1.FillColor2 = System.Drawing.Color.Black;
             this.siticoneCustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
             this.siticoneCustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(545, 329);
+            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(545, 313);
             this.siticoneCustomGradientPanel1.Name = "siticoneCustomGradientPanel1";
             this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(459, 368);
             this.siticoneCustomGradientPanel1.TabIndex = 14;
@@ -195,7 +195,7 @@
             this.siticonePanel4.Controls.Add(this.siticoneHtmlLabel6);
             this.siticonePanel4.Controls.Add(this.siticoneHtmlLabel7);
             this.siticonePanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticonePanel4.Location = new System.Drawing.Point(704, 121);
+            this.siticonePanel4.Location = new System.Drawing.Point(704, 105);
             this.siticonePanel4.Name = "siticonePanel4";
             this.siticonePanel4.Size = new System.Drawing.Size(300, 100);
             this.siticonePanel4.TabIndex = 19;
@@ -230,7 +230,7 @@
             this.siticonePanel2.Controls.Add(this.siticoneHtmlLabel4);
             this.siticonePanel2.Controls.Add(this.siticoneHtmlLabel5);
             this.siticonePanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticonePanel2.Location = new System.Drawing.Point(369, 121);
+            this.siticonePanel2.Location = new System.Drawing.Point(369, 105);
             this.siticonePanel2.Name = "siticonePanel2";
             this.siticonePanel2.Size = new System.Drawing.Size(300, 100);
             this.siticonePanel2.TabIndex = 18;
@@ -265,7 +265,7 @@
             this.siticonePanel3.Controls.Add(this.siticoneHtmlLabel3);
             this.siticonePanel3.Controls.Add(this.siticoneHtmlLabel2);
             this.siticonePanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticonePanel3.Location = new System.Drawing.Point(34, 121);
+            this.siticonePanel3.Location = new System.Drawing.Point(34, 105);
             this.siticonePanel3.Name = "siticonePanel3";
             this.siticonePanel3.Size = new System.Drawing.Size(300, 100);
             this.siticonePanel3.TabIndex = 17;
@@ -297,7 +297,7 @@
             this.siticoneHtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(36, 26);
+            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(36, 10);
             this.siticoneHtmlLabel1.Name = "siticoneHtmlLabel1";
             this.siticoneHtmlLabel1.Size = new System.Drawing.Size(264, 72);
             this.siticoneHtmlLabel1.TabIndex = 15;
