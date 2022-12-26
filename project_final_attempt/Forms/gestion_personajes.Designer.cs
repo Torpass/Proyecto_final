@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gestion_personajes));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnTrue = new System.Windows.Forms.RadioButton();
+            this.siticoneHtmlLabel11 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtBuscar = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.btnRegresar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
@@ -54,6 +57,8 @@
             this.ImagenPersonaje = new Siticone.Desktop.UI.WinForms.SiticoneCirclePictureBox();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.siticoneShadowForm1 = new Siticone.Desktop.UI.WinForms.SiticoneShadowForm(this.components);
+            this.dialogImage = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
+            this.siticoneHtmlLabel10 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.insidePanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEdad)).BeginInit();
@@ -68,6 +73,9 @@
             // 
             // insidePanel
             // 
+            this.insidePanel.Controls.Add(this.btnTrue);
+            this.insidePanel.Controls.Add(this.siticoneHtmlLabel11);
+            this.insidePanel.Controls.Add(this.radioButton1);
             this.insidePanel.Controls.Add(this.txtBuscar);
             this.insidePanel.Controls.Add(this.btnRegresar);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel1);
@@ -80,6 +88,46 @@
             this.insidePanel.Name = "insidePanel";
             this.insidePanel.Size = new System.Drawing.Size(1036, 723);
             this.insidePanel.TabIndex = 1;
+            // 
+            // btnTrue
+            // 
+            this.btnTrue.AutoSize = true;
+            this.btnTrue.Checked = true;
+            this.btnTrue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTrue.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTrue.ForeColor = System.Drawing.Color.Silver;
+            this.btnTrue.Location = new System.Drawing.Point(453, 221);
+            this.btnTrue.Name = "btnTrue";
+            this.btnTrue.Size = new System.Drawing.Size(98, 34);
+            this.btnTrue.TabIndex = 37;
+            this.btnTrue.TabStop = true;
+            this.btnTrue.Text = "Activo";
+            this.btnTrue.UseVisualStyleBackColor = true;
+            // 
+            // siticoneHtmlLabel11
+            // 
+            this.siticoneHtmlLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneHtmlLabel11.ForeColor = System.Drawing.Color.White;
+            this.siticoneHtmlLabel11.Location = new System.Drawing.Point(208, 221);
+            this.siticoneHtmlLabel11.Name = "siticoneHtmlLabel11";
+            this.siticoneHtmlLabel11.Size = new System.Drawing.Size(229, 32);
+            this.siticoneHtmlLabel11.TabIndex = 39;
+            this.siticoneHtmlLabel11.Text = "Actividad del personaje";
+            this.siticoneHtmlLabel11.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton1.ForeColor = System.Drawing.Color.Silver;
+            this.radioButton1.Location = new System.Drawing.Point(557, 221);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(113, 34);
+            this.radioButton1.TabIndex = 38;
+            this.radioButton1.Text = "Inactivo";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
             // 
@@ -173,6 +221,7 @@
             this.btnEnviar.Size = new System.Drawing.Size(381, 91);
             this.btnEnviar.TabIndex = 26;
             this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // txtIdentidad
             // 
@@ -388,8 +437,8 @@
             // 
             this.siticoneHtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneHtmlLabel4.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(225, 218);
+            this.siticoneHtmlLabel4.ForeColor = System.Drawing.Color.Silver;
+            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(208, 194);
             this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
             this.siticoneHtmlLabel4.Size = new System.Drawing.Size(391, 27);
             this.siticoneHtmlLabel4.TabIndex = 7;
@@ -401,7 +450,7 @@
             this.siticoneHtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel3.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel3.Location = new System.Drawing.Point(225, 170);
+            this.siticoneHtmlLabel3.Location = new System.Drawing.Point(208, 146);
             this.siticoneHtmlLabel3.Name = "siticoneHtmlLabel3";
             this.siticoneHtmlLabel3.Size = new System.Drawing.Size(333, 56);
             this.siticoneHtmlLabel3.TabIndex = 6;
@@ -410,14 +459,16 @@
             // 
             // ImagenPersonaje
             // 
+            this.ImagenPersonaje.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ImagenPersonaje.ImageRotate = 0F;
-            this.ImagenPersonaje.Location = new System.Drawing.Point(41, 133);
+            this.ImagenPersonaje.Location = new System.Drawing.Point(40, 127);
             this.ImagenPersonaje.Name = "ImagenPersonaje";
             this.ImagenPersonaje.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.ImagenPersonaje.Size = new System.Drawing.Size(150, 150);
             this.ImagenPersonaje.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenPersonaje.TabIndex = 5;
             this.ImagenPersonaje.TabStop = false;
+            this.ImagenPersonaje.DoubleClick += new System.EventHandler(this.ImagenPersonaje_DoubleClick);
             // 
             // siticoneSeparator1
             // 
@@ -431,6 +482,27 @@
             this.siticoneShadowForm1.BorderRadius = 0;
             this.siticoneShadowForm1.ShadowColor = System.Drawing.Color.Transparent;
             this.siticoneShadowForm1.TargetForm = this;
+            // 
+            // dialogImage
+            // 
+            this.dialogImage.Buttons = Siticone.Desktop.UI.WinForms.MessageDialogButtons.OK;
+            this.dialogImage.Caption = null;
+            this.dialogImage.Icon = Siticone.Desktop.UI.WinForms.MessageDialogIcon.None;
+            this.dialogImage.Parent = null;
+            this.dialogImage.Style = Siticone.Desktop.UI.WinForms.MessageDialogStyle.Default;
+            this.dialogImage.Text = null;
+            // 
+            // siticoneHtmlLabel10
+            // 
+            this.siticoneHtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneHtmlLabel10.ForeColor = System.Drawing.Color.White;
+            this.siticoneHtmlLabel10.Location = new System.Drawing.Point(3, 3);
+            this.siticoneHtmlLabel10.Name = "siticoneHtmlLabel10";
+            this.siticoneHtmlLabel10.Size = new System.Drawing.Size(188, 27);
+            this.siticoneHtmlLabel10.TabIndex = 27;
+            this.siticoneHtmlLabel10.Text = "Actividad del personaje";
+            this.siticoneHtmlLabel10.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // gestion_personajes
             // 
@@ -478,5 +550,10 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtBuscar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnRegresar;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
+        private Siticone.Desktop.UI.WinForms.SiticoneMessageDialog dialogImage;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel11;
+        private RadioButton radioButton1;
+        private RadioButton btnTrue;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel10;
     }
 }
