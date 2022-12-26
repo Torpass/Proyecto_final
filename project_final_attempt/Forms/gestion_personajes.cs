@@ -63,6 +63,7 @@ namespace project_final_attempt.Forms
                 var (validado, dialog) = validar_datos(txtNombre.Text, Convert.ToInt16(txtEdad.Text), txtIdentidad.Text, txtSexo.Text, txtUniverso.Text, txtActitud.Text, ImagenPersonaje.Image);
                 if (validado)
                 {
+                    string ruta_aux = string.Empty;
                     Personaje aux = new Personaje();
                     aux._name = txtNombre.Text;
                     aux._age = Convert.ToInt16(txtEdad.Text);
@@ -71,12 +72,13 @@ namespace project_final_attempt.Forms
                     aux._identity = txtIdentidad.Text;
                     aux._universe = txtUniverso.Text;
                     aux._img = $"{aux._name}.jpeg";
-                    ruta_imagen += $"{aux._img}";
+                    ruta_aux = ruta_imagen + aux._img;
                     if (btnTrue.Checked == true) { aux._activity = true; } else { aux._activity = false; }
-                    ImagenPersonaje.Image.Save(ruta_imagen, ImageFormat.Jpeg);
+                    ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
 
                     personajes.heroe_create(aux);
                     personajes.serealizar_personaje();
+                    limpiar();
                 }
             }
             else { MessageBox.Show("No puedes ingresar el mismo personajes dos veces"); } //mejorar
@@ -98,11 +100,13 @@ namespace project_final_attempt.Forms
                 txtUniverso.Text = persoanje_encontrado._universe;
                 txtActitud.Text = persoanje_encontrado._rol;
                 ImagenPersonaje.Image = Image.FromFile(ruta_aux);
+                ruta_aux = ruta_imagen;
                 if (persoanje_encontrado._activity) { btnTrue.Checked = true; } else { btnFalse.Checked = true;  }
             }else 
             { 
                 MessageBox.Show("No se encontró ni pinga");  //mejorar
             }
+            
         }
 
         private bool encontrar(string nombre_persoanje)
@@ -128,6 +132,18 @@ namespace project_final_attempt.Forms
             if ( imagen == null) { return (false, MessageBox.Show("Ingrese una imagen para identificar al personaje")); }
 
             else { return (true, MessageBox.Show("Datos guardados correctamente en el archivo", "Mensaje"));  }
+        }
+
+        private void limpiar()
+        {
+            txtActitud.Text = default;
+            txtUniverso.Text = default;
+            txtSexo.Text = default;
+            txtEdad.Value = default;
+            txtNombre.Text = "";
+            txtIdentidad.Text = "";
+            ImagenPersonaje.Image = null;
+            btnTrue.Checked = true;
         }
     }
 }

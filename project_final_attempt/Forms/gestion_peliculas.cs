@@ -17,6 +17,7 @@ namespace project_final_attempt.Forms
         static Lista_personajes personajes = new Lista_personajes();
         Lista_peliculas pelis = new Lista_peliculas();
         List<string> nombre_directores = new List<string>();
+        List<string> nombre_personajes = new List<string>();
         List<Personaje> personajes_ingresados = personajes.personajes_desceralizados();
 
         private void Abrirform(object form)
@@ -100,6 +101,7 @@ namespace project_final_attempt.Forms
 
                     pelis.movie_add(Movie_aux);
                     pelis.serealizar_pelicula();
+                    limpiar();
                 }
             }
             else
@@ -160,6 +162,16 @@ namespace project_final_attempt.Forms
                 }
             }
             return false;
+        }
+
+        private void limpiar()
+        {
+            txtNombre.Text = "";
+            txtMonto.Value = default;
+            txtPersonajes.SelectedItem = default;
+            txtDirectores.SelectedItem = default;
+            txtUniverso.Text = default;
+            txtPresentacion.Value = 1951;
         }
     }
 }
