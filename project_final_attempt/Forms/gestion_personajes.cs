@@ -60,10 +60,10 @@ namespace project_final_attempt.Forms
 
             if (!encontrar(txtNombre.Text))
             {
-                if (validar_datos())
+                var (validado, dialog) = validar_datos(txtNombre.Text, Convert.ToInt16(txtEdad.Text), txtIdentidad.Text, txtSexo.Text, txtUniverso.Text, txtActitud.Text, ImagenPersonaje.Image);
+                if (validado)
                 {
                     Personaje aux = new Personaje();
-
                     aux._name = txtNombre.Text;
                     aux._age = Convert.ToInt16(txtEdad.Text);
                     aux._sex = txtSexo.Text;
@@ -77,8 +77,7 @@ namespace project_final_attempt.Forms
 
                     personajes.heroe_create(aux);
                     personajes.serealizar_personaje();
-                    MessageBox.Show("Datos almacenados en el Archivo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }else { MessageBox.Show("No pueden haber datos vacios, intente nuevamente"); }
+                }
             }
             else { MessageBox.Show("No puedes ingresar el mismo personajes dos veces"); } //mejorar
             
@@ -118,17 +117,17 @@ namespace project_final_attempt.Forms
             return false;
         }
 
-        public bool validar_datos()
+        public (bool, DialogResult) validar_datos(string nombre, int edad, string identidad, string sexo, string universo, string actitud, Image imagen)
         {
-            if (txtNombre.Text == "") { return false; }
-            if ( txtEdad.Value <= 0) { return false; }
-            if ( txtIdentidad.Text == "") { return false; }
-            if ( txtSexo.Text == "") { return false; }
-            if ( txtUniverso.Text  == "") { return false; }
-            if ( txtActitud.Text == "") { return false; }
-            if ( ImagenPersonaje.Image == null) { return false; }
+            if (nombre == "") { return (false, MessageBox.Show("El nombre erroneo, ingrese nuevamente"));  }
+            if ( edad <= 0) { return (false, MessageBox.Show("La edad no puede ser menor o igual a cero")); }
+            if ( identidad == "") { return (false, MessageBox.Show("Ingrese la identidad del personaje")); }
+            if ( sexo == "") { return (false, MessageBox.Show("Ingrese el sexo del personaje")); }
+            if ( universo == "") { return (false, MessageBox.Show("Ingrese el universo al cual pertenece el personaje")); }
+            if ( actitud == "") { return (false, MessageBox.Show("Ingrese la actitud del personaje")); }
+            if ( imagen == null) { return (false, MessageBox.Show("Ingrese una imagen para identificar al personaje")); }
 
-            else { return true; }
+            else { return (true, MessageBox.Show("Datos guardados correctamente en el archivo", "Mensaje"));  }
         }
     }
 }
