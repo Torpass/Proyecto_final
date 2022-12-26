@@ -1,2 +1,3 @@
 Faker|27|Lee Faker Sang-hyeok|Heroe|Alien|Marvel|True|Faker.jpeg
 Homero|57|Homero Simpson|Heroe|Desconocido|DC|False|Homero.jpeg
+Superman|65|Secreta|Heroe|Hombre|DC|True|Superman.jpeg
