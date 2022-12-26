@@ -35,12 +35,12 @@
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnEnviar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneHtmlLabel6 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.siticoneNumericUpDown1 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
+            this.txtPersonajes = new System.Windows.Forms.ListBox();
+            this.txtMonto = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.txtDirectores = new System.Windows.Forms.ListBox();
-            this.txtEdad = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
+            this.txtPresentacion = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.siticoneHtmlLabel7 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.txtUniverso = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
@@ -52,8 +52,8 @@
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.peliculas.SuspendLayout();
             this.insidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEdad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMonto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPresentacion)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -75,12 +75,12 @@
             // 
             this.insidePanel.Controls.Add(this.btnEnviar);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel6);
-            this.insidePanel.Controls.Add(this.listBox1);
-            this.insidePanel.Controls.Add(this.siticoneNumericUpDown1);
+            this.insidePanel.Controls.Add(this.txtPersonajes);
+            this.insidePanel.Controls.Add(this.txtMonto);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel4);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel3);
             this.insidePanel.Controls.Add(this.txtDirectores);
-            this.insidePanel.Controls.Add(this.txtEdad);
+            this.insidePanel.Controls.Add(this.txtPresentacion);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel7);
             this.insidePanel.Controls.Add(this.txtUniverso);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel5);
@@ -123,52 +123,52 @@
             this.siticoneHtmlLabel6.Text = "Personajes de la película";
             this.siticoneHtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // listBox1
+            // txtPersonajes
             // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.ForeColor = System.Drawing.Color.Silver;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Items.AddRange(new object[] {
+            this.txtPersonajes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.txtPersonajes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPersonajes.ForeColor = System.Drawing.Color.Silver;
+            this.txtPersonajes.FormattingEnabled = true;
+            this.txtPersonajes.ItemHeight = 25;
+            this.txtPersonajes.Items.AddRange(new object[] {
             "Flash",
             "Spiderman",
             "Superman"});
-            this.listBox1.Location = new System.Drawing.Point(384, 415);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.listBox1.Size = new System.Drawing.Size(267, 125);
-            this.listBox1.Sorted = true;
-            this.listBox1.TabIndex = 48;
+            this.txtPersonajes.Location = new System.Drawing.Point(384, 415);
+            this.txtPersonajes.Name = "txtPersonajes";
+            this.txtPersonajes.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.txtPersonajes.Size = new System.Drawing.Size(267, 125);
+            this.txtPersonajes.Sorted = true;
+            this.txtPersonajes.TabIndex = 48;
             // 
-            // siticoneNumericUpDown1
+            // txtMonto
             // 
-            this.siticoneNumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.siticoneNumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.siticoneNumericUpDown1.DecimalPlaces = 2;
-            this.siticoneNumericUpDown1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.siticoneNumericUpDown1.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown1.FocusedState.UpDownButtonFillColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown1.FocusedState.UpDownButtonForeColor = System.Drawing.Color.Transparent;
-            this.siticoneNumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneNumericUpDown1.ForeColor = System.Drawing.Color.Gray;
-            this.siticoneNumericUpDown1.Increment = new decimal(new int[] {
+            this.txtMonto.BackColor = System.Drawing.Color.Transparent;
+            this.txtMonto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.txtMonto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMonto.DecimalPlaces = 2;
+            this.txtMonto.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.txtMonto.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtMonto.FocusedState.UpDownButtonFillColor = System.Drawing.Color.Transparent;
+            this.txtMonto.FocusedState.UpDownButtonForeColor = System.Drawing.Color.Transparent;
+            this.txtMonto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMonto.ForeColor = System.Drawing.Color.Gray;
+            this.txtMonto.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.siticoneNumericUpDown1.Location = new System.Drawing.Point(28, 415);
-            this.siticoneNumericUpDown1.Maximum = new decimal(new int[] {
+            this.txtMonto.Location = new System.Drawing.Point(28, 415);
+            this.txtMonto.Maximum = new decimal(new int[] {
             1215752192,
             23,
             0,
             0});
-            this.siticoneNumericUpDown1.Name = "siticoneNumericUpDown1";
-            this.siticoneNumericUpDown1.Size = new System.Drawing.Size(300, 36);
-            this.siticoneNumericUpDown1.TabIndex = 47;
-            this.siticoneNumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.siticoneNumericUpDown1.UpDownButtonForeColor = System.Drawing.Color.White;
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(300, 36);
+            this.txtMonto.TabIndex = 47;
+            this.txtMonto.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.txtMonto.UpDownButtonForeColor = System.Drawing.Color.White;
             // 
             // siticoneHtmlLabel4
             // 
@@ -217,34 +217,34 @@
             this.txtDirectores.Sorted = true;
             this.txtDirectores.TabIndex = 44;
             // 
-            // txtEdad
+            // txtPresentacion
             // 
-            this.txtEdad.BackColor = System.Drawing.Color.Transparent;
-            this.txtEdad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.txtEdad.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEdad.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.txtEdad.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtEdad.FocusedState.UpDownButtonFillColor = System.Drawing.Color.Transparent;
-            this.txtEdad.FocusedState.UpDownButtonForeColor = System.Drawing.Color.Transparent;
-            this.txtEdad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEdad.ForeColor = System.Drawing.Color.Gray;
-            this.txtEdad.Location = new System.Drawing.Point(373, 221);
-            this.txtEdad.Maximum = new decimal(new int[] {
+            this.txtPresentacion.BackColor = System.Drawing.Color.Transparent;
+            this.txtPresentacion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.txtPresentacion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPresentacion.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.txtPresentacion.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtPresentacion.FocusedState.UpDownButtonFillColor = System.Drawing.Color.Transparent;
+            this.txtPresentacion.FocusedState.UpDownButtonForeColor = System.Drawing.Color.Transparent;
+            this.txtPresentacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPresentacion.ForeColor = System.Drawing.Color.Gray;
+            this.txtPresentacion.Location = new System.Drawing.Point(373, 221);
+            this.txtPresentacion.Maximum = new decimal(new int[] {
             2023,
             0,
             0,
             0});
-            this.txtEdad.Minimum = new decimal(new int[] {
+            this.txtPresentacion.Minimum = new decimal(new int[] {
             1951,
             0,
             0,
             0});
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(300, 36);
-            this.txtEdad.TabIndex = 43;
-            this.txtEdad.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.txtEdad.UpDownButtonForeColor = System.Drawing.Color.White;
-            this.txtEdad.Value = new decimal(new int[] {
+            this.txtPresentacion.Name = "txtPresentacion";
+            this.txtPresentacion.Size = new System.Drawing.Size(300, 36);
+            this.txtPresentacion.TabIndex = 43;
+            this.txtPresentacion.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.txtPresentacion.UpDownButtonForeColor = System.Drawing.Color.White;
+            this.txtPresentacion.Value = new decimal(new int[] {
             1951,
             0,
             0,
@@ -408,8 +408,8 @@
             this.peliculas.ResumeLayout(false);
             this.insidePanel.ResumeLayout(false);
             this.insidePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticoneNumericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEdad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMonto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPresentacion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,17 +424,17 @@
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
         private ListBox txtDirectores;
-        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown txtEdad;
+        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown txtPresentacion;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel7;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox txtUniverso;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel5;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel2;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtNombre;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel3;
-        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown siticoneNumericUpDown1;
+        private Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown txtMonto;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel4;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel6;
-        private ListBox listBox1;
+        private ListBox txtPersonajes;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnEnviar;
     }
 }
