@@ -1,1 +1,1 @@
-<p>Mundial de Lol</p><p>2022</p><d>Abraham|German|Pastor|</d><p>33000</p><p>DC</p><c>Faker|27|Lee Faker Sang-hyeok|Heroe|Alien|Marvel|True|Faker.jpeg</c>
+<p>Mundial de Lol</p><p>2022</p><d>Abraham|German|Pastor|</d><p>33000</p><p>DC</p><c>Faker|27|Lee Faker Sang-hyeok|Heroe|Alien|Marvel|True|Faker.jpeg</c><p></p><p>1951</p><d></d><p>0</p><p></p><c>Faker|27|Lee Faker Sang-hyeok|Heroe|Alien|Marvel|True|Faker.jpeg</c>

@@ -23,6 +23,7 @@ namespace project_final_attempt.Entities.Peliculas
             movies.Add(movie);
         }
 
+        
         public void serealizar_pelicula()
         {
             FileStream metodo = new FileStream(ruta, FileMode.Append, FileAccess.Write);
@@ -131,7 +132,7 @@ namespace project_final_attempt.Entities.Peliculas
 
             List<string> datos_match = new List<string>();
             List<string> directores_match = new List<string>();
-            List<string> peliculas_match = new List<string>();
+            List<string> personajes_match = new List<string>();
 
             for (int i = 0; i < match_datos.Count; i++)
             {
@@ -153,13 +154,13 @@ namespace project_final_attempt.Entities.Peliculas
 
             for (int i = 0; i < match_personajes.Count; i++)
             {
-                peliculas_match.Add(match_personajes[i].ToString());
+                personajes_match.Add(match_personajes[i].ToString());
             }
-            for (int i = 0; i < peliculas_match.Count; i++)
+            for (int i = 0; i < personajes_match.Count; i++)
             {
-                peliculas_match[i] = peliculas_match[i].ToString().Replace("<c>", "").Replace("</c>", "");
+                personajes_match[i] = personajes_match[i].ToString().Replace("<c>", "").Replace("</c>", "");
             }
-            foreach (string pelicula in peliculas_match)
+            foreach (string pelicula in personajes_match)
             {
                 personajes_aux.Add(leer_personajes(pelicula));
             }

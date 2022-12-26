@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gestion_personajes));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.btnBuscar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnTrue = new System.Windows.Forms.RadioButton();
             this.siticoneHtmlLabel11 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.btnFalse = new System.Windows.Forms.RadioButton();
@@ -74,7 +74,7 @@
             // 
             // insidePanel
             // 
-            this.insidePanel.Controls.Add(this.siticoneButton1);
+            this.insidePanel.Controls.Add(this.btnBuscar);
             this.insidePanel.Controls.Add(this.btnTrue);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel11);
             this.insidePanel.Controls.Add(this.btnFalse);
@@ -91,21 +91,21 @@
             this.insidePanel.Size = new System.Drawing.Size(1036, 723);
             this.insidePanel.TabIndex = 1;
             // 
-            // siticoneButton1
+            // btnBuscar
             // 
-            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneButton1.Image")));
-            this.siticoneButton1.Location = new System.Drawing.Point(457, 40);
-            this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.Size = new System.Drawing.Size(44, 42);
-            this.siticoneButton1.TabIndex = 40;
-            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
+            this.btnBuscar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(457, 40);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(44, 42);
+            this.btnBuscar.TabIndex = 40;
+            this.btnBuscar.Click += new System.EventHandler(this.siticoneButton1_Click);
             // 
             // btnTrue
             // 
@@ -573,6 +573,6 @@
         private RadioButton btnFalse;
         private RadioButton btnTrue;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel10;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnBuscar;
     }
 }

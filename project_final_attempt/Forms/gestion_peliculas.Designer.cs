@@ -50,6 +50,7 @@
             this.btnRegresar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
+            this.btnBuscar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.peliculas.SuspendLayout();
             this.insidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonto)).BeginInit();
@@ -73,6 +74,7 @@
             // 
             // insidePanel
             // 
+            this.insidePanel.Controls.Add(this.btnBuscar);
             this.insidePanel.Controls.Add(this.btnEnviar);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel6);
             this.insidePanel.Controls.Add(this.txtPersonajes);
@@ -396,6 +398,22 @@
             this.siticoneSeparator1.Size = new System.Drawing.Size(985, 14);
             this.siticoneSeparator1.TabIndex = 34;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(456, 38);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(44, 42);
+            this.btnBuscar.TabIndex = 51;
+            this.btnBuscar.Click += new System.EventHandler(this.siticoneButton1_Click);
+            // 
             // gestion_peliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -437,5 +455,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel6;
         private ListBox txtPersonajes;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnEnviar;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnBuscar;
     }
 }

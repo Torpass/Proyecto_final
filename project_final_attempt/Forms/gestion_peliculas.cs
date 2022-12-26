@@ -32,7 +32,7 @@ namespace project_final_attempt.Forms
 
             fh.Show();
         }
-        
+
 
         public gestion_peliculas()
         {
@@ -94,5 +94,55 @@ namespace project_final_attempt.Forms
             pelis.movie_add(Movie_aux);
             pelis.serealizar_pelicula();
         }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            txtDirectores.Items.Clear();
+            List<string> Personajes = new List<string>();
+            txtPersonajes.DataSource = null;
+            if (buscar(txtBuscar.Text))
+            {
+                foreach (Movie aux in pelis.descerealizar_pelicula())
+                {
+                    txtNombre.Text = aux._name;
+                    txtPresentacion.Value = Convert.ToDecimal(aux._year);
+                    txtUniverso.Text = aux._universe;
+                    txtMonto.Value = Convert.ToDecimal(aux._amount);
+                    foreach (string director in aux._directors)
+                    {
+                        txtDirectores.Items.Add(director);
+                    }
+
+                    foreach (Personaje personajes_aux in aux._casting)
+                    {
+                        Personajes.Add(personajes_aux._name);
+                    }
+                    txtPersonajes.DataSource = Personajes;
+                }
+            }  
+        }
+
+        private string descerealizar_directores(List<string> directores)
+        {
+            string director = string.Empty;
+            for(int i=0;i < directores.Count(); i++)
+            {
+                director = directores[i];
+            }
+            return director;
+        }
+
+        private bool buscar(string nombre_pelicula)
+        {
+            foreach (Movie aux in pelis.descerealizar_pelicula())
+            {
+                if (aux._name == nombre_pelicula)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
+
