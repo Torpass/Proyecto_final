@@ -81,20 +81,26 @@ namespace project_final_attempt.Forms
                         }
                     }
                 }
-                Movie_aux._name = txtNombre.Text.ToString();
-                Movie_aux._year = int.Parse(txtPresentacion.Text);
-                Movie_aux._amount = float.Parse(txtMonto.Text);
-                Movie_aux._universe = txtUniverso.Text.ToString();
-
                 foreach (string y in txtDirectores.SelectedItems)
                 {
                     nombre_directores.Add(y.ToString());
                 }
-                Movie_aux._directors = nombre_directores;
-                Movie_aux._casting = personajes_pelicula;
+                var (validado, dialog) = validar_datos(txtNombre.Text, txtUniverso.Text, txtMonto.Value, nombre_directores.Count, personajes_pelicula.Count);
 
-                pelis.movie_add(Movie_aux);
-                pelis.serealizar_pelicula();
+                if (validado)
+                {
+                    Movie_aux._name = txtNombre.Text.ToString();
+                    Movie_aux._year = int.Parse(txtPresentacion.Text);
+                    Movie_aux._amount = float.Parse(txtMonto.Text);
+                    Movie_aux._universe = txtUniverso.Text.ToString();
+
+
+                    Movie_aux._directors = nombre_directores;
+                    Movie_aux._casting = personajes_pelicula;
+
+                    pelis.movie_add(Movie_aux);
+                    pelis.serealizar_pelicula();
+                }
             }
             else
             {
@@ -134,6 +140,15 @@ namespace project_final_attempt.Forms
             }  
         }
 
+        private (bool, DialogResult) validar_datos(string nombre, string universo, decimal monto, int directores, int personajes)
+        {
+            if (nombre == "") { return (false, MessageBox.Show("El nombre de la película no puede ir en blanco")); }
+            if (universo == "") { return (false, MessageBox.Show("Ingrese el universo al cual pertenece la película")); }
+            if (monto <= 0) { return (false, MessageBox.Show("El monto recaudado no puede ser igual a cero")); }
+            if (directores <= 0) { return (false, MessageBox.Show("Por favor ingrese los directores de la película")); }  
+            if (personajes <=0 ) { return (false, MessageBox.Show("Por favor ingrese los personajes de la película")); }
+            else { return (true, MessageBox.Show("Datos almacenados en el archivo")); }
+        }
 
         private bool buscar(string nombre_pelicula)
         {
