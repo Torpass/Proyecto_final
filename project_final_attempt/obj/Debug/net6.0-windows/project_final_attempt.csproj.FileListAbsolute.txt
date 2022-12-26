@@ -20,3 +20,4 @@ C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_att
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.Forms.gestion_personajes.resources
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.Forms.inicio.resources
 C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.plantilla_inicial.resources
+C:\Users\Pastor Jose\OneDrive\Documentos\GitHub\Proyecto_Final\project_final_attempt\obj\Debug\net6.0-windows\project_final_attempt.Forms.gestion_peliculas.resources

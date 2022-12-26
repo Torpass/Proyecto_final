@@ -36,5 +36,10 @@ namespace project_final_attempt.Forms
         {
             Abrirform(new gestion_personajes());
         }
+
+        private void btnGestionPeliculas_Click_1(object sender, EventArgs e)
+        {
+            Abrirform(new gestion_peliculas());
+        }
     }
 }

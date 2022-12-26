@@ -35,9 +35,9 @@
             this.siticoneHtmlLabel9 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel8 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneCustomGradientPanel2 = new Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel();
-            this.btnGestionPeliculas = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneCustomGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel();
             this.btnGestionPersonajes = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneCustomGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel();
+            this.btnGestionPeliculas = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneHtmlLabel6 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel7 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
@@ -114,49 +114,6 @@
             this.siticoneCustomGradientPanel2.Size = new System.Drawing.Size(459, 368);
             this.siticoneCustomGradientPanel2.TabIndex = 16;
             // 
-            // btnGestionPeliculas
-            // 
-            this.btnGestionPeliculas.CausesValidation = false;
-            this.btnGestionPeliculas.CheckedState.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnGestionPeliculas.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnGestionPeliculas.CheckedState.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnGestionPeliculas.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            this.btnGestionPeliculas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGestionPeliculas.CustomBorderThickness = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.btnGestionPeliculas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGestionPeliculas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGestionPeliculas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGestionPeliculas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGestionPeliculas.FillColor = System.Drawing.Color.Transparent;
-            this.btnGestionPeliculas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGestionPeliculas.ForeColor = System.Drawing.Color.White;
-            this.btnGestionPeliculas.HoverState.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnGestionPeliculas.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnGestionPeliculas.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            this.btnGestionPeliculas.Image = ((System.Drawing.Image)(resources.GetObject("btnGestionPeliculas.Image")));
-            this.btnGestionPeliculas.ImageSize = new System.Drawing.Size(380, 380);
-            this.btnGestionPeliculas.Location = new System.Drawing.Point(0, 3);
-            this.btnGestionPeliculas.Name = "btnGestionPeliculas";
-            this.btnGestionPeliculas.PressedColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnGestionPeliculas.PressedDepth = 10;
-            this.btnGestionPeliculas.Size = new System.Drawing.Size(456, 365);
-            this.btnGestionPeliculas.TabIndex = 2;
-            // 
-            // siticoneCustomGradientPanel1
-            // 
-            this.siticoneCustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneCustomGradientPanel1.BorderRadius = 10;
-            this.siticoneCustomGradientPanel1.BorderThickness = 5;
-            this.siticoneCustomGradientPanel1.Controls.Add(this.btnGestionPeliculas);
-            this.siticoneCustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticoneCustomGradientPanel1.FillColor2 = System.Drawing.Color.Black;
-            this.siticoneCustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticoneCustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(545, 329);
-            this.siticoneCustomGradientPanel1.Name = "siticoneCustomGradientPanel1";
-            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(459, 368);
-            this.siticoneCustomGradientPanel1.TabIndex = 14;
-            // 
             // btnGestionPersonajes
             // 
             this.btnGestionPersonajes.CausesValidation = false;
@@ -185,6 +142,50 @@
             this.btnGestionPersonajes.Size = new System.Drawing.Size(456, 365);
             this.btnGestionPersonajes.TabIndex = 3;
             this.btnGestionPersonajes.Click += new System.EventHandler(this.btnGestionPersonajes_Click);
+            // 
+            // siticoneCustomGradientPanel1
+            // 
+            this.siticoneCustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneCustomGradientPanel1.BorderRadius = 10;
+            this.siticoneCustomGradientPanel1.BorderThickness = 5;
+            this.siticoneCustomGradientPanel1.Controls.Add(this.btnGestionPeliculas);
+            this.siticoneCustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
+            this.siticoneCustomGradientPanel1.FillColor2 = System.Drawing.Color.Black;
+            this.siticoneCustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
+            this.siticoneCustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
+            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(545, 329);
+            this.siticoneCustomGradientPanel1.Name = "siticoneCustomGradientPanel1";
+            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(459, 368);
+            this.siticoneCustomGradientPanel1.TabIndex = 14;
+            // 
+            // btnGestionPeliculas
+            // 
+            this.btnGestionPeliculas.CausesValidation = false;
+            this.btnGestionPeliculas.CheckedState.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnGestionPeliculas.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnGestionPeliculas.CheckedState.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnGestionPeliculas.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btnGestionPeliculas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGestionPeliculas.CustomBorderThickness = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.btnGestionPeliculas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGestionPeliculas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGestionPeliculas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGestionPeliculas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGestionPeliculas.FillColor = System.Drawing.Color.Transparent;
+            this.btnGestionPeliculas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGestionPeliculas.ForeColor = System.Drawing.Color.White;
+            this.btnGestionPeliculas.HoverState.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnGestionPeliculas.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnGestionPeliculas.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btnGestionPeliculas.Image = ((System.Drawing.Image)(resources.GetObject("btnGestionPeliculas.Image")));
+            this.btnGestionPeliculas.ImageSize = new System.Drawing.Size(380, 380);
+            this.btnGestionPeliculas.Location = new System.Drawing.Point(0, 3);
+            this.btnGestionPeliculas.Name = "btnGestionPeliculas";
+            this.btnGestionPeliculas.PressedColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnGestionPeliculas.PressedDepth = 10;
+            this.btnGestionPeliculas.Size = new System.Drawing.Size(456, 365);
+            this.btnGestionPeliculas.TabIndex = 2;
+            this.btnGestionPeliculas.Click += new System.EventHandler(this.btnGestionPeliculas_Click_1);
             // 
             // siticonePanel4
             // 
