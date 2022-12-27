@@ -1,1 +1,2 @@
 Faker|27|Dios|Antiheroe|Hombre|DC|True|Faker.jpeg
+Bojack|57|Horseman|Antiheroe|Mujer|Marvel|False|Bojack.jpeg

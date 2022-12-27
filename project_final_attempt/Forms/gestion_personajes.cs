@@ -135,14 +135,23 @@ namespace project_final_attempt.Forms
             personajes.serealizar_personaje();
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            personajes.eliminar(txtNombre.Text);
+            MessageBox.Show("Personaje eliminado");
+            limpiar();
+            activar();
+        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            personajes.eliminar(txtNombre.Text);
             activar();
             btnEliminar.Enabled = false;
             btnEliminar.FillColor = Color.Silver;
             btnActualizar.Visible = true;
             btnActualizar.Enabled = true;
+            btnRegresar.Enabled = false;
         }
 
 
@@ -209,12 +218,6 @@ namespace project_final_attempt.Forms
             btnTrue.Checked = true;
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            personajes.eliminar(txtNombre.Text);
-            MessageBox.Show("Personaje eliminado");
-            limpiar();
-            activar();
-        }
+       
     }
 }
