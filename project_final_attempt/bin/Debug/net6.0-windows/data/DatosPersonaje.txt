@@ -1,8 +1,1 @@
-Faker|27|Lee Faker Sang-hyeok|Heroe|Alien|Marvel|True|Faker.jpeg
-Homero|57|Homero Simpson|Heroe|Desconocido|DC|False|Homero.jpeg
-Superman|65|Secreta|Heroe|Hombre|DC|True|Superman.jpeg
-Batman|37|Bruce Wayne|Heroe|Mujer|Marvel|False|Batman.jpeg
-Pastor|9|Secreta|Heroe|Hombre|Marvel|True|Pastor.jpeg
-Codiman|1|python|Villano|Hombre|DC|False|Codiman.jpeg
-Botellita|2|Botellon|Heroe|Hombre|Marvel|True|Botellita.jpeg
-Git|1|Gitttt|Antiheroe|Hombre|Marvel|True|Git.jpeg
+Faker|27|Dios|Antiheroe|Hombre|DC|True|Faker.jpeg

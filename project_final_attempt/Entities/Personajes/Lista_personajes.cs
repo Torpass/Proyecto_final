@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,6 @@ namespace project_final_attempt.Entities.Personajes
 {
     internal class Lista_personajes
     {
-        private string separador = "\n";
-        private String _h = "\r\n";
         private String ruta = @".\data\DatosPersonaje.txt";
         private List<Personaje> heroes;
 
@@ -19,11 +18,14 @@ namespace project_final_attempt.Entities.Personajes
             heroes = new List<Personaje>();
         }
 
+
+
         //Añada un nuevo Personaje a la lista 
         public void heroe_create(Personaje x)
         {
             heroes.Add(x);
         }
+
 
         public Personaje buscar(string nombre_personaje)
         {
@@ -47,6 +49,24 @@ namespace project_final_attempt.Entities.Personajes
             }
             return null;
         }
+
+
+        public void eliminar(string eliminar_personaje)
+        {
+            heroes = personajes_desceralizados();
+
+            foreach (Personaje aux in heroes)
+            {
+                if (aux._name == eliminar_personaje)
+                {
+                    heroes.Remove(aux);
+                    break;
+                }
+            }
+            File.Delete(ruta);
+            serealizar_personaje();
+        }
+
 
 
         //El objeto de tipo Personaje enviado por el form, lo recibe y lo convierte en un string para ser guardado en un archivo de texto
@@ -79,6 +99,7 @@ namespace project_final_attempt.Entities.Personajes
                    + separador + aux._img.ToString();
             return cadena;
         }
+
 
         //Agarra el string enviado por el redline y lo convierte en un objeto de tipo "Personaje" para ser agregado a la lista
         public List<Personaje> personajes_desceralizados()

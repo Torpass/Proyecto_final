@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -102,12 +103,48 @@ namespace project_final_attempt.Forms
                 ImagenPersonaje.Image = Image.FromFile(ruta_aux);
                 ruta_aux = ruta_imagen;
                 if (persoanje_encontrado._activity) { btnTrue.Checked = true; } else { btnFalse.Checked = true;  }
+                desactivar();
             }else 
             { 
                 MessageBox.Show("No se encontró ni pinga");  //mejorar
             }
+            btnEnviar.FillColor = Color.Silver;
+            btnEnviar.Enabled = false;
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
             
         }
+
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            string ruta_aux = string.Empty;
+
+            Personaje personaje_editado = new Personaje();
+            personaje_editado._name = txtNombre.Text;
+            personaje_editado._age = int.Parse(txtEdad.Text);
+            personaje_editado._img = $"{txtNombre.Text}.jpeg";
+            personaje_editado._universe = txtUniverso.Text;
+            personaje_editado._identity = txtIdentidad.Text;
+            personaje_editado._rol  = txtActitud.Text;
+            personaje_editado._sex = txtSexo.Text;
+            ruta_aux = ruta_imagen + personaje_editado._img;
+            ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
+            if (btnTrue.Checked == true) { personaje_editado._activity = true; } else { personaje_editado._activity = false; }
+            personajes.heroe_create(personaje_editado);
+            personajes.serealizar_personaje();
+        }
+
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            activar();
+            btnEliminar.Enabled = false;
+            btnEliminar.FillColor = Color.Silver;
+            btnActualizar.Visible = true;
+            btnActualizar.Enabled = true;
+        }
+
 
         private bool encontrar(string nombre_persoanje)
         {
@@ -134,6 +171,32 @@ namespace project_final_attempt.Forms
             else { return (true, MessageBox.Show("Datos guardados correctamente en el archivo", "Mensaje"));  }
         }
 
+        private void activar()
+        {
+            txtActitud.Enabled = true;
+            txtEdad.Enabled = true;
+            txtUniverso.Enabled = true;
+            txtSexo.Enabled = true;
+            txtIdentidad.Enabled = true;
+            ImagenPersonaje.Enabled = true;
+            btnTrue.Enabled = true;
+            btnFalse.Enabled = true;
+            txtNombre.Enabled = true;
+        }
+
+        private void desactivar()
+        {
+            txtActitud.Enabled = false;
+            txtEdad.Enabled = false;
+            txtUniverso.Enabled = false;
+            txtSexo.Enabled = false;
+            txtIdentidad.Enabled = false;
+            ImagenPersonaje.Enabled = false;
+            btnTrue.Enabled = false;
+            btnFalse.Enabled = false;
+            txtNombre.Enabled = false;
+        }
+
         private void limpiar()
         {
             txtActitud.Text = default;
@@ -144,6 +207,14 @@ namespace project_final_attempt.Forms
             txtIdentidad.Text = "";
             ImagenPersonaje.Image = null;
             btnTrue.Checked = true;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            personajes.eliminar(txtNombre.Text);
+            MessageBox.Show("Personaje eliminado");
+            limpiar();
+            activar();
         }
     }
 }
