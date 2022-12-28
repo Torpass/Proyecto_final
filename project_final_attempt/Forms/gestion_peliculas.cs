@@ -19,7 +19,7 @@ namespace project_final_attempt.Forms
         List<string> nombre_directores = new List<string>();
         List<string> nombre_personajes = new List<string>();
         List<Personaje> personajes_ingresados = personajes.personajes_desceralizados();
-
+        
         private void Abrirform(object form)
         {
             if (this.insidePanel.Controls.Count > 0)
@@ -38,20 +38,13 @@ namespace project_final_attempt.Forms
         public gestion_peliculas()
         {
             InitializeComponent();
-            List<string> nombre_personajes = new List<string>();
-
-            foreach (Personaje aux in personajes_ingresados)
-            {
-                nombre_personajes.Add(aux._name.ToString());
-            }
-            txtPersonajes.DataSource = null;
-            txtPersonajes.DataSource = nombre_personajes;
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             Abrirform(new inicio());
         }
+
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
@@ -172,6 +165,16 @@ namespace project_final_attempt.Forms
             txtDirectores.SelectedItem = default;
             txtUniverso.Text = default;
             txtPresentacion.Value = 1951;
+        }
+
+        private void txtUniverso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<string> personajes_marvel = new List<string>();
+            List<string> personajes_dc = new List<string>();
+
+            foreach (Personaje aux in personajes_ingresados) { if (aux._universe == "Marvel") { personajes_marvel.Add(aux._name); }else { personajes_dc.Add(aux._name); } }
+            if(txtUniverso.Text == "Marvel") { txtPersonajes.DataSource = personajes_marvel; }else { txtPersonajes.DataSource = personajes_dc; }
+
         }
     }
 }
