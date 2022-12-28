@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project_final_attempt.Entities.Peliculas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,5 +42,7 @@ namespace project_final_attempt.Forms
         {
             Abrirform(new gestion_peliculas());
         }
+
+
     }
 }

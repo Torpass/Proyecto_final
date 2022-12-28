@@ -17,6 +17,8 @@ namespace project_final_attempt.Forms
     public partial class gestion_personajes : Form
     {
         private String ruta_imagen = @".\data\imagenes\";
+        private String ruta_imagen_eliminar = @".\data\imagenes\";
+
         private Lista_personajes personajes = new Lista_personajes();
 
         private void Abrirform(object form)
@@ -83,7 +85,7 @@ namespace project_final_attempt.Forms
                 }
             }
             else { MessageBox.Show("No puedes ingresar el mismo personajes dos veces"); } //mejorar
-            
+
         }
 
 
@@ -102,45 +104,17 @@ namespace project_final_attempt.Forms
                 txtActitud.Text = persoanje_encontrado._rol;
                 ImagenPersonaje.Image = Image.FromFile(ruta_aux);
                 ruta_aux = ruta_imagen;
-                if (persoanje_encontrado._activity) { btnTrue.Checked = true; } else { btnFalse.Checked = true;  }
+                if (persoanje_encontrado._activity) { btnTrue.Checked = true; } else { btnFalse.Checked = true; }
                 desactivar();
-            }else 
-            { 
+            } else
+            {
                 MessageBox.Show("No se encontró ni pinga");  //mejorar
             }
             btnEnviar.FillColor = Color.Silver;
             btnEnviar.Enabled = false;
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
-            
-        }
 
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            string ruta_aux = string.Empty;
-
-            Personaje personaje_editado = new Personaje();
-            personaje_editado._name = txtNombre.Text;
-            personaje_editado._age = int.Parse(txtEdad.Text);
-            personaje_editado._img = $"{txtNombre.Text}.jpeg";
-            personaje_editado._universe = txtUniverso.Text;
-            personaje_editado._identity = txtIdentidad.Text;
-            personaje_editado._rol  = txtActitud.Text;
-            personaje_editado._sex = txtSexo.Text;
-            ruta_aux = ruta_imagen + personaje_editado._img;
-            ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
-            if (btnTrue.Checked == true) { personaje_editado._activity = true; } else { personaje_editado._activity = false; }
-            personajes.heroe_create(personaje_editado);
-            personajes.serealizar_personaje();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            personajes.eliminar(txtNombre.Text);
-            MessageBox.Show("Personaje eliminado");
-            limpiar();
-            activar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -152,6 +126,42 @@ namespace project_final_attempt.Forms
             btnActualizar.Visible = true;
             btnActualizar.Enabled = true;
             btnRegresar.Enabled = false;
+        }
+
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            string ruta_aux = string.Empty;
+
+            Personaje personaje_editado = new Personaje();
+            personaje_editado._name = txtNombre.Text;
+            personaje_editado._age = int.Parse(txtEdad.Text);
+            personaje_editado._universe = txtUniverso.Text;
+            personaje_editado._identity = txtIdentidad.Text;
+            personaje_editado._rol = txtActitud.Text;
+            personaje_editado._sex = txtSexo.Text;
+            personaje_editado._img = $"atc-{txtNombre.Text}.jpeg";
+            ruta_aux = ruta_imagen + personaje_editado._img;
+
+            if (!File.Exists(ruta_aux))
+            {
+                ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
+            }
+
+            if (btnTrue.Checked == true) { personaje_editado._activity = true; } else { personaje_editado._activity = false; }
+            personajes.garbage_colector();
+            personajes.heroe_create(personaje_editado);
+            personajes.serealizar_personaje();
+            limpiar();
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        { 
+            personajes.eliminar(txtNombre.Text);
+            limpiar();
+            MessageBox.Show("Personaje eliminado");
+            activar();
         }
 
 
@@ -217,7 +227,5 @@ namespace project_final_attempt.Forms
             ImagenPersonaje.Image = null;
             btnTrue.Checked = true;
         }
-
-       
     }
 }

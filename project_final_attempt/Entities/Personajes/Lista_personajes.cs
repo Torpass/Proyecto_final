@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace project_final_attempt.Entities.Personajes
 {
     internal class Lista_personajes
     {
         private String ruta = @".\data\DatosPersonaje.txt";
+        private String ruta_imagenes = @".\data\imagenes\";
         private List<Personaje> heroes;
 
 
@@ -54,7 +57,6 @@ namespace project_final_attempt.Entities.Personajes
         public void eliminar(string eliminar_personaje)
         {
             heroes = personajes_desceralizados();
-
             foreach (Personaje aux in heroes)
             {
                 if (aux._name == eliminar_personaje)
@@ -63,10 +65,37 @@ namespace project_final_attempt.Entities.Personajes
                     break;
                 }
             }
+            
             File.Delete(ruta);
             serealizar_personaje();
         }
 
+
+        public void garbage_colector()
+        {
+            string[] ficheros = Directory.GetFiles(ruta_imagenes);
+            string[] nombres = new string[0];
+            List<string> list_nombres = new List<string>(nombres.ToList());
+            List<Personaje> garbaje = personajes_desceralizados();
+            List<string> residuo = new List<string>();
+            foreach (Personaje x in garbaje)
+            {
+                list_nombres.Add(x._img);
+            }
+            for (int i=0; i<ficheros.Length; i++)
+            {
+                ficheros[i] = ficheros[i].Replace(ruta_imagenes, "");
+            }
+
+            IEnumerable<string> eliminar = ficheros.Except(list_nombres);
+
+            foreach (string x in eliminar)
+            {
+                File.Delete( ruta_imagenes+x);
+            }
+         
+            
+        }
 
 
         //El objeto de tipo Personaje enviado por el form, lo recibe y lo convierte en un string para ser guardado en un archivo de texto
