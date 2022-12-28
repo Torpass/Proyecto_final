@@ -88,7 +88,7 @@ namespace project_final_attempt.Entities.Personajes
             }
 
             IEnumerable<string> eliminar = ficheros.Except(list_nombres);
-            if (eliminar.Count() > 1)
+            if (eliminar.Count() >= 1)
             {
                 foreach (string x in eliminar)
                 {

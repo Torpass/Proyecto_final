@@ -33,6 +33,8 @@
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.peliculas = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnEditar = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
+            this.btnEliminar = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.btnBuscar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnEnviar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneHtmlLabel6 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
@@ -73,6 +75,8 @@
             // 
             // insidePanel
             // 
+            this.insidePanel.Controls.Add(this.btnEditar);
+            this.insidePanel.Controls.Add(this.btnEliminar);
             this.insidePanel.Controls.Add(this.btnBuscar);
             this.insidePanel.Controls.Add(this.btnEnviar);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel6);
@@ -94,6 +98,46 @@
             this.insidePanel.Name = "insidePanel";
             this.insidePanel.Size = new System.Drawing.Size(1036, 723);
             this.insidePanel.TabIndex = 1;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditar.Enabled = false;
+            this.btnEditar.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnEditar.Location = new System.Drawing.Point(727, 610);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.btnEditar.Size = new System.Drawing.Size(70, 70);
+            this.btnEditar.TabIndex = 53;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEliminar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEliminar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEliminar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.FillColor = System.Drawing.Color.Red;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageSize = new System.Drawing.Size(43, 43);
+            this.btnEliminar.Location = new System.Drawing.Point(239, 610);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.btnEliminar.Size = new System.Drawing.Size(70, 70);
+            this.btnEliminar.TabIndex = 52;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnBuscar
             // 
@@ -440,5 +484,7 @@
         private ListBox txtPersonajes;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnEnviar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnBuscar;
+        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnEditar;
+        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnEliminar;
     }
 }

@@ -38,6 +38,25 @@ namespace project_final_attempt.Entities.Peliculas
         }
 
 
+        public void eliminar(string eliminar_personaje)
+        {
+            movies = descerealizar_pelicula();
+            foreach (Movie aux in movies)
+            {
+                if (aux._name == eliminar_personaje)
+                {
+                    movies.Remove(aux);
+                    break;
+                }
+            }
+
+            File.Delete(ruta);
+            serealizar_pelicula();
+        }
+
+
+
+
         private string write(Movie movie)
         {
             string etique_apertura = "<p>";

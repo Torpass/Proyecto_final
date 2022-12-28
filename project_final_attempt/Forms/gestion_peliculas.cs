@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -101,8 +102,6 @@ namespace project_final_attempt.Forms
             {
                 MessageBox.Show("No puedes ingresar la misma pelicula dos veces");
             }
-
-            
         }
 
         private void siticoneButton1_Click(object sender, EventArgs e)
@@ -132,7 +131,15 @@ namespace project_final_attempt.Forms
                         txtPersonajes.DataSource = Personajes;
                     }
                 }
-            }  
+            }
+            btnEnviar.FillColor = Color.Silver;
+            btnEnviar.Enabled = false;
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
+            txtBuscar.Text = "";
+            txtPersonajes.ClearSelected();
+            desactivar();
+
         }
 
         private (bool, DialogResult) validar_datos(string nombre, string universo, decimal monto, int directores, int personajes)
@@ -175,6 +182,39 @@ namespace project_final_attempt.Forms
             foreach (Personaje aux in personajes_ingresados) { if (aux._universe == "Marvel") { personajes_marvel.Add(aux._name); }else { personajes_dc.Add(aux._name); } }
             if(txtUniverso.Text == "Marvel") { txtPersonajes.DataSource = personajes_marvel; }else { txtPersonajes.DataSource = personajes_dc; }
 
+        }
+
+        private void activar()
+        {
+            txtMonto.Enabled = true;
+            txtPersonajes.Enabled = true;
+            txtPresentacion.Enabled = true;
+            txtDirectores.Enabled = true;
+            txtUniverso.Enabled = true;
+            txtNombre.Enabled = true;
+        }
+
+        private void desactivar()
+        {
+            txtMonto.Enabled = false;
+            txtPersonajes.Enabled = false;
+            txtPresentacion.Enabled = false;
+            txtDirectores.Enabled = false;
+            txtUniverso.Enabled = false;
+            txtNombre.Enabled = false;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            pelis.eliminar(txtNombre.Text);
+            limpiar();
+            MessageBox.Show("movie eliminado");
+            activar();
         }
     }
 }
