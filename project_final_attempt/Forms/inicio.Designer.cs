@@ -48,7 +48,6 @@
             this.siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel2 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.insidePanel.SuspendLayout();
             this.siticoneCustomGradientPanel2.SuspendLayout();
             this.siticoneCustomGradientPanel1.SuspendLayout();
@@ -65,7 +64,6 @@
             // 
             // insidePanel
             // 
-            this.insidePanel.Controls.Add(this.siticoneButton1);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel9);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel8);
             this.insidePanel.Controls.Add(this.siticoneCustomGradientPanel2);
@@ -305,20 +303,6 @@
             this.siticoneHtmlLabel1.TabIndex = 15;
             this.siticoneHtmlLabel1.Text = "Estadisticas";
             // 
-            // siticoneButton1
-            // 
-            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Location = new System.Drawing.Point(832, 10);
-            this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.Size = new System.Drawing.Size(170, 54);
-            this.siticoneButton1.TabIndex = 1;
-            this.siticoneButton1.Text = "siticoneButton1";
-            // 
             // inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -363,6 +347,5 @@
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel3;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel2;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
     }
 }

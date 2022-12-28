@@ -88,13 +88,13 @@ namespace project_final_attempt.Entities.Personajes
             }
 
             IEnumerable<string> eliminar = ficheros.Except(list_nombres);
-
-            foreach (string x in eliminar)
+            if (eliminar.Count() > 1)
             {
-                File.Delete( ruta_imagenes+x);
+                foreach (string x in eliminar)
+                {
+                    File.Delete(ruta_imagenes + x);
+                }
             }
-         
-            
         }
 
 

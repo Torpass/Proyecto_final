@@ -43,6 +43,7 @@ namespace project_final_attempt.Forms
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             Abrirform(new inicio());
+            personajes.garbage_colector();
         }
 
         private void ImagenPersonaje_DoubleClick(object sender, EventArgs e)
@@ -114,6 +115,7 @@ namespace project_final_attempt.Forms
             btnEnviar.Enabled = false;
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
+            txtBuscar.Text = "";
 
         }
 
@@ -149,9 +151,14 @@ namespace project_final_attempt.Forms
             }
 
             if (btnTrue.Checked == true) { personaje_editado._activity = true; } else { personaje_editado._activity = false; }
-            personajes.garbage_colector();
             personajes.heroe_create(personaje_editado);
             personajes.serealizar_personaje();
+            btnEnviar.Enabled = true;
+            btnEnviar.FillColor = Color.Red;
+            btnActualizar.Enabled = false;
+            btnActualizar.Visible = false;
+            btnEditar.Enabled = false;
+            btnRegresar.Enabled = true;
             limpiar();
             
         }
