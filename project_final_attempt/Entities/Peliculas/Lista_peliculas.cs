@@ -95,7 +95,7 @@ namespace project_final_attempt.Entities.Peliculas
 
             foreach (string director in directores)
             {
-                cadena_directores += director + seprador;
+                cadena_directores += seprador + director ;
             }
             cadena_directores = etique_apertura + cadena_directores + etique_cierre;
 
@@ -212,9 +212,11 @@ namespace project_final_attempt.Entities.Peliculas
 
             for (int i = 0; i < directores.Length; i++)
             {
-                director.Add(Convert.ToString(directores[i]));
+                if (directores[i] != "")
+                {
+                    director.Add(Convert.ToString(directores[i]));
+                }
             }
-
             return director;
         }
 

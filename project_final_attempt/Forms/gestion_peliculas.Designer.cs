@@ -33,6 +33,7 @@
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.peliculas = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnActualizar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnEditar = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.btnEliminar = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.btnBuscar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -75,6 +76,7 @@
             // 
             // insidePanel
             // 
+            this.insidePanel.Controls.Add(this.btnActualizar);
             this.insidePanel.Controls.Add(this.btnEditar);
             this.insidePanel.Controls.Add(this.btnEliminar);
             this.insidePanel.Controls.Add(this.btnBuscar);
@@ -98,6 +100,26 @@
             this.insidePanel.Name = "insidePanel";
             this.insidePanel.Size = new System.Drawing.Size(1036, 723);
             this.insidePanel.TabIndex = 1;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BorderRadius = 27;
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnActualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnActualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnActualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnActualizar.Enabled = false;
+            this.btnActualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
+            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(329, 600);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(381, 92);
+            this.btnActualizar.TabIndex = 54;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.Visible = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEditar
             // 
@@ -159,6 +181,7 @@
             // btnEnviar
             // 
             this.btnEnviar.BorderRadius = 27;
+            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnviar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEnviar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnEnviar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -486,5 +509,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnBuscar;
         private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnEditar;
         private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnEliminar;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnActualizar;
     }
 }

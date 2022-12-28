@@ -1,5 +1,3 @@
-Cowboy|35|See you space cowboy|Antiheroe|Hombre|Marvel|False|Cowboy.jpeg
 Negra|32|Secreta|Villano|Mujer|Marvel|False|Negra.jpeg
 Pedro|32|Secreta|Villano|Mujer|Marvel|False|Pedro.jpeg
 Fakerff|27|Dios|Antiheroe|Hombre|DC|True|atc-Fakerff.jpeg
-Torpas|18|Pastor|Heroe|Alien|DC|False|Torpas.jpeg

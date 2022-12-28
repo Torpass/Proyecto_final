@@ -107,15 +107,16 @@ namespace project_final_attempt.Forms
                 ruta_aux = ruta_imagen;
                 if (persoanje_encontrado._activity) { btnTrue.Checked = true; } else { btnFalse.Checked = true; }
                 desactivar();
+                btnEnviar.FillColor = Color.Silver;
+                btnEnviar.Enabled = false;
+                btnEditar.Enabled = true;
+                btnEliminar.Enabled = true;
+                txtBuscar.Text = "";
             } else
             {
                 MessageBox.Show("No se encontró ni pinga");  //mejorar
             }
-            btnEnviar.FillColor = Color.Silver;
-            btnEnviar.Enabled = false;
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
-            txtBuscar.Text = "";
+            
 
         }
 
@@ -168,6 +169,10 @@ namespace project_final_attempt.Forms
             personajes.eliminar(txtNombre.Text);
             limpiar();
             MessageBox.Show("Personaje eliminado");
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnEnviar.Enabled = true;
+            btnEnviar.FillColor = Color.Red;
             activar();
         }
 
