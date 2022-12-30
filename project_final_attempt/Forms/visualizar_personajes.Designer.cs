@@ -57,7 +57,7 @@
             this.insidePanel.Controls.Add(this.DataGridView);
             this.insidePanel.Location = new System.Drawing.Point(-4, 1);
             this.insidePanel.Name = "insidePanel";
-            this.insidePanel.Size = new System.Drawing.Size(1044, 724);
+            this.insidePanel.Size = new System.Drawing.Size(1044, 725);
             this.insidePanel.TabIndex = 0;
             // 
             // DataGridView
@@ -162,9 +162,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1036, 723);
             this.Controls.Add(this.insidePanel);
+            this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "visualizar_personajes";
-            this.Text = "visualizar_peliculas";
             this.insidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             this.ResumeLayout(false);

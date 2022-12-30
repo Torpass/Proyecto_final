@@ -53,7 +53,6 @@
             this.txtBuscar = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.btnRegresar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
-            this.button1 = new System.Windows.Forms.Button();
             this.peliculas.SuspendLayout();
             this.insidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonto)).BeginInit();
@@ -76,7 +75,6 @@
             // 
             // insidePanel
             // 
-            this.insidePanel.Controls.Add(this.button1);
             this.insidePanel.Controls.Add(this.btnActualizar);
             this.insidePanel.Controls.Add(this.btnEditar);
             this.insidePanel.Controls.Add(this.btnEliminar);
@@ -467,16 +465,6 @@
             this.siticoneSeparator1.Size = new System.Drawing.Size(986, 13);
             this.siticoneSeparator1.TabIndex = 34;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(103, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // gestion_peliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -521,6 +509,5 @@
         private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnEditar;
         private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnEliminar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnActualizar;
-        private Button button1;
     }
 }

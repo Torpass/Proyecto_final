@@ -1,4 +1,5 @@
 ﻿using project_final_attempt.Entities.Peliculas;
+using project_final_attempt.Entities.Personajes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace project_final_attempt.Forms
 {
     public partial class inicio : Form
     {
+        Lista_personajes lista_Personajes = new Lista_personajes();
         private void Abrirform(object form)
         {
             if (this.insidePanel.Controls.Count > 0)
@@ -30,6 +32,7 @@ namespace project_final_attempt.Forms
         public inicio()
         {
             InitializeComponent();
+            lista_Personajes.garbage_colector();
         }
 
  

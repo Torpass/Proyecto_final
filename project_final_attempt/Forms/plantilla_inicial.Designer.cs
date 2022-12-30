@@ -177,6 +177,7 @@
             this.siticoneControlBox1.PressedColor = System.Drawing.Color.Crimson;
             this.siticoneControlBox1.Size = new System.Drawing.Size(68, 78);
             this.siticoneControlBox1.TabIndex = 0;
+            this.siticoneControlBox1.Click += new System.EventHandler(this.siticoneControlBox1_Click);
             // 
             // insidePanel
             // 

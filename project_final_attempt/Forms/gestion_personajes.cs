@@ -19,6 +19,7 @@ namespace project_final_attempt.Forms
     {
         private String ruta_imagen = @".\data\imagenes\";
         private String ruta_imagen_eliminar = @".\data\imagenes\";
+        Lista_peliculas peliculas = new Lista_peliculas();  
 
         private Lista_personajes personajes = new Lista_personajes();
 
@@ -44,7 +45,6 @@ namespace project_final_attempt.Forms
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             Abrirform(new inicio());
-            personajes.garbage_colector();
         }
 
         private void ImagenPersonaje_DoubleClick(object sender, EventArgs e)
@@ -168,7 +168,7 @@ namespace project_final_attempt.Forms
             btnEditar.Enabled = false;
             btnRegresar.Enabled = true;
             limpiar();
-            
+            peliculas.actualizar_personajes();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

@@ -99,11 +99,12 @@
             // ID
             // 
             this.ID.AutoSize = true;
+            this.ID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.ID.Location = new System.Drawing.Point(110, 17);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(59, 25);
+            this.ID.Size = new System.Drawing.Size(0, 25);
             this.ID.TabIndex = 43;
-            this.ID.Text = "label1";
+            this.ID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // labelNombre
             // 

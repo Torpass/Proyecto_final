@@ -7,13 +7,14 @@ namespace project_final_attempt
         private void Abrirform(object form)
         {
             if (this.insidePanel.Controls.Count > 0)
-                this.insidePanel.Controls.RemoveAt(0);
+                this.insidePanel.Controls.Clear();
 
             Form fh = form as Form;
             fh.TopLevel = false;
-            fh.Dock = this.insidePanel.Dock;
+            fh.Dock = insidePanel.Dock;
             this.insidePanel.Controls.Add(fh);
             this.insidePanel.Tag = fh;
+
             fh.Show();
         }
 
@@ -37,6 +38,23 @@ namespace project_final_attempt
 
         private void btnPeliculas_Click(object sender, EventArgs e)
         {
+        }
+
+        private void siticoneControlBox1_Click(object sender, EventArgs e)
+        {
+            File.Copy(@".\data\DatosPeliculas.txt", @".\data\Backup\Backup-datosPeliculas.txt", true);
+            File.Copy(@".\data\DatosPersonaje.txt", @".\data\Backup\Backup-datosPersonajes.txt", true);
+            string path_backup = @".\data\Backup\Backup-imagenes";
+            string path_imagenes = Directory.GetCurrentDirectory() + @".\data\imagenes";
+            if (!Directory.Exists(path_backup))
+            {
+                Directory.CreateDirectory(path_backup);
+            }
+            foreach (var file in Directory.GetFiles(path_imagenes))
+            {
+                File.Copy(file, Path.Combine(path_backup, Path.GetFileName(file)), true);
+            }
+
         }
     }
 
