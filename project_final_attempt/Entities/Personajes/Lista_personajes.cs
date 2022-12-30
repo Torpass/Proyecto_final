@@ -46,7 +46,8 @@ namespace project_final_attempt.Entities.Personajes
                     Persona_encontrado._age = aux._age;
                     Persona_encontrado._img = aux._img;
                     Persona_encontrado._sex = aux._sex;
-                    Persona_encontrado._universe = aux._universe;   
+                    Persona_encontrado._universe = aux._universe;  
+                    Persona_encontrado._id = aux._id;
                     return Persona_encontrado;
                 }
             }
@@ -77,7 +78,7 @@ namespace project_final_attempt.Entities.Personajes
             string[] nombres = new string[0];
             List<string> list_nombres = new List<string>(nombres.ToList());
             List<Personaje> garbaje = personajes_desceralizados();
-            List<string> residuo = new List<string>();
+
             foreach (Personaje x in garbaje)
             {
                 list_nombres.Add(x._img);
@@ -88,6 +89,7 @@ namespace project_final_attempt.Entities.Personajes
             }
 
             IEnumerable<string> eliminar = ficheros.Except(list_nombres);
+
             if (eliminar.Count() >= 1)
             {
                 foreach (string x in eliminar)
@@ -125,7 +127,8 @@ namespace project_final_attempt.Entities.Personajes
                    + separador + aux._sex.ToString()
                    + separador + aux._universe.ToString()
                    + separador + aux._activity.ToString()
-                   + separador + aux._img.ToString();
+                   + separador + aux._img.ToString()
+                   + separador + aux._id.ToString();
             return cadena;
         }
 
@@ -134,14 +137,18 @@ namespace project_final_attempt.Entities.Personajes
         public List<Personaje> personajes_desceralizados()
         {
             List<Personaje> desceralizados = new List<Personaje>();
-            FileStream acceso = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+            FileStream acceso = new FileStream(ruta, FileMode.OpenOrCreate, FileAccess.Read);
             StreamReader lector = new StreamReader(acceso);
 
             string linea = lector.ReadLine();
-            while (linea != null)
+            if (linea != "")
             {
-                desceralizados.Add(Leer(linea));
-                linea = lector.ReadLine();
+                while (linea != null)
+                {
+                    desceralizados.Add(Leer(linea));
+                    linea = lector.ReadLine();
+                }
+                lector.Close();
             }
             lector.Close();
             return desceralizados;
@@ -161,6 +168,7 @@ namespace project_final_attempt.Entities.Personajes
             aux._universe = Convert.ToString(arreglo_personaje[5]);
             aux._activity = Convert.ToBoolean(arreglo_personaje[6]);
             aux._img = Convert.ToString(arreglo_personaje[7]);
+            aux._id = Convert.ToString(arreglo_personaje[8]);
             return aux;
         }
 

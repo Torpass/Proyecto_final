@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.Intrinsics.X86;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -77,6 +78,8 @@ namespace project_final_attempt.Forms
                     aux._universe = txtUniverso.Text;
                     aux._img = $"{aux._name}.jpeg";
                     ruta_aux = ruta_imagen + aux._img;
+                    aux._id = Guid.NewGuid().ToString();
+
                     if (btnTrue.Checked == true) { aux._activity = true; } else { aux._activity = false; }
                     ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
 
@@ -97,6 +100,7 @@ namespace project_final_attempt.Forms
             if (persoanje_encontrado != null)
             {
                 string ruta_aux = ruta_imagen + persoanje_encontrado._img;
+                ID.Text = persoanje_encontrado._id;
                 txtNombre.Text = persoanje_encontrado._name;
                 txtEdad.Value = persoanje_encontrado._age;
                 txtIdentidad.Text = persoanje_encontrado._identity;
@@ -104,6 +108,7 @@ namespace project_final_attempt.Forms
                 txtUniverso.Text = persoanje_encontrado._universe;
                 txtActitud.Text = persoanje_encontrado._rol;
                 ImagenPersonaje.Image = Image.FromFile(ruta_aux);
+                ID.Text = persoanje_encontrado._id;
                 ruta_aux = ruta_imagen;
                 if (persoanje_encontrado._activity) { btnTrue.Checked = true; } else { btnFalse.Checked = true; }
                 desactivar();
@@ -144,6 +149,8 @@ namespace project_final_attempt.Forms
             personaje_editado._rol = txtActitud.Text;
             personaje_editado._sex = txtSexo.Text;
             personaje_editado._img = $"atc-{txtNombre.Text}.jpeg";
+            personaje_editado._id = ID.Text;
+            ID.Text = "";
             ruta_aux = ruta_imagen + personaje_editado._img;
 
             if (!File.Exists(ruta_aux))
@@ -181,9 +188,13 @@ namespace project_final_attempt.Forms
         {
             foreach (Personaje aux in personajes.personajes_desceralizados())
             {
-                if (aux._name == nombre_persoanje)
+                if (aux._name != "")
                 {
-                    return true;
+                    if (aux._name == nombre_persoanje)
+                    {
+                        return true;
+                    }
+                    return false;
                 }
             }
             return false;

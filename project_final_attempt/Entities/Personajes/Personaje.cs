@@ -15,6 +15,7 @@ namespace project_final_attempt.Entities.Personajes
         private string identity;
         private string universe;
         private bool activity;
+        private string ID;
         private string img;
 
 
@@ -26,6 +27,7 @@ namespace project_final_attempt.Entities.Personajes
         public string _universe { get { return universe; } set { universe = value; } }
         public bool _activity { get { return activity; } set { activity = value; } }
         public string _img { get { return img; } set { img = value; } }
+        public string _id { get { return ID; } set { ID = value; } }
 
 
         public Personaje()
@@ -38,6 +40,7 @@ namespace project_final_attempt.Entities.Personajes
             _universe = null;
             _activity = false;
             _img = null;
+            _id = null;
         }
     }
 }

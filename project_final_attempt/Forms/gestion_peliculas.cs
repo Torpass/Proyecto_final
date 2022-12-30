@@ -42,6 +42,7 @@ namespace project_final_attempt.Forms
             InitializeComponent();
         }
 
+
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             Abrirform(new inicio());
@@ -52,8 +53,6 @@ namespace project_final_attempt.Forms
         {
             List<Personaje> personajes_pelicula = new List<Personaje>();
             Movie Movie_aux = new Movie();
-
-
             if (!buscar(txtNombre.Text))
             {
                 //Selecciona todos los personajes ingresados por el usuario
@@ -72,6 +71,7 @@ namespace project_final_attempt.Forms
                             Personaje_aux._activity = perosnaje_seleccionado._activity;
                             Personaje_aux._universe = perosnaje_seleccionado._universe.ToString();
                             Personaje_aux._img = perosnaje_seleccionado._img.ToString();
+                            Personaje_aux._id = perosnaje_seleccionado._id.ToString();
 
                             personajes_pelicula.Add(Personaje_aux);
                         }
@@ -105,6 +105,7 @@ namespace project_final_attempt.Forms
                 MessageBox.Show("No puedes ingresar la misma pelicula dos veces");
             }
         }
+
 
         private void siticoneButton1_Click(object sender, EventArgs e)
         {
@@ -160,6 +161,7 @@ namespace project_final_attempt.Forms
             txtDirectores.ResetText();
         }
 
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
             btnEliminar.Enabled = false;
@@ -170,6 +172,7 @@ namespace project_final_attempt.Forms
             pelis.eliminar(txtNombre.Text);
             activar();
         }
+
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
@@ -240,6 +243,7 @@ namespace project_final_attempt.Forms
             else { return (true, MessageBox.Show("Datos almacenados en el archivo")); }
         }
 
+
         private bool buscar(string nombre_pelicula)
         {
             foreach (Movie aux in pelis.descerealizar_pelicula())
@@ -252,6 +256,7 @@ namespace project_final_attempt.Forms
             return false;
         }
 
+
         private void limpiar()
         {
             txtNombre.Text = "";
@@ -261,6 +266,7 @@ namespace project_final_attempt.Forms
             txtUniverso.Text = default;
             txtPresentacion.Value = 1951;
         }
+
 
         private void txtUniverso_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -272,6 +278,7 @@ namespace project_final_attempt.Forms
 
         }
 
+
         private void activar()
         {
             txtMonto.Enabled = true;
@@ -281,6 +288,7 @@ namespace project_final_attempt.Forms
             txtUniverso.Enabled = true;
             txtNombre.Enabled = true;
         }
+
 
         private void desactivar()
         {
@@ -292,9 +300,11 @@ namespace project_final_attempt.Forms
             txtNombre.Enabled = false;
         }
 
-        
-
-     
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pelis.actualizar_personajes();
+            
+        }
     }
 }
 

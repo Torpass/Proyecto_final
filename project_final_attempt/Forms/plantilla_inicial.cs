@@ -11,7 +11,7 @@ namespace project_final_attempt
 
             Form fh = form as Form;
             fh.TopLevel = false;
-            fh.Dock = DockStyle.Right;
+            fh.Dock = this.insidePanel.Dock;
             this.insidePanel.Controls.Add(fh);
             this.insidePanel.Tag = fh;
             fh.Show();
@@ -27,7 +27,7 @@ namespace project_final_attempt
 
         private void btnPersonajes_Click(object sender, EventArgs e)
         {
-            Abrirform(new gestion_personajes());
+            Abrirform(new visualizar_personajes());
         }
 
         private void siticonePictureBox1_Click(object sender, EventArgs e)

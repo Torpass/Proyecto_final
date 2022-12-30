@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gestion_personajes));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.ID = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
             this.btnBuscar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.btnTrue = new System.Windows.Forms.RadioButton();
@@ -63,7 +64,6 @@
             this.siticoneShadowForm1 = new Siticone.Desktop.UI.WinForms.SiticoneShadowForm(this.components);
             this.dialogImage = new Siticone.Desktop.UI.WinForms.SiticoneMessageDialog();
             this.siticoneHtmlLabel10 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.insidePanel.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEdad)).BeginInit();
@@ -78,7 +78,7 @@
             // 
             // insidePanel
             // 
-            this.insidePanel.Controls.Add(this.button1);
+            this.insidePanel.Controls.Add(this.ID);
             this.insidePanel.Controls.Add(this.labelNombre);
             this.insidePanel.Controls.Add(this.btnBuscar);
             this.insidePanel.Controls.Add(this.btnTrue);
@@ -95,6 +95,15 @@
             this.insidePanel.Name = "insidePanel";
             this.insidePanel.Size = new System.Drawing.Size(1036, 723);
             this.insidePanel.TabIndex = 1;
+            // 
+            // ID
+            // 
+            this.ID.AutoSize = true;
+            this.ID.Location = new System.Drawing.Point(110, 17);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(59, 25);
+            this.ID.TabIndex = 43;
+            this.ID.Text = "label1";
             // 
             // labelNombre
             // 
@@ -588,15 +597,6 @@
             this.siticoneHtmlLabel10.Text = "Actividad del personaje";
             this.siticoneHtmlLabel10.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(898, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // gestion_personajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -652,6 +652,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnEliminar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnActualizar;
         private Label labelNombre;
-        private Button button1;
+        private Label ID;
     }
 }

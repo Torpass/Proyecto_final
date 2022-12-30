@@ -1,10 +1,12 @@
 ﻿using project_final_attempt.Entities.Personajes;
+using Siticone.Desktop.UI.Material.Animation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Sources;
 
 namespace project_final_attempt.Entities.Peliculas
 {
@@ -55,6 +57,45 @@ namespace project_final_attempt.Entities.Peliculas
         }
 
 
+        public void actualizar_personajes()
+        {
+            movies.Clear();
+            movies = descerealizar_pelicula();
+
+            Lista_personajes personajes = new Lista_personajes();
+
+            List<Personaje> persoanjes_actuales = personajes.personajes_desceralizados();
+
+            foreach (Movie j in movies)
+            {
+                foreach (Personaje viejo in j._casting)
+                {
+                    foreach (Personaje actual in persoanjes_actuales)
+                    {
+                        if (viejo._id == actual._id)
+                        {
+                            viejo._name = actual._name;
+                            viejo._img = actual._img;
+                            viejo._age = actual._age;
+                            viejo._sex = actual._sex;
+                            viejo._identity = actual._identity;
+                            viejo._universe = actual._universe;
+                            viejo._activity = actual._activity;
+                            viejo._rol = actual._rol;
+                        }
+                    }
+                }
+            }
+            FileStream metodo = new FileStream(ruta, FileMode.Create, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(metodo);
+
+            foreach (Movie aux in movies)
+            {
+                writer.WriteLine(write(aux));
+            }
+            movies.Clear();
+            writer.Close();
+        }
 
 
         private string write(Movie movie)
@@ -102,6 +143,7 @@ namespace project_final_attempt.Entities.Peliculas
             return cadena_directores;
         }
 
+
         private string leerPersonaje(Personaje aux)
         {
             string etique_apertura = "<c>";
@@ -116,7 +158,8 @@ namespace project_final_attempt.Entities.Peliculas
                      aux._sex.ToString().Trim() + seprador +
                      aux._universe.ToString().Trim() + seprador +
                      aux._activity.ToString().Trim() + seprador +
-                     aux._img.ToString().Trim() + etique_cierre;
+                     aux._img.ToString().Trim() + seprador + 
+                     aux._id.ToString().Trim() + etique_cierre;
             return cadena;
         }
 
@@ -124,7 +167,7 @@ namespace project_final_attempt.Entities.Peliculas
         public List<Movie> descerealizar_pelicula()
         {
             List<Movie> peliculas_descerealizadas = new List<Movie>();
-            FileStream acceso = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+            FileStream acceso = new FileStream(ruta, FileMode.OpenOrCreate, FileAccess.Read);
             StreamReader lector = new StreamReader(acceso);
             string cadena = lector.ReadLine();
             while (cadena != null)
@@ -200,6 +243,7 @@ namespace project_final_attempt.Entities.Peliculas
             aux._universe = Convert.ToString(arreglo_personaje[5]);
             aux._activity = Convert.ToBoolean(arreglo_personaje[6]);
             aux._img = Convert.ToString(arreglo_personaje[7]);
+            aux._id = Convert.ToString(arreglo_personaje[8]);
             return aux;
         }
 
@@ -219,6 +263,8 @@ namespace project_final_attempt.Entities.Peliculas
             }
             return director;
         }
+
+
 
 
     }

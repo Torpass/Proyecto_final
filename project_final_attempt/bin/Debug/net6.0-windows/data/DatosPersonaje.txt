@@ -1,3 +1,3 @@
-Negra|32|Secreta|Villano|Mujer|Marvel|False|Negra.jpeg
-Pedro|32|Secreta|Villano|Mujer|Marvel|False|Pedro.jpeg
-Fakerff|27|Dios|Antiheroe|Hombre|DC|True|atc-Fakerff.jpeg
+Locop1|11|Locooo|Villano|Alien|Marvel|False|atc-Locop1.jpeg|8c5ff797-5fc7-4a71-ab94-2515c81ebb3a
+Superhumano|16|Secreta|Antiheroe|Desconocido|DC|True|atc-Superhumano.jpeg|41109875-851b-457c-967a-235ae07b3efa
+pedro|27|secreta|Heroe|Hombre|DC|False|atc-pedro.jpeg|ead7f803-62c8-46f2-99cf-293bb2007a5a
