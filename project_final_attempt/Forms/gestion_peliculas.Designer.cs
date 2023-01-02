@@ -281,15 +281,6 @@
             this.txtDirectores.ForeColor = System.Drawing.Color.Silver;
             this.txtDirectores.FormattingEnabled = true;
             this.txtDirectores.ItemHeight = 25;
-            this.txtDirectores.Items.AddRange(new object[] {
-            "Abraham",
-            "Andrés",
-            "Felipe",
-            "German",
-            "Jose",
-            "Luis",
-            "Pastor",
-            "Pedro"});
             this.txtDirectores.Location = new System.Drawing.Point(700, 415);
             this.txtDirectores.Name = "txtDirectores";
             this.txtDirectores.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;

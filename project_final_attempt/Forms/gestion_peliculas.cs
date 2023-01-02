@@ -17,7 +17,7 @@ namespace project_final_attempt.Forms
     {
         static Lista_personajes personajes = new Lista_personajes();
         Lista_peliculas pelis = new Lista_peliculas();
-        List<string> nombre_directores = new List<string>();
+        List<string> nombre_directores = new List<string> { "Pedro", "Pepe", "Abraham", "Pastor", "Felipe"};
         List<string> nombre_personajes = new List<string>();
         List<string> directores = new List<string>();
         List<Personaje> personajes_ingresados = personajes.personajes_desceralizados();
@@ -40,6 +40,7 @@ namespace project_final_attempt.Forms
         public gestion_peliculas()
         {
             InitializeComponent();
+            txtDirectores.DataSource = nombre_directores;
         }
 
 
@@ -52,6 +53,7 @@ namespace project_final_attempt.Forms
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             List<Personaje> personajes_pelicula = new List<Personaje>();
+            List<string> directores_pelicula = new List<string>();
             Movie Movie_aux = new Movie();
             if (!buscar(txtNombre.Text))
             {
@@ -79,7 +81,7 @@ namespace project_final_attempt.Forms
                 }
                 foreach (string y in txtDirectores.SelectedItems)
                 {
-                    nombre_directores.Add(y.ToString());
+                    directores_pelicula.Add(y.ToString());
                 }
 
                 var (validado, dialog) = validar_datos(txtNombre.Text, txtUniverso.Text, txtMonto.Value, nombre_directores.Count, personajes_pelicula.Count);
@@ -92,7 +94,7 @@ namespace project_final_attempt.Forms
                     Movie_aux._universe = txtUniverso.Text.ToString();
 
 
-                    Movie_aux._directors = nombre_directores;
+                    Movie_aux._directors = directores_pelicula;
                     Movie_aux._casting = personajes_pelicula;
 
                     pelis.movie_add(Movie_aux);
@@ -111,22 +113,23 @@ namespace project_final_attempt.Forms
         {
 
             List<string> Personajes = new List<string>();
-            txtPersonajes.DataSource = default;
+            List<string> Directores = new List<string>();
             if (buscar(txtBuscar.Text))
             {
                 foreach (Movie aux in pelis.descerealizar_pelicula())
                 {
                     if (aux._name == txtBuscar.Text)
                     {
-                        txtDirectores.Items.Clear();
                         txtNombre.Text = aux._name;
                         txtPresentacion.Value = Convert.ToDecimal(aux._year);
                         txtUniverso.Text = aux._universe;
                         txtMonto.Value = Convert.ToDecimal(aux._amount);
                         foreach (string director in aux._directors)
                         {
-                            txtDirectores.Items.Add(director);
+                            Directores.Add(director);
                         }
+                        txtDirectores.DataSource = null;
+                        txtDirectores.DataSource = Directores;
 
                         foreach (Personaje personajes_aux in aux._casting)
                         {
@@ -139,9 +142,8 @@ namespace project_final_attempt.Forms
                         btnEliminar.Enabled = true;
                         txtBuscar.Text = "";
                         txtPersonajes.ClearSelected();
+                        txtDirectores.ClearSelected();
                         desactivar();
-                        txtDirectores.Enabled = true;
-                        txtPersonajes.Enabled = true;
                     }
                 }
             }else { MessageBox.Show("No se encontró ni pinga"); }
@@ -164,6 +166,8 @@ namespace project_final_attempt.Forms
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            txtDirectores.DataSource = null;
+            txtDirectores.DataSource = nombre_directores;   
             btnEliminar.Enabled = false;
             btnEliminar.FillColor = Color.Silver;
             btnActualizar.Visible = true;
@@ -177,6 +181,7 @@ namespace project_final_attempt.Forms
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             List<Personaje> personajes_pelicula = new List<Personaje>();
+            List<string> directores_pelicula = new List<string>();
             Movie Movie_aux = new Movie();
 
             if (!buscar(txtNombre.Text))
@@ -204,7 +209,7 @@ namespace project_final_attempt.Forms
                 }
                 foreach (string y in txtDirectores.SelectedItems)
                 {
-                    nombre_directores.Add(y.ToString());
+                    directores_pelicula.Add(y.ToString());
                 }
 
                 var (validado, dialog) = validar_datos(txtNombre.Text, txtUniverso.Text, txtMonto.Value, nombre_directores.Count, personajes_pelicula.Count);
@@ -216,7 +221,7 @@ namespace project_final_attempt.Forms
                     Movie_aux._universe = txtUniverso.Text.ToString();
 
 
-                    Movie_aux._directors = nombre_directores;
+                    Movie_aux._directors = directores_pelicula;
                     Movie_aux._casting = personajes_pelicula;
 
                     pelis.movie_add(Movie_aux);
@@ -261,10 +266,11 @@ namespace project_final_attempt.Forms
         private void limpiar()
         {
             txtNombre.Text = "";
+            txtDirectores.DataSource = nombre_directores;
             txtMonto.Value = default;
             txtPersonajes.SelectedItem = default;
             txtDirectores.SelectedItem = default;
-            txtUniverso.Text = default;
+            txtUniverso.Text = "Marvel";
             txtPresentacion.Value = 1951;
         }
 

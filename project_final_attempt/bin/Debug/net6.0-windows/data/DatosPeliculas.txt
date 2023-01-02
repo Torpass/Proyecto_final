@@ -1,2 +1,2 @@
 <p>lukita</p><p>1956</p><d>|Abraham</d><p>5000</p><p>DC</p><c>pedro|27|secreta|Heroe|Hombre|DC|False|pedro.jpeg|ead7f803-62c8-46f2-99cf-293bb2007a5a</c>
-<p>N2</p><p>1956</p><d>|Felipe|Felipe</d><p>2000</p><p>Marvel</p><c>Nitzche|78|Místico|Villano|Desconocido|Marvel|False|atc-Nitzche.jpeg|81a7622b-421a-4297-86b7-c21ec77f19d7</c>
+<p>N1</p><p>2022</p><d>|Abraham</d><p>20000000</p><p>DC</p><c>prueba|24|secreta|Heroe|Hombre|DC|False|prueba.jpeg|5715e373-26b0-4f9f-811a-b96b443e58c4</c>
