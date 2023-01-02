@@ -228,9 +228,9 @@
         private Siticone.Desktop.UI.WinForms.SiticoneShadowForm siticoneShadowForm1;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneControlBox siticoneControlBox2;
-        private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnPersonajes;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnPeliculas;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
+        public Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
     }
 }

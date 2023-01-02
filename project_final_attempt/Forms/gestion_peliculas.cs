@@ -111,7 +111,7 @@ namespace project_final_attempt.Forms
         {
 
             List<string> Personajes = new List<string>();
-            txtPersonajes.DataSource =null;
+            txtPersonajes.DataSource = default;
             if (buscar(txtBuscar.Text))
             {
                 foreach (Movie aux in pelis.descerealizar_pelicula())
@@ -196,6 +196,7 @@ namespace project_final_attempt.Forms
                             Personaje_aux._activity = perosnaje_seleccionado._activity;
                             Personaje_aux._universe = perosnaje_seleccionado._universe.ToString();
                             Personaje_aux._img = perosnaje_seleccionado._img.ToString();
+                            Personaje_aux._id = perosnaje_seleccionado._id.ToString();
 
                             personajes_pelicula.Add(Personaje_aux);
                         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project_final_attempt.Forms;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -74,28 +75,36 @@ namespace project_final_attempt.Entities.Personajes
 
         public void garbage_colector()
         {
-            string[] ficheros = Directory.GetFiles(ruta_imagenes);
-            string[] nombres = new string[0];
-            List<string> list_nombres = new List<string>(nombres.ToList());
-            List<Personaje> garbaje = personajes_desceralizados();
-
-            foreach (Personaje x in garbaje)
+            try
             {
-                list_nombres.Add(x._img);
-            }
-            for (int i=0; i<ficheros.Length; i++)
-            {
-                ficheros[i] = ficheros[i].Replace(ruta_imagenes, "");
-            }
+                string[] ficheros = Directory.GetFiles(ruta_imagenes);
+                string[] nombres = new string[0];
+                List<string> list_nombres = new List<string>(nombres.ToList());
+                List<Personaje> garbaje = personajes_desceralizados();
 
-            IEnumerable<string> eliminar = ficheros.Except(list_nombres);
-
-            if (eliminar.Count() >= 1)
-            {
-                foreach (string x in eliminar)
+                foreach (Personaje x in garbaje)
                 {
-                    File.Delete(ruta_imagenes + x);
+                    list_nombres.Add(x._img);
                 }
+                for (int i = 0; i < ficheros.Length; i++)
+                {
+                    ficheros[i] = ficheros[i].Replace(ruta_imagenes, "");
+                }
+
+                IEnumerable<string> eliminar = ficheros.Except(list_nombres);
+
+                if (eliminar.Count() >= 1)
+                {
+                    foreach (string x in eliminar)
+                    {
+                        File.Delete(ruta_imagenes + x);
+                    }
+                }
+
+            }
+            catch (Exception x)
+            {
+               
             }
         }
 
@@ -173,4 +182,6 @@ namespace project_final_attempt.Entities.Personajes
         }
 
     }
+
+
 }

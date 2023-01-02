@@ -1,3 +1,2 @@
-<p>N1</p><p>1957</p><d>|Felipe</d><p>3000</p><p>Marvel</p><c>Locop2|27|Secreta|Antiheroe|Hombre|Marvel|False|atc-Locop2.jpeg|8c5ff797-5fc7-4a71-ab94-2515c81ebb3a</c><c>pedro|27|secreta|Heroe|Hombre|DC|False|atc-pedro.jpeg|ead7f803-62c8-46f2-99cf-293bb2007a5a</c>
-<p>N2</p><p>1956</p><d>|Felipe|Felipe|German</d><p>3000</p><p>Marvel</p><c>Locop2|27|Secreta|Antiheroe|Hombre|Marvel|False|atc-Locop2.jpeg|8c5ff797-5fc7-4a71-ab94-2515c81ebb3a</c>
-<p>lukita</p><p>1956</p><d>|Abraham</d><p>5000</p><p>DC</p><c>pedro|27|secreta|Heroe|Hombre|DC|False|atc-pedro.jpeg|ead7f803-62c8-46f2-99cf-293bb2007a5a</c>
+<p>lukita</p><p>1956</p><d>|Abraham</d><p>5000</p><p>DC</p><c>pedro|27|secreta|Heroe|Hombre|DC|False|pedro.jpeg|ead7f803-62c8-46f2-99cf-293bb2007a5a</c>
+<p>N2</p><p>1956</p><d>|Felipe|Felipe</d><p>2000</p><p>Marvel</p><c>Nitzche|78|Místico|Villano|Desconocido|Marvel|False|atc-Nitzche.jpeg|81a7622b-421a-4297-86b7-c21ec77f19d7</c>

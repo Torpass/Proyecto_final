@@ -33,7 +33,14 @@ namespace project_final_attempt
 
         private void siticonePictureBox1_Click(object sender, EventArgs e)
         {
-            Abrirform(new inicio());
+            try
+            {
+                Abrirform(new inicio());
+            }
+            catch (Exception x)
+            {
+                Abrirform(new inicio());
+            }
         }
 
         private void btnPeliculas_Click(object sender, EventArgs e)

@@ -136,6 +136,7 @@ namespace project_final_attempt.Forms
             btnRegresar.Enabled = false;
         }
 
+        
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
@@ -148,7 +149,7 @@ namespace project_final_attempt.Forms
             personaje_editado._identity = txtIdentidad.Text;
             personaje_editado._rol = txtActitud.Text;
             personaje_editado._sex = txtSexo.Text;
-            personaje_editado._img = $"atc-{txtNombre.Text}.jpeg";
+            personaje_editado._img = $"{txtNombre.Text}.jpeg";
             personaje_editado._id = ID.Text;
             ID.Text = "";
             ruta_aux = ruta_imagen + personaje_editado._img;
@@ -156,6 +157,20 @@ namespace project_final_attempt.Forms
             if (!File.Exists(ruta_aux))
             {
                 ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
+            }
+            else
+            {
+                try
+                {
+                    ruta_aux = ruta_imagen + "atc-" + personaje_editado._img;
+                    personaje_editado._img = "atc-" + personaje_editado._img;
+                    ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
+                }
+                catch(Exception x)
+                {
+                    Abrirform(new inicio());
+                }
+               
             }
 
             if (btnTrue.Checked == true) { personaje_editado._activity = true; } else { personaje_editado._activity = false; }

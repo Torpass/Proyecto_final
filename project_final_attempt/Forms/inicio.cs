@@ -1,5 +1,6 @@
 ﻿using project_final_attempt.Entities.Peliculas;
 using project_final_attempt.Entities.Personajes;
+using Siticone.Desktop.UI.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,8 @@ namespace project_final_attempt.Forms
     public partial class inicio : Form
     {
         Lista_personajes lista_Personajes = new Lista_personajes();
-        private void Abrirform(object form)
+
+        public void Abrirform(object form)
         {
             if (this.insidePanel.Controls.Count > 0)
                 this.insidePanel.Controls.Clear();
@@ -39,6 +41,7 @@ namespace project_final_attempt.Forms
         private void btnGestionPersonajes_Click(object sender, EventArgs e)
         {
             Abrirform(new gestion_personajes());
+            
         }
 
         private void btnGestionPeliculas_Click_1(object sender, EventArgs e)
