@@ -16,10 +16,12 @@ namespace project_final_attempt.Forms
     {
         static Lista_personajes personajes = new Lista_personajes();
         List<Personaje> personajes_agregados = personajes.personajes_desceralizados();
+
         List<Personaje> Personajes_hombre = new List<Personaje>();
         List<Personaje> Personajes_mujer = new List<Personaje>();
         List<Personaje> Personajes_desconocido = new List<Personaje>();
         List<Personaje> Personajes_alien = new List<Personaje>();
+
 
         public visualizar_personajes()
         {
@@ -27,6 +29,7 @@ namespace project_final_attempt.Forms
             mostrar_gridview(personajes_agregados);
             sexo_persoanje();
         }
+
 
         private void txtUniverso_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -67,6 +70,22 @@ namespace project_final_attempt.Forms
                 if (x._sex == "Alien") { Personajes_alien.Add(x); }
             }
         }
+
+
+        public List<Personaje> rango_edad(int edad_1, int edad_2)
+        {
+            List<Personaje> Personaje_rango = new List<Personaje>();
+
+            foreach (Personaje aux in personajes_agregados)
+            {
+                if (aux._age >= edad_1 && aux._age <= edad_2 || aux._age >= edad_2 && aux._age <= edad_1)
+                {
+                    Personaje_rango.Add(aux);
+                }
+            }
+            return Personaje_rango;
+        }
+
         
         public void mostrar_gridview(List<Personaje> mostrar)
         {
@@ -83,6 +102,15 @@ namespace project_final_attempt.Forms
             }
         }
 
-        
+        private void siticoneCircleButton1_Click(object sender, EventArgs e)
+        {
+            mostrar_gridview(personajes_agregados);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+           List<Personaje> rango = rango_edad(Convert.ToInt16(edad_1.Value), Convert.ToInt16(edad_2.Value));
+            mostrar_gridview(rango);
+        }
     }
 }
