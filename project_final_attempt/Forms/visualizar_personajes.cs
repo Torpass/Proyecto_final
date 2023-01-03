@@ -23,32 +23,26 @@ namespace project_final_attempt.Forms
         List<Personaje> Personajes_alien = new List<Personaje>();
 
 
+        List<Personaje> Personajes_heroe = new List<Personaje>();
+        List<Personaje> Personajes_antiheroe = new List<Personaje>();
+        List<Personaje> Personajes_villano = new List<Personaje>();
+
+
+
         public visualizar_personajes()
         {
             InitializeComponent();
             mostrar_gridview(personajes_agregados);
             sexo_persoanje();
+            rol_persoanje();
         }
 
 
         private void txtUniverso_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (txtBuscar.Text == "Edad")
-            {
-                ContenedorSexo.Visible = false;
-                ContenedorRol.Visible = false;
-                ContenedorEdades.Visible = true;
-            }if (txtBuscar.Text == "Tipo de Personaje")
-            {
-                ContenedorEdades.Visible = false;
-                ContenedorSexo.Visible = false;
-                ContenedorRol.Visible = true;
-            }if (txtBuscar.Text == "Sexo")
-            {
-                ContenedorRol.Visible = false;
-                ContenedorEdades.Visible = false;
-                ContenedorSexo.Visible = true;
-            }
+            if (txtBuscar.Text == "Edad") { ContenedorSexo.Visible = false; ContenedorRol.Visible = false; ContenedorEdades.Visible = true; }
+            if (txtBuscar.Text == "Tipo de Personaje") { ContenedorEdades.Visible = false; ContenedorSexo.Visible = false; ContenedorRol.Visible = true; }
+            if (txtBuscar.Text == "Sexo") { ContenedorRol.Visible = false; ContenedorEdades.Visible = false; ContenedorSexo.Visible = true; }
         }
 
 
@@ -60,6 +54,21 @@ namespace project_final_attempt.Forms
             if (btnSexo.Text == "Alien") { mostrar_gridview(Personajes_alien); }
         }
 
+       
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<Personaje> rango = rango_edad(Convert.ToInt16(edad_1.Value), Convert.ToInt16(edad_2.Value));
+            mostrar_gridview(rango);
+        }
+
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            mostrar_gridview(personajes_agregados);
+        }
+
+
         public void sexo_persoanje()
         {
             foreach (Personaje x in personajes_agregados)
@@ -68,6 +77,17 @@ namespace project_final_attempt.Forms
                 if (x._sex == "Mujer") { Personajes_mujer.Add(x); }
                 if (x._sex == "Desconocido") { Personajes_desconocido.Add(x); }
                 if (x._sex == "Alien") { Personajes_alien.Add(x); }
+            }
+        }
+
+        public void rol_persoanje()
+        {
+            foreach (Personaje x in personajes_agregados)
+            {
+                if (x._rol == "Heroe") { Personajes_heroe.Add(x); }
+                if (x._rol == "Antiheroe") { Personajes_antiheroe.Add(x); }
+                if (x._rol == "Villano") { Personajes_villano.Add(x); }
+                
             }
         }
 
@@ -86,7 +106,10 @@ namespace project_final_attempt.Forms
             return Personaje_rango;
         }
 
-        
+
+
+
+
         public void mostrar_gridview(List<Personaje> mostrar)
         {
             DataGridView.Rows.Clear();
@@ -102,15 +125,11 @@ namespace project_final_attempt.Forms
             }
         }
 
-        private void siticoneCircleButton1_Click(object sender, EventArgs e)
+        private void btnRol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mostrar_gridview(personajes_agregados);
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-           List<Personaje> rango = rango_edad(Convert.ToInt16(edad_1.Value), Convert.ToInt16(edad_2.Value));
-            mostrar_gridview(rango);
+            if (btnRol.Text == "Heroe") { mostrar_gridview(Personajes_heroe); }
+            if (btnRol.Text == "Antiheroe") { mostrar_gridview(Personajes_antiheroe); }
+            if (btnRol.Text == "Villano") { mostrar_gridview(Personajes_villano); }
         }
     }
 }

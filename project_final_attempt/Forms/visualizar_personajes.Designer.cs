@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(visualizar_personajes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneCircleButton1 = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
+            this.btnReiniciar = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.ContenedorSexo = new System.Windows.Forms.FlowLayoutPanel();
             this.siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.btnSexo = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
@@ -76,7 +76,7 @@
             // 
             // insidePanel
             // 
-            this.insidePanel.Controls.Add(this.siticoneCircleButton1);
+            this.insidePanel.Controls.Add(this.btnReiniciar);
             this.insidePanel.Controls.Add(this.ContenedorSexo);
             this.insidePanel.Controls.Add(this.ContenedorRol);
             this.insidePanel.Controls.Add(this.ContenedorEdades);
@@ -88,31 +88,31 @@
             this.insidePanel.Size = new System.Drawing.Size(1044, 725);
             this.insidePanel.TabIndex = 0;
             // 
-            // siticoneCircleButton1
+            // btnReiniciar
             // 
-            this.siticoneCircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.siticoneCircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneCircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneCircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneCircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneCircleButton1.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.siticoneCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneCircleButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneCircleButton1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.siticoneCircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneCircleButton1.Image")));
-            this.siticoneCircleButton1.ImageSize = new System.Drawing.Size(40, 40);
-            this.siticoneCircleButton1.Location = new System.Drawing.Point(968, 113);
-            this.siticoneCircleButton1.Name = "siticoneCircleButton1";
-            this.siticoneCircleButton1.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.siticoneCircleButton1.Size = new System.Drawing.Size(60, 60);
-            this.siticoneCircleButton1.TabIndex = 31;
-            this.siticoneCircleButton1.Click += new System.EventHandler(this.siticoneCircleButton1_Click);
+            this.btnReiniciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReiniciar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReiniciar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReiniciar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReiniciar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReiniciar.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnReiniciar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReiniciar.ForeColor = System.Drawing.Color.White;
+            this.btnReiniciar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnReiniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnReiniciar.Image")));
+            this.btnReiniciar.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnReiniciar.Location = new System.Drawing.Point(968, 113);
+            this.btnReiniciar.Name = "btnReiniciar";
+            this.btnReiniciar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.btnReiniciar.Size = new System.Drawing.Size(60, 60);
+            this.btnReiniciar.TabIndex = 31;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // ContenedorSexo
             // 
             this.ContenedorSexo.Controls.Add(this.siticoneHtmlLabel3);
             this.ContenedorSexo.Controls.Add(this.btnSexo);
-            this.ContenedorSexo.Location = new System.Drawing.Point(360, 97);
+            this.ContenedorSexo.Location = new System.Drawing.Point(21, 97);
             this.ContenedorSexo.Name = "ContenedorSexo";
             this.ContenedorSexo.Size = new System.Drawing.Size(249, 76);
             this.ContenedorSexo.TabIndex = 29;
@@ -160,7 +160,7 @@
             // 
             this.ContenedorRol.Controls.Add(this.siticoneHtmlLabel2);
             this.ContenedorRol.Controls.Add(this.btnRol);
-            this.ContenedorRol.Location = new System.Drawing.Point(615, 97);
+            this.ContenedorRol.Location = new System.Drawing.Point(23, 97);
             this.ContenedorRol.Name = "ContenedorRol";
             this.ContenedorRol.Size = new System.Drawing.Size(245, 76);
             this.ContenedorRol.TabIndex = 28;
@@ -195,12 +195,13 @@
             this.btnRol.ItemHeight = 30;
             this.btnRol.Items.AddRange(new object[] {
             "Heroe",
-            "AntiHeroe",
+            "Antiheroe",
             "Villano"});
             this.btnRol.Location = new System.Drawing.Point(3, 36);
             this.btnRol.Name = "btnRol";
             this.btnRol.Size = new System.Drawing.Size(188, 36);
             this.btnRol.TabIndex = 26;
+            this.btnRol.SelectedIndexChanged += new System.EventHandler(this.btnRol_SelectedIndexChanged);
             // 
             // ContenedorEdades
             // 
@@ -209,7 +210,7 @@
             this.ContenedorEdades.Controls.Add(this.edad_2);
             this.ContenedorEdades.Controls.Add(this.edad_1);
             this.ContenedorEdades.Controls.Add(this.siticoneHtmlLabel7);
-            this.ContenedorEdades.Location = new System.Drawing.Point(28, 97);
+            this.ContenedorEdades.Location = new System.Drawing.Point(25, 97);
             this.ContenedorEdades.Name = "ContenedorEdades";
             this.ContenedorEdades.Size = new System.Drawing.Size(326, 76);
             this.ContenedorEdades.TabIndex = 19;
@@ -298,7 +299,7 @@
             this.siticoneHtmlLabel7.Name = "siticoneHtmlLabel7";
             this.siticoneHtmlLabel7.Size = new System.Drawing.Size(310, 27);
             this.siticoneHtmlLabel7.TabIndex = 22;
-            this.siticoneHtmlLabel7.Text = "Buscar persoanjes con edades de entre";
+            this.siticoneHtmlLabel7.Text = "Buscar personajes con edades de entre";
             this.siticoneHtmlLabel7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtBuscar
@@ -320,7 +321,7 @@
             "Edad",
             "Tipo de Personaje",
             "Sexo"});
-            this.txtBuscar.Location = new System.Drawing.Point(28, 55);
+            this.txtBuscar.Location = new System.Drawing.Point(16, 51);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(254, 36);
             this.txtBuscar.TabIndex = 18;
@@ -331,7 +332,7 @@
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel5.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(28, 22);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(25, 18);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(143, 27);
             this.siticoneHtmlLabel5.TabIndex = 17;
@@ -340,16 +341,16 @@
             // 
             // DataGridView
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridView.ColumnHeadersHeight = 27;
             this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -359,14 +360,14 @@
             this.Actitud,
             this.Edad,
             this.colum_sexo});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView.Location = new System.Drawing.Point(16, 179);
             this.DataGridView.Name = "DataGridView";
@@ -484,6 +485,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox btnRol;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnBuscar;
-        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton siticoneCircleButton1;
+        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnReiniciar;
     }
 }

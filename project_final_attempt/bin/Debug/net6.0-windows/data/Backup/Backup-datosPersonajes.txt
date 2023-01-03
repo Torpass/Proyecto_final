@@ -1,4 +1,4 @@
 Locop2|27|Secreta|Antiheroe|Hombre|Marvel|False|atc-Locop2.jpeg|8c5ff797-5fc7-4a71-ab94-2515c81ebb3a
 Nitzche|78|Místico|Villano|Desconocido|Marvel|False|Nitzche.jpeg|81a7622b-421a-4297-86b7-c21ec77f19d7
 Batman|27|Secreta|Villano|Alien|Marvel|False|atc-Batman.jpeg|3532e4f5-4761-452f-a169-2cb92820efb7
-N2|26|Secreta|Antiheroe|Alien|Marvel|True|N2.jpeg|99425197-454b-41e8-a2a5-6129106be6b0
+N2|26|Secreta|Heroe|Alien|Marvel|True|atc-N2.jpeg|99425197-454b-41e8-a2a5-6129106be6b0
