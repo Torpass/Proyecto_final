@@ -67,7 +67,6 @@ namespace project_final_attempt.Entities.Personajes
                     break;
                 }
             }
-            
             File.Delete(ruta);
             serealizar_personaje();
         }
@@ -169,6 +168,7 @@ namespace project_final_attempt.Entities.Personajes
         {
             Personaje aux = new Personaje();
             string[] arreglo_personaje = cadena_personaje.Split('|');
+
             aux._name = Convert.ToString(arreglo_personaje[0]);
             aux._age = Convert.ToInt16(arreglo_personaje[1]);
             aux._identity = Convert.ToString(arreglo_personaje[2]);

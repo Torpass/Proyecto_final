@@ -203,6 +203,7 @@ namespace project_final_attempt.Entities.Peliculas
             {
                 datos_match[i] = datos_match[i].ToString().Replace("<p>", "").Replace("</p>", "");
             }
+
             movie_aux._name = datos_match[0];
             movie_aux._year = int.Parse(datos_match[1]);
             movie_aux._amount = int.Parse(datos_match[2]);

@@ -176,6 +176,7 @@ namespace project_final_attempt.Forms
             if (btnTrue.Checked == true) { personaje_editado._activity = true; } else { personaje_editado._activity = false; }
             personajes.heroe_create(personaje_editado);
             personajes.serealizar_personaje();
+
             btnEnviar.Enabled = true;
             btnEnviar.FillColor = Color.Red;
             btnActualizar.Enabled = false;

@@ -1,2 +1,4 @@
 <p>lukita</p><p>1956</p><d>|Abraham</d><p>5000</p><p>DC</p><c>pedro|27|secreta|Heroe|Hombre|DC|False|pedro.jpeg|ead7f803-62c8-46f2-99cf-293bb2007a5a</c>
 <p>N1</p><p>2022</p><d>|Abraham</d><p>20000000</p><p>DC</p><c>prueba|24|secreta|Heroe|Hombre|DC|False|prueba.jpeg|5715e373-26b0-4f9f-811a-b96b443e58c4</c>
+<p>Fantasticos</p><p>2021</p><d>|Felipe|Pedro|Pepe</d><p>2500000</p><p>Marvel</p><c>Locop2|27|Secreta|Antiheroe|Hombre|Marvel|False|atc-Locop2.jpeg|8c5ff797-5fc7-4a71-ab94-2515c81ebb3a</c><c>Nitzche|78|Místico|Villano|Desconocido|Marvel|False|Nitzche.jpeg|81a7622b-421a-4297-86b7-c21ec77f19d7</c>
+<p>prueba</p><p>2021</p><d>|Abraham|Pastor</d><p>3000</p><p>Marvel</p><c>Batman|27|Secreta|Villano|Alien|Marvel|False|atc-Batman.jpeg|3532e4f5-4761-452f-a169-2cb92820efb7</c>

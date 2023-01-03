@@ -282,7 +282,6 @@ namespace project_final_attempt.Forms
 
             foreach (Personaje aux in personajes_ingresados) { if (aux._universe == "Marvel") { personajes_marvel.Add(aux._name); }else { personajes_dc.Add(aux._name); } }
             if(txtUniverso.Text == "Marvel") { txtPersonajes.DataSource = personajes_marvel; }else { txtPersonajes.DataSource = personajes_dc; }
-
         }
 
 
@@ -305,12 +304,6 @@ namespace project_final_attempt.Forms
             txtDirectores.Enabled = false;
             txtUniverso.Enabled = false;
             txtNombre.Enabled = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            pelis.actualizar_personajes();
-            
         }
     }
 }

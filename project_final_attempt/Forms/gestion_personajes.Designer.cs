@@ -100,7 +100,7 @@
             // 
             this.ID.AutoSize = true;
             this.ID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.ID.Location = new System.Drawing.Point(110, 17);
+            this.ID.Location = new System.Drawing.Point(103, 30);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(0, 25);
             this.ID.TabIndex = 43;
