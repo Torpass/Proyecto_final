@@ -23,14 +23,14 @@ namespace project_final_attempt.Entities.Personajes
         }
 
 
-
-        //Añada un nuevo Personaje a la lista 
+        //Añade un nuevo Personaje a la lista 
         public void heroe_create(Personaje x)
         {
             heroes.Add(x);
         }
 
 
+        //descerealiza el archivo y hace una busqueda por el nombre del personaje, cuando encuenta una coincidencia, devuelve al personaje encontrado
         public Personaje buscar(string nombre_personaje)
         {
            List<Personaje> Persoanjes = personajes_desceralizados();
@@ -56,6 +56,7 @@ namespace project_final_attempt.Entities.Personajes
         }
 
 
+        //descerealiza el archivo en una lista de personajes, remueve el pesonaje por su nombre y vuelve a serealizar la lista actualizada (Sin el personaje eliminado)
         public void eliminar(string eliminar_personaje)
         {
             heroes = personajes_desceralizados();
@@ -72,6 +73,7 @@ namespace project_final_attempt.Entities.Personajes
         }
 
 
+        //Funcion para eliminar todas las imagenes residuales de los personajes
         public void garbage_colector()
         {
             try
@@ -106,7 +108,40 @@ namespace project_final_attempt.Entities.Personajes
                
             }
         }
+        public void garbage_colector(string ruta_imagenes, string ruta)
+        {
+            try
+            {
+                string[] ficheros = Directory.GetFiles(ruta_imagenes);
+                string[] nombres = new string[0];
+                List<string> list_nombres = new List<string>(nombres.ToList());
+                List<Personaje> garbaje = personajes_desceralizados(ruta);
 
+                foreach (Personaje x in garbaje)
+                {
+                    list_nombres.Add(x._img);
+                }
+                for (int i = 0; i < ficheros.Length; i++)
+                {
+                    ficheros[i] = ficheros[i].Replace(ruta_imagenes, "");
+                }
+
+                IEnumerable<string> eliminar = ficheros.Except(list_nombres);
+
+                if (eliminar.Count() >= 1)
+                {
+                    foreach (string x in eliminar)
+                    {
+                        File.Delete(ruta_imagenes + x);
+                    }
+                }
+
+            }
+            catch (Exception x)
+            {
+
+            }
+        }
 
         //El objeto de tipo Personaje enviado por el form, lo recibe y lo convierte en un string para ser guardado en un archivo de texto
         public void serealizar_personaje()
@@ -161,6 +196,25 @@ namespace project_final_attempt.Entities.Personajes
             lector.Close();
             return desceralizados;
         }
+        public List<Personaje> personajes_desceralizados(string ruta)
+        {
+            List<Personaje> desceralizados = new List<Personaje>();
+            FileStream acceso = new FileStream(ruta, FileMode.OpenOrCreate, FileAccess.Read);
+            StreamReader lector = new StreamReader(acceso);
+
+            string linea = lector.ReadLine();
+            if (linea != "")
+            {
+                while (linea != null)
+                {
+                    desceralizados.Add(Leer(linea));
+                    linea = lector.ReadLine();
+                }
+                lector.Close();
+            }
+            lector.Close();
+            return desceralizados;
+        }//Sobrecarga para descerealizar el backup
 
 
         //La linea leida por el ReadLine la separa por '|' y los guarda en un arreglo, donde cada posición va a ser un dato del personaje
@@ -182,6 +236,4 @@ namespace project_final_attempt.Entities.Personajes
         }
 
     }
-
-
 }

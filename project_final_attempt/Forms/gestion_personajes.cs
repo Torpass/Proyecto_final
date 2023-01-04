@@ -19,8 +19,7 @@ namespace project_final_attempt.Forms
     public partial class gestion_personajes : Form
     {
         private String ruta_imagen = @".\data\imagenes\";
-        private String ruta_imagen_eliminar = @".\data\imagenes\";
-        Lista_peliculas peliculas = new Lista_peliculas();  
+        Lista_peliculas peliculas = new Lista_peliculas();      
 
         private Lista_personajes personajes = new Lista_personajes();
 
@@ -89,7 +88,7 @@ namespace project_final_attempt.Forms
                     limpiar();
                 }
             }
-            else { MessageBox.Show("No puedes ingresar el mismo personajes dos veces"); } //mejorar
+            else { MessageBox.Show("No puedes agregar dos personajes iguales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning); } 
 
         }
 
@@ -120,9 +119,9 @@ namespace project_final_attempt.Forms
                 txtBuscar.Text = "";
             } else
             {
-                MessageBox.Show("No se encontró ni pinga");  //mejorar
+                MessageBox.Show("No se ha encontrado ningun personaje con el nombre ingresado, por favor intente de nuevo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+
 
         }
 
@@ -193,20 +192,24 @@ namespace project_final_attempt.Forms
                     peliculas.actualizar_personajes();
                 }
             }
-            else { MessageBox.Show("No puedes agregar dos personajes iguales"); }
+            else { MessageBox.Show("No puedes agregar dos personajes iguales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
-        { 
-            personajes.eliminar(txtNombre.Text);
-            limpiar();
-            MessageBox.Show("Personaje eliminado");
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnEnviar.Enabled = true;
-            btnEnviar.FillColor = Color.Red;
-            peliculas.actualizar_personajes();
-            activar();
+        {
+            if (MessageBox.Show("¿Seguro que deseas eliminar a esta pelicula de forma permanente?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                personajes.eliminar(txtNombre.Text);
+                limpiar();
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnEnviar.Enabled = true;
+                btnEnviar.FillColor = Color.Red;
+                peliculas.actualizar_personajes();
+                activar();
+                MessageBox.Show("El personaje se ha eliminado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
 
 
@@ -227,15 +230,15 @@ namespace project_final_attempt.Forms
 
         public (bool, DialogResult) validar_datos(string nombre, int edad, string identidad, string sexo, string universo, string actitud, Image imagen)
         {
-            if (nombre == "") { return (false, MessageBox.Show("El nombre erroneo, ingrese nuevamente"));  }
-            if ( edad <= 0) { return (false, MessageBox.Show("La edad no puede ser menor o igual a cero")); }
-            if ( identidad == "") { return (false, MessageBox.Show("Ingrese la identidad del personaje")); }
-            if ( sexo == "") { return (false, MessageBox.Show("Ingrese el sexo del personaje")); }
-            if ( universo == "") { return (false, MessageBox.Show("Ingrese el universo al cual pertenece el personaje")); }
-            if ( actitud == "") { return (false, MessageBox.Show("Ingrese la actitud del personaje")); }
-            if ( imagen == null) { return (false, MessageBox.Show("Ingrese una imagen para identificar al personaje")); }
+            if (nombre == "") { return (false, MessageBox.Show("Nombre erroneo, ingrese nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation));  }
+            if ( edad <= 0) { return (false, MessageBox.Show("La edad no puede ser menor o igual a cero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)); }
+            if ( identidad == "") { return (false, MessageBox.Show("Ingrese la identidad del personaje", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)); }
+            if ( sexo == "") { return (false, MessageBox.Show("Ingrese el sexo del personaje", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)); }
+            if ( universo == "") { return (false, MessageBox.Show("Ingrese el universo al cual pertenece el personaje", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)); }
+            if ( actitud == "") { return (false, MessageBox.Show("Ingrese la actitud del personaje", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)); }
+            if ( imagen == null) { return (false, MessageBox.Show("Ingrese una imagen para identificar al personaje", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)); }
 
-            else { return (true, MessageBox.Show("Datos guardados correctamente en el archivo", "Mensaje"));  }
+            else { return (true, MessageBox.Show("Datos guardados correctamente en el archivo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information));  }
         }
 
         private void activar()

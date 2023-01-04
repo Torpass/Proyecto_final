@@ -1,1 +1,2 @@
-negro|27|secreta|Antiheroe|Hombre|Marvel|False|negro.jpeg|6ec73797-6840-42ef-b8cb-efeab09b9238
+ola|32|secreta|Heroe|Hombre|DC|True|ola.jpeg|033f1032-ffcb-41d3-91a3-8af38d73a626
+yefry|3|asd|Antiheroe|Hombre|DC|True|yefry.jpeg|732390a5-0234-45d2-a567-e7a434f3d0ee

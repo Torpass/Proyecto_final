@@ -38,6 +38,7 @@
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.siticoneCircleButton1 = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.btnRegresar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.ContenedorYear = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnBuscarYear = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
@@ -46,12 +47,12 @@
             this.year_1 = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
             this.siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.btnReiniciar = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
-            this.ContenedorPersonaje = new System.Windows.Forms.FlowLayoutPanel();
-            this.siticoneHtmlLabel2 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.btnPersonaje = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.ContenedorUniverso = new System.Windows.Forms.FlowLayoutPanel();
             this.siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.btnUniverso = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            this.ContenedorPersonaje = new System.Windows.Forms.FlowLayoutPanel();
+            this.siticoneHtmlLabel2 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.btnPersonaje = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.ContenedorRecaudo = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnBuscarMonto = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.txtMonto = new Siticone.Desktop.UI.WinForms.SiticoneNumericUpDown();
@@ -70,8 +71,8 @@
             this.ContenedorYear.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.year_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.year_1)).BeginInit();
-            this.ContenedorPersonaje.SuspendLayout();
             this.ContenedorUniverso.SuspendLayout();
+            this.ContenedorPersonaje.SuspendLayout();
             this.ContenedorRecaudo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).BeginInit();
@@ -96,11 +97,12 @@
             // siticonePanel1
             // 
             this.siticonePanel1.AutoSize = true;
+            this.siticonePanel1.Controls.Add(this.siticoneCircleButton1);
             this.siticonePanel1.Controls.Add(this.btnRegresar);
             this.siticonePanel1.Controls.Add(this.ContenedorYear);
             this.siticonePanel1.Controls.Add(this.btnReiniciar);
-            this.siticonePanel1.Controls.Add(this.ContenedorPersonaje);
             this.siticonePanel1.Controls.Add(this.ContenedorUniverso);
+            this.siticonePanel1.Controls.Add(this.ContenedorPersonaje);
             this.siticonePanel1.Controls.Add(this.ContenedorRecaudo);
             this.siticonePanel1.Controls.Add(this.txtBuscar);
             this.siticonePanel1.Controls.Add(this.siticoneHtmlLabel5);
@@ -109,6 +111,27 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(1044, 727);
             this.siticonePanel1.TabIndex = 2;
+            // 
+            // siticoneCircleButton1
+            // 
+            this.siticoneCircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.siticoneCircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneCircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneCircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneCircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneCircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.siticoneCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneCircleButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneCircleButton1.HoverState.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.siticoneCircleButton1.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.siticoneCircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneCircleButton1.Image")));
+            this.siticoneCircleButton1.ImageSize = new System.Drawing.Size(50, 50);
+            this.siticoneCircleButton1.Location = new System.Drawing.Point(951, 13);
+            this.siticoneCircleButton1.Name = "siticoneCircleButton1";
+            this.siticoneCircleButton1.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.siticoneCircleButton1.Size = new System.Drawing.Size(73, 72);
+            this.siticoneCircleButton1.TabIndex = 35;
+            this.siticoneCircleButton1.Click += new System.EventHandler(this.siticoneCircleButton1_Click);
             // 
             // btnRegresar
             // 
@@ -120,10 +143,10 @@
             this.btnRegresar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.btnRegresar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRegresar.ForeColor = System.Drawing.Color.White;
-            this.btnRegresar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnRegresar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnRegresar.Location = new System.Drawing.Point(955, 10);
+            this.btnRegresar.Location = new System.Drawing.Point(21, 0);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(69, 85);
             this.btnRegresar.TabIndex = 34;
@@ -136,7 +159,7 @@
             this.ContenedorYear.Controls.Add(this.year_2);
             this.ContenedorYear.Controls.Add(this.year_1);
             this.ContenedorYear.Controls.Add(this.siticoneHtmlLabel4);
-            this.ContenedorYear.Location = new System.Drawing.Point(293, 61);
+            this.ContenedorYear.Location = new System.Drawing.Point(291, 60);
             this.ContenedorYear.Name = "ContenedorYear";
             this.ContenedorYear.Size = new System.Drawing.Size(297, 77);
             this.ContenedorYear.TabIndex = 32;
@@ -258,66 +281,23 @@
             this.btnReiniciar.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnReiniciar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnReiniciar.ForeColor = System.Drawing.Color.White;
-            this.btnReiniciar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnReiniciar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btnReiniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnReiniciar.Image")));
-            this.btnReiniciar.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnReiniciar.Location = new System.Drawing.Point(964, 112);
+            this.btnReiniciar.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnReiniciar.Location = new System.Drawing.Point(951, 100);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.btnReiniciar.Size = new System.Drawing.Size(60, 60);
+            this.btnReiniciar.Size = new System.Drawing.Size(73, 72);
             this.btnReiniciar.TabIndex = 31;
             this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
-            // 
-            // ContenedorPersonaje
-            // 
-            this.ContenedorPersonaje.Controls.Add(this.siticoneHtmlLabel2);
-            this.ContenedorPersonaje.Controls.Add(this.btnPersonaje);
-            this.ContenedorPersonaje.Location = new System.Drawing.Point(291, 55);
-            this.ContenedorPersonaje.Name = "ContenedorPersonaje";
-            this.ContenedorPersonaje.Size = new System.Drawing.Size(309, 83);
-            this.ContenedorPersonaje.TabIndex = 30;
-            this.ContenedorPersonaje.Visible = false;
-            // 
-            // siticoneHtmlLabel2
-            // 
-            this.siticoneHtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneHtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(3, 3);
-            this.siticoneHtmlLabel2.Name = "siticoneHtmlLabel2";
-            this.siticoneHtmlLabel2.Size = new System.Drawing.Size(241, 27);
-            this.siticoneHtmlLabel2.TabIndex = 29;
-            this.siticoneHtmlLabel2.Text = "Buscar peliculas por personaje\r\n\r\n";
-            this.siticoneHtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnPersonaje
-            // 
-            this.btnPersonaje.BackColor = System.Drawing.Color.Transparent;
-            this.btnPersonaje.BorderColor = System.Drawing.Color.Transparent;
-            this.btnPersonaje.BorderRadius = 15;
-            this.btnPersonaje.BorderThickness = 0;
-            this.btnPersonaje.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.btnPersonaje.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.btnPersonaje.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
-            this.btnPersonaje.FocusedColor = System.Drawing.Color.Transparent;
-            this.btnPersonaje.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnPersonaje.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPersonaje.ForeColor = System.Drawing.Color.Gray;
-            this.btnPersonaje.HoverState.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnPersonaje.ItemHeight = 30;
-            this.btnPersonaje.Location = new System.Drawing.Point(3, 36);
-            this.btnPersonaje.Name = "btnPersonaje";
-            this.btnPersonaje.Size = new System.Drawing.Size(294, 36);
-            this.btnPersonaje.TabIndex = 33;
-            this.btnPersonaje.SelectedIndexChanged += new System.EventHandler(this.btnPersonaje_SelectedIndexChanged);
             // 
             // ContenedorUniverso
             // 
             this.ContenedorUniverso.Controls.Add(this.siticoneHtmlLabel3);
             this.ContenedorUniverso.Controls.Add(this.btnUniverso);
-            this.ContenedorUniverso.Location = new System.Drawing.Point(293, 55);
+            this.ContenedorUniverso.Location = new System.Drawing.Point(294, 57);
             this.ContenedorUniverso.Name = "ContenedorUniverso";
-            this.ContenedorUniverso.Size = new System.Drawing.Size(297, 77);
+            this.ContenedorUniverso.Size = new System.Drawing.Size(297, 115);
             this.ContenedorUniverso.TabIndex = 29;
             this.ContenedorUniverso.Visible = false;
             // 
@@ -356,6 +336,49 @@
             this.btnUniverso.Size = new System.Drawing.Size(188, 36);
             this.btnUniverso.TabIndex = 28;
             this.btnUniverso.SelectedIndexChanged += new System.EventHandler(this.btnUniverso_SelectedIndexChanged);
+            // 
+            // ContenedorPersonaje
+            // 
+            this.ContenedorPersonaje.Controls.Add(this.siticoneHtmlLabel2);
+            this.ContenedorPersonaje.Controls.Add(this.btnPersonaje);
+            this.ContenedorPersonaje.Location = new System.Drawing.Point(294, 55);
+            this.ContenedorPersonaje.Name = "ContenedorPersonaje";
+            this.ContenedorPersonaje.Size = new System.Drawing.Size(309, 117);
+            this.ContenedorPersonaje.TabIndex = 30;
+            this.ContenedorPersonaje.Visible = false;
+            // 
+            // siticoneHtmlLabel2
+            // 
+            this.siticoneHtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneHtmlLabel2.ForeColor = System.Drawing.Color.White;
+            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(3, 3);
+            this.siticoneHtmlLabel2.Name = "siticoneHtmlLabel2";
+            this.siticoneHtmlLabel2.Size = new System.Drawing.Size(241, 27);
+            this.siticoneHtmlLabel2.TabIndex = 29;
+            this.siticoneHtmlLabel2.Text = "Buscar peliculas por personaje\r\n\r\n";
+            this.siticoneHtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnPersonaje
+            // 
+            this.btnPersonaje.BackColor = System.Drawing.Color.Transparent;
+            this.btnPersonaje.BorderColor = System.Drawing.Color.Transparent;
+            this.btnPersonaje.BorderRadius = 15;
+            this.btnPersonaje.BorderThickness = 0;
+            this.btnPersonaje.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.btnPersonaje.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.btnPersonaje.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
+            this.btnPersonaje.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnPersonaje.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnPersonaje.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPersonaje.ForeColor = System.Drawing.Color.Gray;
+            this.btnPersonaje.HoverState.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnPersonaje.ItemHeight = 30;
+            this.btnPersonaje.Location = new System.Drawing.Point(3, 36);
+            this.btnPersonaje.Name = "btnPersonaje";
+            this.btnPersonaje.Size = new System.Drawing.Size(294, 36);
+            this.btnPersonaje.TabIndex = 33;
+            this.btnPersonaje.SelectedIndexChanged += new System.EventHandler(this.btnPersonaje_SelectedIndexChanged);
             // 
             // ContenedorRecaudo
             // 
@@ -446,7 +469,7 @@
             "Universo",
             "Monto recaudado",
             "Personaje"});
-            this.txtBuscar.Location = new System.Drawing.Point(11, 89);
+            this.txtBuscar.Location = new System.Drawing.Point(11, 124);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(254, 36);
             this.txtBuscar.TabIndex = 18;
@@ -457,7 +480,7 @@
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel5.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(21, 55);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(21, 91);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(125, 27);
             this.siticoneHtmlLabel5.TabIndex = 17;
@@ -611,10 +634,10 @@
             this.ContenedorYear.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.year_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.year_1)).EndInit();
-            this.ContenedorPersonaje.ResumeLayout(false);
-            this.ContenedorPersonaje.PerformLayout();
             this.ContenedorUniverso.ResumeLayout(false);
             this.ContenedorUniverso.PerformLayout();
+            this.ContenedorPersonaje.ResumeLayout(false);
+            this.ContenedorPersonaje.PerformLayout();
             this.ContenedorRecaudo.ResumeLayout(false);
             this.ContenedorRecaudo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonto)).EndInit();
@@ -655,5 +678,6 @@
         private DataGridViewTextBoxColumn Personajes;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox btnPersonaje;
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnRegresar;
+        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton siticoneCircleButton1;
     }
 }

@@ -28,17 +28,32 @@ namespace project_final_attempt.Entities.Peliculas
         
         public void serealizar_pelicula()
         {
-            FileStream metodo = new FileStream(ruta, FileMode.Append, FileAccess.Write);
-            StreamWriter writer = new StreamWriter(metodo);
-
-            foreach (Movie aux in movies)
+            if (File.Exists(ruta))
             {
-                writer.WriteLine(write(aux));
-            }
-            movies.Clear();
-            writer.Close();
-        }
+                FileStream metodo = new FileStream(ruta, FileMode.Append, FileAccess.Write);
+                StreamWriter writer = new StreamWriter(metodo);
 
+                foreach (Movie aux in movies)
+                {
+                    writer.WriteLine(write(aux));
+                }
+                movies.Clear();
+                writer.Close();
+            }
+            else
+            {
+                FileStream metodo = new FileStream(ruta, FileMode.Create, FileAccess.Write);
+                StreamWriter writer = new StreamWriter(metodo);
+
+                foreach (Movie aux in movies)
+                {
+                    writer.WriteLine(write(aux));
+                }
+                movies.Clear();
+                writer.Close();
+            }
+        }
+     
 
         public void eliminar(string eliminar_personaje)
         {
@@ -63,14 +78,12 @@ namespace project_final_attempt.Entities.Peliculas
             movies = descerealizar_pelicula();
 
             Lista_personajes personajes = new Lista_personajes();
-            List<Personaje> personajes_nuevos = new List<Personaje>();
             List<Personaje> persoanjes_actuales = personajes.personajes_desceralizados();
 
             foreach (Movie j in movies)
             {
                 foreach (Personaje actual in persoanjes_actuales)
                 {
-                    //IEnumerable<Personaje> eliminar = j._casting.Except(persoanjes_actuales);
                     foreach (Personaje viejo in j._casting)
                     {
                         if (viejo._id == actual._id)
@@ -181,6 +194,20 @@ namespace project_final_attempt.Entities.Peliculas
             lector.Close();
             return peliculas_descerealizadas;
         }
+        public List<Movie> descerealizar_pelicula(string ruta)
+        {
+            List<Movie> peliculas_descerealizadas = new List<Movie>();
+            FileStream acceso = new FileStream(ruta, FileMode.OpenOrCreate, FileAccess.Read);
+            StreamReader lector = new StreamReader(acceso);
+            string cadena = lector.ReadLine();
+            while (cadena != null)
+            {
+                peliculas_descerealizadas.Add(leer_pelicula(cadena));
+                cadena = lector.ReadLine();
+            }
+            lector.Close();
+            return peliculas_descerealizadas;
+        }
 
         private Movie leer_pelicula(string cadena_movie)
         {
@@ -267,9 +294,5 @@ namespace project_final_attempt.Entities.Peliculas
             }
             return director;
         }
-
-
-
-
     }
 }

@@ -17,6 +17,7 @@ namespace project_final_attempt
             fh.Show();
         }
 
+
         private void Abrirform_(object form)
         {
             if (this.insidePanel.Controls.Count > 0)
@@ -45,19 +46,6 @@ namespace project_final_attempt
         }
 
 
-        private void siticonePictureBox1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Abrirform(new inicio());
-            }
-            catch (Exception x)
-            {
-                Abrirform(new inicio());
-            }
-        }
-
-
         private void btnPeliculas_Click(object sender, EventArgs e)
         {
             Abrirform_(new visualizar_peliculas());
@@ -78,9 +66,25 @@ namespace project_final_attempt
                 }
                 foreach (var file in Directory.GetFiles(path_imagenes))
                 {
-                    File.Copy(file, Path.Combine(path_backup, Path.GetFileName(file)), true);
+                    try
+                    {
+                        File.Copy(file, Path.Combine(path_backup, Path.GetFileName(file)), true);
+                    }
+                    catch (System.Exception x) { Application.Exit(); }
                 }
                 Application.Exit();
+            }
+        }
+
+        private void siticonePictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Abrirform_(new inicio());
+            }
+            catch
+            {
+                Abrirform_(new inicio());
             }
         }
     }   

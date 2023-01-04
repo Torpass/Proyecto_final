@@ -58,13 +58,13 @@
             this.LeftPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
             this.LeftPanel.Location = new System.Drawing.Point(0, 0);
             this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(221, 800);
+            this.LeftPanel.Size = new System.Drawing.Size(221, 740);
             this.LeftPanel.TabIndex = 0;
             // 
             // siticoneSeparator1
             // 
             this.siticoneSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
-            this.siticoneSeparator1.Location = new System.Drawing.Point(11, 251);
+            this.siticoneSeparator1.Location = new System.Drawing.Point(11, 252);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(200, 15);
             this.siticoneSeparator1.TabIndex = 0;
@@ -93,7 +93,7 @@
             this.btnPersonajes.Name = "btnPersonajes";
             this.btnPersonajes.PressedColor = System.Drawing.Color.DeepSkyBlue;
             this.btnPersonajes.PressedDepth = 10;
-            this.btnPersonajes.Size = new System.Drawing.Size(221, 239);
+            this.btnPersonajes.Size = new System.Drawing.Size(221, 238);
             this.btnPersonajes.TabIndex = 1;
             this.btnPersonajes.Click += new System.EventHandler(this.btnPersonajes_Click);
             // 
@@ -116,11 +116,11 @@
             this.btnPeliculas.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btnPeliculas.Image = ((System.Drawing.Image)(resources.GetObject("btnPeliculas.Image")));
             this.btnPeliculas.ImageSize = new System.Drawing.Size(125, 125);
-            this.btnPeliculas.Location = new System.Drawing.Point(0, 529);
+            this.btnPeliculas.Location = new System.Drawing.Point(0, 528);
             this.btnPeliculas.Name = "btnPeliculas";
             this.btnPeliculas.PressedColor = System.Drawing.Color.DeepSkyBlue;
             this.btnPeliculas.PressedDepth = 10;
-            this.btnPeliculas.Size = new System.Drawing.Size(221, 239);
+            this.btnPeliculas.Size = new System.Drawing.Size(221, 238);
             this.btnPeliculas.TabIndex = 0;
             this.btnPeliculas.Click += new System.EventHandler(this.btnPeliculas_Click);
             // 
@@ -130,9 +130,9 @@
             this.siticonePictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.siticonePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticonePictureBox1.Image")));
             this.siticonePictureBox1.ImageRotate = 0F;
-            this.siticonePictureBox1.Location = new System.Drawing.Point(-5, 11);
+            this.siticonePictureBox1.Location = new System.Drawing.Point(-6, 12);
             this.siticonePictureBox1.Name = "siticonePictureBox1";
-            this.siticonePictureBox1.Size = new System.Drawing.Size(235, 236);
+            this.siticonePictureBox1.Size = new System.Drawing.Size(234, 237);
             this.siticonePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.siticonePictureBox1.TabIndex = 0;
             this.siticonePictureBox1.TabStop = false;
@@ -162,9 +162,9 @@
             this.btnCerrar.HoverState.FillColor = System.Drawing.Color.Red;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnCerrar.Location = new System.Drawing.Point(938, -1);
+            this.btnCerrar.Location = new System.Drawing.Point(939, -2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(68, 76);
+            this.btnCerrar.Size = new System.Drawing.Size(69, 77);
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
@@ -176,9 +176,9 @@
             this.siticoneControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
             this.siticoneControlBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneControlBox2.IconColor = System.Drawing.Color.White;
-            this.siticoneControlBox2.Location = new System.Drawing.Point(864, -1);
+            this.siticoneControlBox2.Location = new System.Drawing.Point(864, -2);
             this.siticoneControlBox2.Name = "siticoneControlBox2";
-            this.siticoneControlBox2.Size = new System.Drawing.Size(68, 78);
+            this.siticoneControlBox2.Size = new System.Drawing.Size(69, 78);
             this.siticoneControlBox2.TabIndex = 1;
             // 
             // insidePanel
@@ -187,7 +187,7 @@
             this.insidePanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
             this.insidePanel.Location = new System.Drawing.Point(221, 75);
             this.insidePanel.Name = "insidePanel";
-            this.insidePanel.Size = new System.Drawing.Size(1039, 725);
+            this.insidePanel.Size = new System.Drawing.Size(1039, 665);
             this.insidePanel.TabIndex = 2;
             // 
             // siticoneDragControl1
@@ -206,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 800);
+            this.ClientSize = new System.Drawing.Size(1260, 740);
             this.Controls.Add(this.insidePanel);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftPanel);

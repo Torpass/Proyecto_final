@@ -38,6 +38,7 @@ namespace project_final_attempt.Forms
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
             mostrar_gridview(peliculas_agregadas);
+            txtBuscar.Enabled = true;
         }
 
 
@@ -91,6 +92,7 @@ namespace project_final_attempt.Forms
                 DataGridView.Rows[rowindex].Cells[5].Value = linea_personajes(agregar);
             }
         }
+
 
         private List<Movie> movie_personaje(string nombre_personaje)
         {
@@ -181,10 +183,12 @@ namespace project_final_attempt.Forms
             return nombre_personajes;
         }
 
+
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             Abrirform(new inicio());
         }
+
 
         private void Abrirform(object form)
         {
@@ -197,6 +201,19 @@ namespace project_final_attempt.Forms
             this.insidePanel.Controls.Add(fh);
 
             fh.Show();
+        }
+
+        private void siticoneCircleButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea cargar la copia de seguridad anterior para visualizar los datos de las Peliculas?","Mensaje", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)==DialogResult.OK)
+            {
+                List<Movie> backup_peliculas = Peliculas.descerealizar_pelicula(@".\data\Backup\backup-datosPeliculas.txt");
+                if (backup_peliculas.Count() > 0)
+                {
+                    mostrar_gridview(backup_peliculas);
+                    txtBuscar.Enabled = false;
+                }else { MessageBox.Show("No se ha registrado ningun Backup reciente","Error",MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
         }
     }
 }

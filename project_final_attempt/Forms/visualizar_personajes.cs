@@ -66,6 +66,8 @@ namespace project_final_attempt.Forms
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
             mostrar_gridview(personajes_agregados);
+            txtBuscar.Enabled = true;
+
         }
 
 
@@ -107,9 +109,6 @@ namespace project_final_attempt.Forms
         }
 
 
-
-
-
         public void mostrar_gridview(List<Personaje> mostrar)
         {
             DataGridView.Rows.Clear();
@@ -127,6 +126,26 @@ namespace project_final_attempt.Forms
                 catch (Exception x) { DataGridView.Rows[rowindex].Cells[6].Value = null; }
             }
         }
+
+
+        public void mostrar_gridview(List<Personaje> mostrar, string rutaimagen)
+        {
+            DataGridView.Rows.Clear();
+            DataGridView.RowTemplate.Height = 200;
+            foreach (Personaje agregar in mostrar)
+            {
+                int rowindex = DataGridView.Rows.Add();
+                DataGridView.Rows[rowindex].Cells[0].Value = agregar._name.ToString();
+                DataGridView.Rows[rowindex].Cells[1].Value = agregar._identity.ToString();
+                DataGridView.Rows[rowindex].Cells[2].Value = agregar._universe.ToString();
+                DataGridView.Rows[rowindex].Cells[3].Value = agregar._rol.ToString();
+                DataGridView.Rows[rowindex].Cells[4].Value = agregar._age.ToString();
+                DataGridView.Rows[rowindex].Cells[5].Value = agregar._sex.ToString();
+                try { DataGridView.Rows[rowindex].Cells[6].Value = Image.FromFile(rutaimagen + agregar._img); }
+                catch (Exception x) { DataGridView.Rows[rowindex].Cells[6].Value = null; }
+            }
+        }
+
 
         private void btnRol_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -151,6 +170,20 @@ namespace project_final_attempt.Forms
             this.insidePanel.Controls.Add(fh);
 
             fh.Show();
+        }
+
+        private void siticoneCircleButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea cargar la copia de seguridad anterior para visualizar los datos de los personajes?", "Mensaje", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                List<Personaje> backup_personajes = personajes.personajes_desceralizados(@".\data\Backup\backup-datosPersonajes.txt");
+                if (backup_personajes.Count() > 0)
+                {
+                    mostrar_gridview(backup_personajes, @".\data\Backup\Backup-imagenes\");
+                    txtBuscar.Enabled = false;
+                }
+                else { MessageBox.Show("No se ha registrado ningun Backup reciente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
         }
     }
 }
