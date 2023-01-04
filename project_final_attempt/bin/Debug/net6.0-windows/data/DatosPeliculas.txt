@@ -1,5 +1,4 @@
-<p>prueba</p><p>1951</p><d>|Abraham</d><p>5000</p><p>DC</p><c>ñame|5|asdasd|Antiheroe|Hombre|DC|False|ñame.jpeg|1402351c-3799-4d6f-ade3-e5e68293b6d0</c><c>Mono|4|sd|Heroe|Hombre|DC|True|Mono.jpeg|c593351a-9d77-4e5a-8332-8f0f4295bf13</c>
-<p>prueba2</p><p>1957</p><d>|Abraham</d><p>5000</p><p>Marvel</p><c>if|3|sd|Antiheroe|Hombre|Marvel|False|if.jpeg|3165df8e-62f7-44cb-ad63-ee8d6bc6f888</c><c>negro|27|secreta|Antiheroe|Hombre|Marvel|False|negro.jpeg|6ec73797-6840-42ef-b8cb-efeab09b9238</c>
-<p>prueba3</p><p>1956</p><d>|Abraham</d><p>5000</p><p>DC</p><c>Mono|4|sd|Heroe|Hombre|DC|True|Mono.jpeg|c593351a-9d77-4e5a-8332-8f0f4295bf13</c>
-<p>n3</p><p>1951</p><d>|Abraham</d><p>3000</p><p>Marvel</p><c>reloj|4|sdasd|Antiheroe|Hombre|Marvel|False|reloj.jpeg|6b19a31c-3cbb-4119-a310-1cebc5a1ee48</c>
-<p>n4</p><p>1951</p><d>|Abraham</d><p>5000</p><p>Marvel</p><c>if|3|sd|Antiheroe|Hombre|Marvel|False|if.jpeg|3165df8e-62f7-44cb-ad63-ee8d6bc6f888</c><c>reloj|4|sdasd|Antiheroe|Hombre|Marvel|False|reloj.jpeg|6b19a31c-3cbb-4119-a310-1cebc5a1ee48</c>
+<p>prueba</p><p>1951</p><d>|Abraham</d><p>5000</p><p>Marvel</p><c>burgues|4|sdasd|Antiheroe|Hombre|Marvel|False|burgues.jpeg|6b19a31c-3cbb-4119-a310-1cebc5a1ee48</c><c>negro|27|secreta|Antiheroe|Hombre|Marvel|False|negro.jpeg|6ec73797-6840-42ef-b8cb-efeab09b9238</c>
+<p>prueba2</p><p>1957</p><d>|Abraham</d><p>5000</p><p>Marvel</p><c>burgues|4|sdasd|Antiheroe|Hombre|Marvel|False|burgues.jpeg|6b19a31c-3cbb-4119-a310-1cebc5a1ee48</c>
+<p>prueba3</p><p>1956</p><d>|Abraham</d><p>5000</p><p>Marvel</p><c>burgues|4|sdasd|Antiheroe|Hombre|Marvel|False|burgues.jpeg|6b19a31c-3cbb-4119-a310-1cebc5a1ee48</c><c>negro|27|secreta|Antiheroe|Hombre|Marvel|False|negro.jpeg|6ec73797-6840-42ef-b8cb-efeab09b9238</c>
+<p>asd</p><p>1951</p><d>|Cathy Yan|David Ayer</d><p>1000</p><p>Marvel</p><c>negro|27|secreta|Antiheroe|Hombre|Marvel|False|negro.jpeg|6ec73797-6840-42ef-b8cb-efeab09b9238</c>

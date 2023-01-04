@@ -180,5 +180,23 @@ namespace project_final_attempt.Forms
             }
             return nombre_personajes;
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Abrirform(new inicio());
+        }
+
+        private void Abrirform(object form)
+        {
+            if (this.insidePanel.Controls.Count > 0)
+                this.insidePanel.Controls.Clear();
+
+            Form fh = form as Form;
+            fh.TopLevel = false;
+            insidePanel.Dock = fh.Dock;
+            this.insidePanel.Controls.Add(fh);
+
+            fh.Show();
+        }
     }
 }

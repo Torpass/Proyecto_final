@@ -1,3 +1,1 @@
 negro|27|secreta|Antiheroe|Hombre|Marvel|False|negro.jpeg|6ec73797-6840-42ef-b8cb-efeab09b9238
-reloj|4|sdasd|Antiheroe|Hombre|Marvel|False|reloj.jpeg|6b19a31c-3cbb-4119-a310-1cebc5a1ee48
-ñame|5|asdasd|Antiheroe|Hombre|DC|False|ñame.jpeg|1402351c-3799-4d6f-ade3-e5e68293b6d0

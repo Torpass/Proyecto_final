@@ -68,9 +68,10 @@ namespace project_final_attempt.Entities.Peliculas
 
             foreach (Movie j in movies)
             {
-                foreach (Personaje viejo in j._casting)
+                foreach (Personaje actual in persoanjes_actuales)
                 {
-                    foreach (Personaje actual in persoanjes_actuales)
+                    //IEnumerable<Personaje> eliminar = j._casting.Except(persoanjes_actuales);
+                    foreach (Personaje viejo in j._casting)
                     {
                         if (viejo._id == actual._id)
                         {
@@ -86,6 +87,8 @@ namespace project_final_attempt.Entities.Peliculas
                     }
                 }
             }
+
+
             FileStream metodo = new FileStream(ruta, FileMode.Create, FileAccess.Write);
             StreamWriter writer = new StreamWriter(metodo);
 

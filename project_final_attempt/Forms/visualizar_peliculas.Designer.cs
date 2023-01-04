@@ -38,6 +38,7 @@
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnRegresar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.ContenedorYear = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnBuscarYear = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
@@ -95,6 +96,7 @@
             // siticonePanel1
             // 
             this.siticonePanel1.AutoSize = true;
+            this.siticonePanel1.Controls.Add(this.btnRegresar);
             this.siticonePanel1.Controls.Add(this.ContenedorYear);
             this.siticonePanel1.Controls.Add(this.btnReiniciar);
             this.siticonePanel1.Controls.Add(this.ContenedorPersonaje);
@@ -107,6 +109,25 @@
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(1044, 727);
             this.siticonePanel1.TabIndex = 2;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegresar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegresar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegresar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRegresar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.btnRegresar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRegresar.ForeColor = System.Drawing.Color.White;
+            this.btnRegresar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
+            this.btnRegresar.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRegresar.Location = new System.Drawing.Point(955, 10);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(69, 85);
+            this.btnRegresar.TabIndex = 34;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // ContenedorYear
             // 
@@ -237,10 +258,10 @@
             this.btnReiniciar.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnReiniciar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnReiniciar.ForeColor = System.Drawing.Color.White;
-            this.btnReiniciar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnReiniciar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnReiniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnReiniciar.Image")));
             this.btnReiniciar.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnReiniciar.Location = new System.Drawing.Point(969, 113);
+            this.btnReiniciar.Location = new System.Drawing.Point(964, 112);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.btnReiniciar.Size = new System.Drawing.Size(60, 60);
@@ -633,5 +654,6 @@
         private DataGridViewTextBoxColumn Recaudacion;
         private DataGridViewTextBoxColumn Personajes;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox btnPersonaje;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnRegresar;
     }
 }

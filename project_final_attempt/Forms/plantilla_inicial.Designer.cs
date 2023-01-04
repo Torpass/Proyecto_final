@@ -36,8 +36,8 @@
             this.btnPeliculas = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticonePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.TopPanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
+            this.btnCerrar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneControlBox2 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
-            this.siticoneControlBox1 = new Siticone.Desktop.UI.WinForms.SiticoneControlBox();
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneDragControl1 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneDragControl2 = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
@@ -140,14 +140,33 @@
             // 
             // TopPanel
             // 
+            this.TopPanel.Controls.Add(this.btnCerrar);
             this.TopPanel.Controls.Add(this.siticoneControlBox2);
-            this.TopPanel.Controls.Add(this.siticoneControlBox1);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
             this.TopPanel.Location = new System.Drawing.Point(221, 0);
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1039, 75);
             this.TopPanel.TabIndex = 1;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCerrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCerrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCerrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
+            this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.HoverState.FillColor = System.Drawing.Color.Red;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnCerrar.Location = new System.Drawing.Point(938, -1);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(68, 76);
+            this.btnCerrar.TabIndex = 2;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // siticoneControlBox2
             // 
@@ -161,23 +180,6 @@
             this.siticoneControlBox2.Name = "siticoneControlBox2";
             this.siticoneControlBox2.Size = new System.Drawing.Size(68, 78);
             this.siticoneControlBox2.TabIndex = 1;
-            // 
-            // siticoneControlBox1
-            // 
-            this.siticoneControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneControlBox1.Animated = true;
-            this.siticoneControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.siticoneControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
-            this.siticoneControlBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneControlBox1.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.siticoneControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
-            this.siticoneControlBox1.IconColor = System.Drawing.Color.White;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(938, -1);
-            this.siticoneControlBox1.Name = "siticoneControlBox1";
-            this.siticoneControlBox1.PressedColor = System.Drawing.Color.Crimson;
-            this.siticoneControlBox1.Size = new System.Drawing.Size(68, 78);
-            this.siticoneControlBox1.TabIndex = 0;
-            this.siticoneControlBox1.Click += new System.EventHandler(this.siticoneControlBox1_Click);
             // 
             // insidePanel
             // 
@@ -232,5 +234,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton btnPeliculas;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
         public Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnCerrar;
     }
 }

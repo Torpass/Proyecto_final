@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(visualizar_personajes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(visualizar_personajes));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnReiniciar = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
@@ -60,6 +60,7 @@
             this.colum_sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewImageColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnRegresar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.insidePanel.SuspendLayout();
             this.ContenedorSexo.SuspendLayout();
             this.ContenedorRol.SuspendLayout();
@@ -79,6 +80,7 @@
             // insidePanel
             // 
             this.insidePanel.AutoSize = true;
+            this.insidePanel.Controls.Add(this.btnRegresar);
             this.insidePanel.Controls.Add(this.btnReiniciar);
             this.insidePanel.Controls.Add(this.ContenedorSexo);
             this.insidePanel.Controls.Add(this.ContenedorRol);
@@ -101,10 +103,10 @@
             this.btnReiniciar.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnReiniciar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnReiniciar.ForeColor = System.Drawing.Color.White;
-            this.btnReiniciar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnReiniciar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnReiniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnReiniciar.Image")));
             this.btnReiniciar.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnReiniciar.Location = new System.Drawing.Point(969, 113);
+            this.btnReiniciar.Location = new System.Drawing.Point(964, 112);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.btnReiniciar.Size = new System.Drawing.Size(60, 60);
@@ -472,6 +474,25 @@
             this.Imagen.Name = "Imagen";
             this.Imagen.ReadOnly = true;
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegresar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRegresar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRegresar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRegresar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
+            this.btnRegresar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRegresar.ForeColor = System.Drawing.Color.White;
+            this.btnRegresar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
+            this.btnRegresar.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRegresar.Location = new System.Drawing.Point(964, 13);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(60, 72);
+            this.btnRegresar.TabIndex = 33;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // visualizar_personajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -526,5 +547,6 @@
         private DataGridViewTextBoxColumn Edad;
         private DataGridViewTextBoxColumn colum_sexo;
         private DataGridViewImageColumn Imagen;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnRegresar;
     }
 }

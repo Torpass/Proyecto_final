@@ -134,5 +134,23 @@ namespace project_final_attempt.Forms
             if (btnRol.Text == "Antiheroe") { mostrar_gridview(Personajes_antiheroe); }
             if (btnRol.Text == "Villano") { mostrar_gridview(Personajes_villano); }
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Abrirform(new inicio()) ;
+        }
+
+        private void Abrirform(object form)
+        {
+            if (this.insidePanel.Controls.Count > 0)
+                this.insidePanel.Controls.Clear();
+
+            Form fh = form as Form;
+            fh.TopLevel = false;
+            fh.Dock = insidePanel.Dock;
+            this.insidePanel.Controls.Add(fh);
+
+            fh.Show();
+        }
     }
 }

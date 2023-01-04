@@ -17,7 +17,7 @@ namespace project_final_attempt.Forms
     {
         static Lista_personajes personajes = new Lista_personajes();
         Lista_peliculas pelis = new Lista_peliculas();
-        List<string> nombre_directores = new List<string> { "Pedro", "Pepe", "Abraham", "Pastor", "Felipe"};
+        List<string> nombre_directores = new List<string> { "James Gunn", "Zack Snyder", "David Sandberg", "David Ayer", "Angel Manuel Soto", "Patty Jenkings", "Ben Affleck", "Cathy Yan", "Michael Keaton", "Joe Russo", "Jon Favreau", "Peyton Reed", "Kevin Feige", "Joss Whedon", "Taika Waititi", "Ryan Coogler" };
         List<string> nombre_personajes = new List<string>();
         List<string> directores = new List<string>();
         List<Personaje> personajes_ingresados = personajes.personajes_desceralizados();
@@ -104,7 +104,7 @@ namespace project_final_attempt.Forms
             }
             else
             {
-                MessageBox.Show("No puedes ingresar la misma pelicula dos veces");
+                MessageBox.Show("No puedes agregar dos pelicuals iguales", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -147,22 +147,29 @@ namespace project_final_attempt.Forms
                         desactivar();
                     }
                 }
-            }else { MessageBox.Show("No se encontró ni pinga"); }
+            }else
+            {
+                MessageBox.Show("No se ha encontrado ninguna pelicula con el nombre ingresado, por favor intente de nuevo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
 
         private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            pelis.eliminar(txtNombre.Text);
-            limpiar();
-            MessageBox.Show("Película eliminado");
-            activar();
-            btnEnviar.Enabled = true;
-            btnEnviar.FillColor = Color.Red;
-            btnEliminar.Enabled = false;
-            btnEditar.Enabled = false;
-            txtDirectores.ResetText();
+        {  
+            if (MessageBox.Show("¿Seguro que deseas eliminar a esta pelicula de forma permanente?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                pelis.eliminar(txtNombre.Text);
+                limpiar();
+                activar();
+                btnEnviar.Enabled = true;
+                btnEnviar.FillColor = Color.Red;
+                btnEliminar.Enabled = false;
+                btnEditar.Enabled = false;
+                txtDirectores.ResetText();
+                MessageBox.Show("La pelicula se ha eliminado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
 
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -233,21 +240,22 @@ namespace project_final_attempt.Forms
                     btnActualizar.Visible = false;
                     btnEditar.Enabled = false;
                     btnRegresar.Enabled = true;
+                    MessageBox.Show("La pelicula se ha actualizado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiar();
                 }
             }
-            else { MessageBox.Show("No se pueden agregar dos pelicuals iguales"); }
+            else { MessageBox.Show("No puedes agregar dos pelicuals iguales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
 
         private (bool, DialogResult) validar_datos(string nombre, string universo, decimal monto, int directores, int personajes)
         {
-            if (nombre == "") { return (false, MessageBox.Show("El nombre de la película no puede ir en blanco")); }
+            if (nombre == "") { return (false, MessageBox.Show("El nombre de la película no puede ir en blanco", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)); }
             if (universo == "") { return (false, MessageBox.Show("Ingrese el universo al cual pertenece la película")); }
-            if (monto <= 0) { return (false, MessageBox.Show("El monto recaudado no puede ser igual a cero")); }
-            if (directores <= 0) { return (false, MessageBox.Show("Por favor ingrese los directores de la película")); }  
-            if (personajes <=0 ) { return (false, MessageBox.Show("Por favor ingrese los personajes de la película")); }
-            else { return (true, MessageBox.Show("Datos almacenados en el archivo")); }
+            if (monto <= 0) { return (false, MessageBox.Show("El monto recaudado no puede ser igual a cero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)); }
+            if (directores <= 0) { return (false, MessageBox.Show("Por favor ingrese los directores de la película", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)); }  
+            if (personajes <=0 ) { return (false, MessageBox.Show("Por favor ingrese los personajes de la película", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)); }
+            else { return (true, MessageBox.Show("Pelicula registrada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information)); }
         }
 
 
