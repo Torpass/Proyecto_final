@@ -70,11 +70,12 @@
             this.peliculas.Controls.Add(this.insidePanel);
             this.peliculas.Location = new System.Drawing.Point(0, 2);
             this.peliculas.Name = "peliculas";
-            this.peliculas.Size = new System.Drawing.Size(1036, 721);
+            this.peliculas.Size = new System.Drawing.Size(1036, 722);
             this.peliculas.TabIndex = 0;
             // 
             // insidePanel
             // 
+            this.insidePanel.AutoSize = true;
             this.insidePanel.Controls.Add(this.btnActualizar);
             this.insidePanel.Controls.Add(this.btnEditar);
             this.insidePanel.Controls.Add(this.btnEliminar);
@@ -214,7 +215,7 @@
             this.txtPersonajes.ForeColor = System.Drawing.Color.Silver;
             this.txtPersonajes.FormattingEnabled = true;
             this.txtPersonajes.ItemHeight = 25;
-            this.txtPersonajes.Location = new System.Drawing.Point(384, 415);
+            this.txtPersonajes.Location = new System.Drawing.Point(384, 426);
             this.txtPersonajes.Name = "txtPersonajes";
             this.txtPersonajes.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.txtPersonajes.Size = new System.Drawing.Size(267, 125);
@@ -281,7 +282,7 @@
             this.txtDirectores.ForeColor = System.Drawing.Color.Silver;
             this.txtDirectores.FormattingEnabled = true;
             this.txtDirectores.ItemHeight = 25;
-            this.txtDirectores.Location = new System.Drawing.Point(700, 415);
+            this.txtDirectores.Location = new System.Drawing.Point(700, 426);
             this.txtDirectores.Name = "txtDirectores";
             this.txtDirectores.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.txtDirectores.Size = new System.Drawing.Size(309, 125);
@@ -326,7 +327,7 @@
             this.siticoneHtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel7.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel7.Location = new System.Drawing.Point(384, 182);
+            this.siticoneHtmlLabel7.Location = new System.Drawing.Point(384, 176);
             this.siticoneHtmlLabel7.Name = "siticoneHtmlLabel7";
             this.siticoneHtmlLabel7.Size = new System.Drawing.Size(167, 27);
             this.siticoneHtmlLabel7.TabIndex = 42;
@@ -362,7 +363,7 @@
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel5.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(700, 182);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(700, 176);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(178, 27);
             this.siticoneHtmlLabel5.TabIndex = 40;
@@ -374,7 +375,7 @@
             this.siticoneHtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(39, 182);
+            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(39, 176);
             this.siticoneHtmlLabel2.Name = "siticoneHtmlLabel2";
             this.siticoneHtmlLabel2.Size = new System.Drawing.Size(176, 27);
             this.siticoneHtmlLabel2.TabIndex = 39;
@@ -467,6 +468,7 @@
             this.Name = "gestion_peliculas";
             this.Text = "gestion_peliculas";
             this.peliculas.ResumeLayout(false);
+            this.peliculas.PerformLayout();
             this.insidePanel.ResumeLayout(false);
             this.insidePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonto)).EndInit();

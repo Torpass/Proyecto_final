@@ -18,6 +18,7 @@ namespace project_final_attempt
             fh.Show();
         }
 
+
         public plantilla_inicial()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace project_final_attempt
             Abrirform(new visualizar_personajes());
         }
 
+
         private void siticonePictureBox1_Click(object sender, EventArgs e)
         {
             try
@@ -43,10 +45,12 @@ namespace project_final_attempt
             }
         }
 
+
         private void btnPeliculas_Click(object sender, EventArgs e)
         {
             Abrirform(new visualizar_peliculas());
         }
+
 
         private void siticoneControlBox1_Click(object sender, EventArgs e)
         {
@@ -62,9 +66,6 @@ namespace project_final_attempt
             {
                 File.Copy(file, Path.Combine(path_backup, Path.GetFileName(file)), true);
             }
-
         }
-    }
-
-    
+    }   
 }

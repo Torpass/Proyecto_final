@@ -52,7 +52,6 @@
             this.txtBuscar = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.DataGridView = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Identidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Universo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +59,7 @@
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colum_sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewImageColumn();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.insidePanel.SuspendLayout();
             this.ContenedorSexo.SuspendLayout();
             this.ContenedorRol.SuspendLayout();
@@ -78,6 +78,7 @@
             // 
             // insidePanel
             // 
+            this.insidePanel.AutoSize = true;
             this.insidePanel.Controls.Add(this.btnReiniciar);
             this.insidePanel.Controls.Add(this.ContenedorSexo);
             this.insidePanel.Controls.Add(this.ContenedorRol);
@@ -85,7 +86,7 @@
             this.insidePanel.Controls.Add(this.txtBuscar);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel5);
             this.insidePanel.Controls.Add(this.DataGridView);
-            this.insidePanel.Location = new System.Drawing.Point(-4, -1);
+            this.insidePanel.Location = new System.Drawing.Point(-4, -2);
             this.insidePanel.Name = "insidePanel";
             this.insidePanel.Size = new System.Drawing.Size(1044, 727);
             this.insidePanel.TabIndex = 0;
@@ -103,7 +104,7 @@
             this.btnReiniciar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnReiniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnReiniciar.Image")));
             this.btnReiniciar.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnReiniciar.Location = new System.Drawing.Point(968, 113);
+            this.btnReiniciar.Location = new System.Drawing.Point(969, 113);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.btnReiniciar.Size = new System.Drawing.Size(60, 60);
@@ -114,9 +115,9 @@
             // 
             this.ContenedorSexo.Controls.Add(this.siticoneHtmlLabel3);
             this.ContenedorSexo.Controls.Add(this.btnSexo);
-            this.ContenedorSexo.Location = new System.Drawing.Point(21, 97);
+            this.ContenedorSexo.Location = new System.Drawing.Point(296, 55);
             this.ContenedorSexo.Name = "ContenedorSexo";
-            this.ContenedorSexo.Size = new System.Drawing.Size(249, 76);
+            this.ContenedorSexo.Size = new System.Drawing.Size(249, 77);
             this.ContenedorSexo.TabIndex = 29;
             this.ContenedorSexo.Visible = false;
             // 
@@ -162,9 +163,9 @@
             // 
             this.ContenedorRol.Controls.Add(this.siticoneHtmlLabel2);
             this.ContenedorRol.Controls.Add(this.btnRol);
-            this.ContenedorRol.Location = new System.Drawing.Point(23, 97);
+            this.ContenedorRol.Location = new System.Drawing.Point(297, 55);
             this.ContenedorRol.Name = "ContenedorRol";
-            this.ContenedorRol.Size = new System.Drawing.Size(245, 76);
+            this.ContenedorRol.Size = new System.Drawing.Size(246, 77);
             this.ContenedorRol.TabIndex = 28;
             this.ContenedorRol.Visible = false;
             // 
@@ -212,9 +213,9 @@
             this.ContenedorEdades.Controls.Add(this.edad_2);
             this.ContenedorEdades.Controls.Add(this.edad_1);
             this.ContenedorEdades.Controls.Add(this.siticoneHtmlLabel7);
-            this.ContenedorEdades.Location = new System.Drawing.Point(25, 97);
+            this.ContenedorEdades.Location = new System.Drawing.Point(295, 56);
             this.ContenedorEdades.Name = "ContenedorEdades";
-            this.ContenedorEdades.Size = new System.Drawing.Size(326, 76);
+            this.ContenedorEdades.Size = new System.Drawing.Size(326, 77);
             this.ContenedorEdades.TabIndex = 19;
             this.ContenedorEdades.Visible = false;
             // 
@@ -229,10 +230,10 @@
             this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(243, 36);
+            this.btnBuscar.Location = new System.Drawing.Point(243, 37);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.btnBuscar.Size = new System.Drawing.Size(42, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(41, 37);
             this.btnBuscar.TabIndex = 30;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -241,7 +242,7 @@
             this.siticoneHtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(102, 40);
+            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(101, 40);
             this.siticoneHtmlLabel1.Name = "siticoneHtmlLabel1";
             this.siticoneHtmlLabel1.Size = new System.Drawing.Size(12, 27);
             this.siticoneHtmlLabel1.TabIndex = 20;
@@ -259,7 +260,7 @@
             this.edad_2.FocusedState.UpDownButtonForeColor = System.Drawing.Color.Transparent;
             this.edad_2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.edad_2.ForeColor = System.Drawing.Color.Gray;
-            this.edad_2.Location = new System.Drawing.Point(145, 36);
+            this.edad_2.Location = new System.Drawing.Point(146, 37);
             this.edad_2.Maximum = new decimal(new int[] {
             300,
             0,
@@ -281,7 +282,7 @@
             this.edad_1.FocusedState.UpDownButtonForeColor = System.Drawing.Color.Transparent;
             this.edad_1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.edad_1.ForeColor = System.Drawing.Color.Gray;
-            this.edad_1.Location = new System.Drawing.Point(3, 36);
+            this.edad_1.Location = new System.Drawing.Point(3, 37);
             this.edad_1.Maximum = new decimal(new int[] {
             300,
             0,
@@ -323,7 +324,7 @@
             "Edad",
             "Tipo de Personaje",
             "Sexo"});
-            this.txtBuscar.Location = new System.Drawing.Point(16, 51);
+            this.txtBuscar.Location = new System.Drawing.Point(11, 89);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(254, 36);
             this.txtBuscar.TabIndex = 18;
@@ -334,7 +335,7 @@
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel5.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(25, 18);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(21, 55);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(143, 27);
             this.siticoneHtmlLabel5.TabIndex = 17;
@@ -381,7 +382,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView.Location = new System.Drawing.Point(21, 179);
+            this.DataGridView.Location = new System.Drawing.Point(21, 178);
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.ReadOnly = true;
             this.DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -493,6 +494,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.edad_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

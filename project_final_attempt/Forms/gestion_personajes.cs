@@ -10,6 +10,7 @@ using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
 using System.Text;
+using System.Globalization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -63,7 +64,7 @@ namespace project_final_attempt.Forms
         private void btnEnviar_Click(object sender, EventArgs e)
         {
 
-            if (!encontrar(txtNombre.Text))
+            if (encontrar(txtNombre.Text))
             {
                 var (validado, dialog) = validar_datos(txtNombre.Text, Convert.ToInt16(txtEdad.Text), txtIdentidad.Text, txtSexo.Text, txtUniverso.Text, txtActitud.Text, ImagenPersonaje.Image);
                 if (validado)
@@ -142,49 +143,57 @@ namespace project_final_attempt.Forms
         {
             string ruta_aux = string.Empty;
 
-            Personaje personaje_editado = new Personaje();
-            personaje_editado._name = txtNombre.Text;
-            personaje_editado._age = int.Parse(txtEdad.Text);
-            personaje_editado._universe = txtUniverso.Text;
-            personaje_editado._identity = txtIdentidad.Text;
-            personaje_editado._rol = txtActitud.Text;
-            personaje_editado._sex = txtSexo.Text;
-            personaje_editado._img = $"{txtNombre.Text}.jpeg";
-            personaje_editado._id = ID.Text;
-            ID.Text = "";
-            ruta_aux = ruta_imagen + personaje_editado._img;
-
-            if (!File.Exists(ruta_aux))
+            if (encontrar(txtNombre.Text))
             {
-                ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
-            }
-            else
-            {
-                try
+                var (validado, dialog) = validar_datos(txtNombre.Text, Convert.ToInt16(txtEdad.Text), txtIdentidad.Text, txtSexo.Text, txtUniverso.Text, txtActitud.Text, ImagenPersonaje.Image);
+                if (validado)
                 {
-                    ruta_aux = ruta_imagen + "atc-" + personaje_editado._img;
-                    personaje_editado._img = "atc-" + personaje_editado._img;
-                    ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
+                    Personaje personaje_editado = new Personaje();
+                    personaje_editado._name = txtNombre.Text;
+                    personaje_editado._age = int.Parse(txtEdad.Text);
+                    personaje_editado._universe = txtUniverso.Text;
+                    personaje_editado._identity = txtIdentidad.Text;
+                    personaje_editado._rol = txtActitud.Text;
+                    personaje_editado._sex = txtSexo.Text;
+                    personaje_editado._img = $"{txtNombre.Text}.jpeg";
+                    personaje_editado._id = ID.Text;
+                    ID.Text = "";
+                    ruta_aux = ruta_imagen + personaje_editado._img;
+
+                    if (!File.Exists(ruta_aux))
+                    {
+                        ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            ruta_aux = ruta_imagen + "atc-" + personaje_editado._img;
+                            personaje_editado._img = "atc-" + personaje_editado._img;
+                            ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
+                        }
+                        catch (Exception x)
+                        {
+                            Abrirform(new inicio());
+                        }
+
+                    }
+
+                    if (btnTrue.Checked == true) { personaje_editado._activity = true; } else { personaje_editado._activity = false; }
+                    personajes.heroe_create(personaje_editado);
+                    personajes.serealizar_personaje();
+
+                    btnEnviar.Enabled = true;
+                    btnEnviar.FillColor = Color.Red;
+                    btnActualizar.Enabled = false;
+                    btnActualizar.Visible = false;
+                    btnEditar.Enabled = false;
+                    btnRegresar.Enabled = true;
+                    limpiar();
+                    peliculas.actualizar_personajes();
                 }
-                catch(Exception x)
-                {
-                    Abrirform(new inicio());
-                }
-               
             }
-
-            if (btnTrue.Checked == true) { personaje_editado._activity = true; } else { personaje_editado._activity = false; }
-            personajes.heroe_create(personaje_editado);
-            personajes.serealizar_personaje();
-
-            btnEnviar.Enabled = true;
-            btnEnviar.FillColor = Color.Red;
-            btnActualizar.Enabled = false;
-            btnActualizar.Visible = false;
-            btnEditar.Enabled = false;
-            btnRegresar.Enabled = true;
-            limpiar();
-            peliculas.actualizar_personajes();
+            else { MessageBox.Show("No puedes agregar dos personajes iguales"); }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -196,6 +205,7 @@ namespace project_final_attempt.Forms
             btnEliminar.Enabled = false;
             btnEnviar.Enabled = true;
             btnEnviar.FillColor = Color.Red;
+            peliculas.actualizar_personajes();
             activar();
         }
 
@@ -206,14 +216,13 @@ namespace project_final_attempt.Forms
             {
                 if (aux._name != "")
                 {
-                    if (aux._name == nombre_persoanje)
+                    if (aux._name.ToLower() == nombre_persoanje.ToLower())
                     {
-                        return true;
+                        return false;
                     }
-                    return false;
                 }
             }
-            return false;
+            return true;
         }
 
         public (bool, DialogResult) validar_datos(string nombre, int edad, string identidad, string sexo, string universo, string actitud, Image imagen)

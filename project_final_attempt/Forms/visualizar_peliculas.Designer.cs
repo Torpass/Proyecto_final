@@ -94,6 +94,7 @@
             // 
             // siticonePanel1
             // 
+            this.siticonePanel1.AutoSize = true;
             this.siticonePanel1.Controls.Add(this.ContenedorYear);
             this.siticonePanel1.Controls.Add(this.btnReiniciar);
             this.siticonePanel1.Controls.Add(this.ContenedorPersonaje);
@@ -114,9 +115,9 @@
             this.ContenedorYear.Controls.Add(this.year_2);
             this.ContenedorYear.Controls.Add(this.year_1);
             this.ContenedorYear.Controls.Add(this.siticoneHtmlLabel4);
-            this.ContenedorYear.Location = new System.Drawing.Point(25, 97);
+            this.ContenedorYear.Location = new System.Drawing.Point(293, 61);
             this.ContenedorYear.Name = "ContenedorYear";
-            this.ContenedorYear.Size = new System.Drawing.Size(297, 76);
+            this.ContenedorYear.Size = new System.Drawing.Size(297, 77);
             this.ContenedorYear.TabIndex = 32;
             this.ContenedorYear.Visible = false;
             // 
@@ -134,7 +135,7 @@
             this.btnBuscarYear.Location = new System.Drawing.Point(243, 35);
             this.btnBuscarYear.Name = "btnBuscarYear";
             this.btnBuscarYear.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.btnBuscarYear.Size = new System.Drawing.Size(42, 36);
+            this.btnBuscarYear.Size = new System.Drawing.Size(41, 37);
             this.btnBuscarYear.TabIndex = 30;
             this.btnBuscarYear.Click += new System.EventHandler(this.btnBuscarYear_Click);
             // 
@@ -193,7 +194,7 @@
             this.year_1.FocusedState.UpDownButtonForeColor = System.Drawing.Color.Transparent;
             this.year_1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.year_1.ForeColor = System.Drawing.Color.Gray;
-            this.year_1.Location = new System.Drawing.Point(3, 36);
+            this.year_1.Location = new System.Drawing.Point(3, 37);
             this.year_1.Maximum = new decimal(new int[] {
             2023,
             0,
@@ -239,7 +240,7 @@
             this.btnReiniciar.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnReiniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnReiniciar.Image")));
             this.btnReiniciar.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnReiniciar.Location = new System.Drawing.Point(968, 113);
+            this.btnReiniciar.Location = new System.Drawing.Point(969, 113);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.btnReiniciar.Size = new System.Drawing.Size(60, 60);
@@ -250,7 +251,7 @@
             // 
             this.ContenedorPersonaje.Controls.Add(this.siticoneHtmlLabel2);
             this.ContenedorPersonaje.Controls.Add(this.btnPersonaje);
-            this.ContenedorPersonaje.Location = new System.Drawing.Point(25, 94);
+            this.ContenedorPersonaje.Location = new System.Drawing.Point(291, 55);
             this.ContenedorPersonaje.Name = "ContenedorPersonaje";
             this.ContenedorPersonaje.Size = new System.Drawing.Size(309, 83);
             this.ContenedorPersonaje.TabIndex = 30;
@@ -293,9 +294,9 @@
             // 
             this.ContenedorUniverso.Controls.Add(this.siticoneHtmlLabel3);
             this.ContenedorUniverso.Controls.Add(this.btnUniverso);
-            this.ContenedorUniverso.Location = new System.Drawing.Point(29, 94);
+            this.ContenedorUniverso.Location = new System.Drawing.Point(293, 55);
             this.ContenedorUniverso.Name = "ContenedorUniverso";
-            this.ContenedorUniverso.Size = new System.Drawing.Size(297, 76);
+            this.ContenedorUniverso.Size = new System.Drawing.Size(297, 77);
             this.ContenedorUniverso.TabIndex = 29;
             this.ContenedorUniverso.Visible = false;
             // 
@@ -340,9 +341,9 @@
             this.ContenedorRecaudo.Controls.Add(this.btnBuscarMonto);
             this.ContenedorRecaudo.Controls.Add(this.txtMonto);
             this.ContenedorRecaudo.Controls.Add(this.siticoneHtmlLabel7);
-            this.ContenedorRecaudo.Location = new System.Drawing.Point(25, 97);
+            this.ContenedorRecaudo.Location = new System.Drawing.Point(291, 55);
             this.ContenedorRecaudo.Name = "ContenedorRecaudo";
-            this.ContenedorRecaudo.Size = new System.Drawing.Size(373, 76);
+            this.ContenedorRecaudo.Size = new System.Drawing.Size(373, 77);
             this.ContenedorRecaudo.TabIndex = 19;
             this.ContenedorRecaudo.Visible = false;
             // 
@@ -357,10 +358,10 @@
             this.btnBuscarMonto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnBuscarMonto.ForeColor = System.Drawing.Color.White;
             this.btnBuscarMonto.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarMonto.Image")));
-            this.btnBuscarMonto.Location = new System.Drawing.Point(309, 36);
+            this.btnBuscarMonto.Location = new System.Drawing.Point(309, 37);
             this.btnBuscarMonto.Name = "btnBuscarMonto";
             this.btnBuscarMonto.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.btnBuscarMonto.Size = new System.Drawing.Size(42, 36);
+            this.btnBuscarMonto.Size = new System.Drawing.Size(41, 37);
             this.btnBuscarMonto.TabIndex = 30;
             this.btnBuscarMonto.Click += new System.EventHandler(this.btnBuscarMonto_Click);
             // 
@@ -381,7 +382,7 @@
             0,
             0,
             0});
-            this.txtMonto.Location = new System.Drawing.Point(3, 36);
+            this.txtMonto.Location = new System.Drawing.Point(3, 37);
             this.txtMonto.Maximum = new decimal(new int[] {
             -1530494976,
             232830,
@@ -424,7 +425,7 @@
             "Universo",
             "Monto recaudado",
             "Personaje"});
-            this.txtBuscar.Location = new System.Drawing.Point(16, 51);
+            this.txtBuscar.Location = new System.Drawing.Point(11, 89);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(254, 36);
             this.txtBuscar.TabIndex = 18;
@@ -435,7 +436,7 @@
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel5.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(25, 18);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(21, 55);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(125, 27);
             this.siticoneHtmlLabel5.TabIndex = 17;
@@ -454,7 +455,6 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
-            this.DataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -481,7 +481,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView.Location = new System.Drawing.Point(21, 179);
+            this.DataGridView.Location = new System.Drawing.Point(21, 178);
             this.DataGridView.MultiSelect = false;
             this.DataGridView.Name = "DataGridView";
             this.DataGridView.ReadOnly = true;
@@ -583,6 +583,7 @@
             this.Name = "visualizar_peliculas";
             this.Text = "visualizar_peliculas";
             this.insidePanel.ResumeLayout(false);
+            this.insidePanel.PerformLayout();
             this.siticonePanel1.ResumeLayout(false);
             this.siticonePanel1.PerformLayout();
             this.ContenedorYear.ResumeLayout(false);

@@ -63,6 +63,7 @@ namespace project_final_attempt.Entities.Peliculas
             movies = descerealizar_pelicula();
 
             Lista_personajes personajes = new Lista_personajes();
+            List<Personaje> personajes_nuevos = new List<Personaje>();
             List<Personaje> persoanjes_actuales = personajes.personajes_desceralizados();
 
             foreach (Movie j in movies)

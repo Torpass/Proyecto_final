@@ -38,7 +38,7 @@ namespace project_final_attempt.Entities.Personajes
 
             foreach (Personaje aux in Persoanjes)
             {
-                if (aux._name == nombre_personaje)
+                if (aux._name.ToLower() == nombre_personaje.ToLower())
                 {
                     Persona_encontrado._name = aux._name;
                     Persona_encontrado._rol = aux._rol;

@@ -114,11 +114,12 @@ namespace project_final_attempt.Forms
 
             List<string> Personajes = new List<string>();
             List<string> Directores = new List<string>();
+
             if (buscar(txtBuscar.Text))
             {
                 foreach (Movie aux in pelis.descerealizar_pelicula())
                 {
-                    if (aux._name == txtBuscar.Text)
+                    if (aux._name.ToLower() == txtBuscar.Text.ToLower())
                     {
                         txtNombre.Text = aux._name;
                         txtPresentacion.Value = Convert.ToDecimal(aux._year);
@@ -254,7 +255,7 @@ namespace project_final_attempt.Forms
         {
             foreach (Movie aux in pelis.descerealizar_pelicula())
             {
-                if (aux._name == nombre_pelicula)
+                if (aux._name.ToLower() == nombre_pelicula.ToLower())
                 {
                     return true;
                 }
@@ -305,6 +306,7 @@ namespace project_final_attempt.Forms
             txtUniverso.Enabled = false;
             txtNombre.Enabled = false;
         }
+
     }
 }
 
