@@ -157,7 +157,7 @@
             this.siticoneControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(68)))), ((int)(((byte)(85)))));
             this.siticoneControlBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneControlBox2.IconColor = System.Drawing.Color.White;
-            this.siticoneControlBox2.Location = new System.Drawing.Point(896, -1);
+            this.siticoneControlBox2.Location = new System.Drawing.Point(864, -1);
             this.siticoneControlBox2.Name = "siticoneControlBox2";
             this.siticoneControlBox2.Size = new System.Drawing.Size(68, 78);
             this.siticoneControlBox2.TabIndex = 1;
@@ -172,7 +172,7 @@
             this.siticoneControlBox1.HoverState.BorderColor = System.Drawing.Color.Red;
             this.siticoneControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
             this.siticoneControlBox1.IconColor = System.Drawing.Color.White;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(972, -1);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(938, -1);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
             this.siticoneControlBox1.PressedColor = System.Drawing.Color.Crimson;
             this.siticoneControlBox1.Size = new System.Drawing.Size(68, 78);

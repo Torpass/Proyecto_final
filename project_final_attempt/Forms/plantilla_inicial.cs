@@ -45,6 +45,7 @@ namespace project_final_attempt
 
         private void btnPeliculas_Click(object sender, EventArgs e)
         {
+            Abrirform(new visualizar_peliculas());
         }
 
         private void siticoneControlBox1_Click(object sender, EventArgs e)

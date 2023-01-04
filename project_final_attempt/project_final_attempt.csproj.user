@@ -13,6 +13,9 @@
     <Compile Update="Forms\plantilla_inicial.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\visualizar_peliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\visualizar_personajes.cs">
       <SubType>Form</SubType>
     </Compile>

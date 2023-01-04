@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.insidePanel = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.btnReiniciar = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
@@ -51,13 +52,14 @@
             this.txtBuscar = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.DataGridView = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Identidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Universo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Actitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colum_sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Imagen = new System.Windows.Forms.DataGridViewImageColumn();
             this.insidePanel.SuspendLayout();
             this.ContenedorSexo.SuspendLayout();
             this.ContenedorRol.SuspendLayout();
@@ -83,9 +85,9 @@
             this.insidePanel.Controls.Add(this.txtBuscar);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel5);
             this.insidePanel.Controls.Add(this.DataGridView);
-            this.insidePanel.Location = new System.Drawing.Point(-4, 1);
+            this.insidePanel.Location = new System.Drawing.Point(-4, -1);
             this.insidePanel.Name = "insidePanel";
-            this.insidePanel.Size = new System.Drawing.Size(1044, 725);
+            this.insidePanel.Size = new System.Drawing.Size(1044, 727);
             this.insidePanel.TabIndex = 0;
             // 
             // btnReiniciar
@@ -341,17 +343,26 @@
             // 
             // DataGridView
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DataGridView.AllowUserToAddRows = false;
+            this.DataGridView.AllowUserToDeleteRows = false;
+            this.DataGridView.AllowUserToResizeColumns = false;
+            this.DataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridView.ColumnHeadersHeight = 27;
+            this.DataGridView.ColumnHeadersHeight = 65;
             this.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
@@ -359,42 +370,53 @@
             this.Universo,
             this.Actitud,
             this.Edad,
-            this.colum_sexo});
+            this.colum_sexo,
+            this.Imagen});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridView.Location = new System.Drawing.Point(16, 179);
+            this.DataGridView.Location = new System.Drawing.Point(21, 179);
             this.DataGridView.Name = "DataGridView";
+            this.DataGridView.ReadOnly = true;
+            this.DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridView.RowHeadersVisible = false;
             this.DataGridView.RowHeadersWidth = 62;
-            this.DataGridView.RowTemplate.Height = 33;
-            this.DataGridView.Size = new System.Drawing.Size(1012, 523);
+            this.DataGridView.RowTemplate.Height = 35;
+            this.DataGridView.Size = new System.Drawing.Size(1003, 520);
             this.DataGridView.TabIndex = 0;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DataGridView.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(58)))), ((int)(((byte)(75)))));
             this.DataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DataGridView.ThemeStyle.HeaderStyle.Height = 27;
-            this.DataGridView.ThemeStyle.ReadOnly = false;
+            this.DataGridView.ThemeStyle.HeaderStyle.Height = 65;
+            this.DataGridView.ThemeStyle.ReadOnly = true;
             this.DataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DataGridView.ThemeStyle.RowsStyle.Height = 33;
+            this.DataGridView.ThemeStyle.RowsStyle.Height = 35;
             this.DataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
@@ -403,36 +425,51 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.MinimumWidth = 8;
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // Identidad
             // 
             this.Identidad.HeaderText = "Identidad";
             this.Identidad.MinimumWidth = 8;
             this.Identidad.Name = "Identidad";
+            this.Identidad.ReadOnly = true;
             // 
             // Universo
             // 
             this.Universo.HeaderText = "Universo";
             this.Universo.MinimumWidth = 8;
             this.Universo.Name = "Universo";
+            this.Universo.ReadOnly = true;
             // 
             // Actitud
             // 
             this.Actitud.HeaderText = "Actitud";
             this.Actitud.MinimumWidth = 8;
             this.Actitud.Name = "Actitud";
+            this.Actitud.ReadOnly = true;
             // 
             // Edad
             // 
             this.Edad.HeaderText = "Edad";
             this.Edad.MinimumWidth = 8;
             this.Edad.Name = "Edad";
+            this.Edad.ReadOnly = true;
             // 
             // colum_sexo
             // 
             this.colum_sexo.HeaderText = "Sexo";
             this.colum_sexo.MinimumWidth = 8;
             this.colum_sexo.Name = "colum_sexo";
+            this.colum_sexo.ReadOnly = true;
+            // 
+            // Imagen
+            // 
+            this.Imagen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.Imagen.HeaderText = "Foto";
+            this.Imagen.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Imagen.MinimumWidth = 100;
+            this.Imagen.Name = "Imagen";
+            this.Imagen.ReadOnly = true;
             // 
             // visualizar_personajes
             // 
@@ -464,12 +501,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm siticoneBorderlessForm1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel insidePanel;
         private Siticone.Desktop.UI.WinForms.SiticoneDataGridView DataGridView;
-        private DataGridViewTextBoxColumn Nombre;
-        private DataGridViewTextBoxColumn Identidad;
-        private DataGridViewTextBoxColumn Universo;
-        private DataGridViewTextBoxColumn Actitud;
-        private DataGridViewTextBoxColumn Edad;
-        private DataGridViewTextBoxColumn colum_sexo;
         private Siticone.Desktop.UI.WinForms.SiticonePanel ContenedorEdades;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox txtBuscar;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel5;
@@ -486,5 +517,12 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnBuscar;
         private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnReiniciar;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Identidad;
+        private DataGridViewTextBoxColumn Universo;
+        private DataGridViewTextBoxColumn Actitud;
+        private DataGridViewTextBoxColumn Edad;
+        private DataGridViewTextBoxColumn colum_sexo;
+        private DataGridViewImageColumn Imagen;
     }
 }

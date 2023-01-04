@@ -1,4 +1,5 @@
-Locop2|27|Secreta|Antiheroe|Hombre|Marvel|False|atc-Locop2.jpeg|8c5ff797-5fc7-4a71-ab94-2515c81ebb3a
 Nitzche|78|Místico|Villano|Desconocido|Marvel|False|Nitzche.jpeg|81a7622b-421a-4297-86b7-c21ec77f19d7
-Batman|27|Secreta|Villano|Alien|Marvel|False|atc-Batman.jpeg|3532e4f5-4761-452f-a169-2cb92820efb7
-N2|26|Secreta|Heroe|Alien|Marvel|True|atc-N2.jpeg|99425197-454b-41e8-a2a5-6129106be6b0
+N2|26|Secreta|Heroe|Alien|DC|True|N2.jpeg|99425197-454b-41e8-a2a5-6129106be6b0
+Supergirl|27|Secreta|Villano|Alien|DC|False|Supergirl.jpeg|3532e4f5-4761-452f-a169-2cb92820efb7
+Loco|27|Secreta|Antiheroe|Hombre|Marvel|False|Loco.jpeg|8c5ff797-5fc7-4a71-ab94-2515c81ebb3a
+falopa|23|secreta|Heroe|Mujer|DC|False|falopa.jpeg|2d71ec83-4a34-40f6-88b5-32c38aaa66c7

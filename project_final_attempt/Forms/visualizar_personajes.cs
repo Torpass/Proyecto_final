@@ -27,7 +27,7 @@ namespace project_final_attempt.Forms
         List<Personaje> Personajes_antiheroe = new List<Personaje>();
         List<Personaje> Personajes_villano = new List<Personaje>();
 
-
+        string ruta_imagen = @".\data\imagenes\";
 
         public visualizar_personajes()
         {
@@ -113,6 +113,7 @@ namespace project_final_attempt.Forms
         public void mostrar_gridview(List<Personaje> mostrar)
         {
             DataGridView.Rows.Clear();
+            DataGridView.RowTemplate.Height = 200;
             foreach (Personaje agregar in mostrar)
             {
                 int rowindex = DataGridView.Rows.Add();
@@ -122,6 +123,8 @@ namespace project_final_attempt.Forms
                 DataGridView.Rows[rowindex].Cells[3].Value = agregar._rol.ToString();
                 DataGridView.Rows[rowindex].Cells[4].Value = agregar._age.ToString();
                 DataGridView.Rows[rowindex].Cells[5].Value = agregar._sex.ToString();
+                try { DataGridView.Rows[rowindex].Cells[6].Value = Image.FromFile(ruta_imagen + agregar._img); }
+                catch (Exception x) { DataGridView.Rows[rowindex].Cells[6].Value = null; }
             }
         }
 
