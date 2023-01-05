@@ -81,8 +81,26 @@ namespace project_final_attempt.Forms
                     aux._id = Guid.NewGuid().ToString();
 
                     if (btnTrue.Checked == true) { aux._activity = true; } else { aux._activity = false; }
-                    ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
 
+                    ruta_aux = ruta_imagen + aux._img;
+
+                    if (!File.Exists(ruta_aux))
+                    {
+                        ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            ruta_aux = ruta_imagen + "atc-" + aux._img;
+                            aux._img = "atc-" + aux._img;
+                            ImagenPersonaje.Image.Save(ruta_aux, ImageFormat.Jpeg);
+                        }
+                        catch (Exception x)
+                        {
+                            Abrirform(new inicio());
+                        }
+                    }
                     personajes.heroe_create(aux);
                     personajes.serealizar_personaje();
                     limpiar();

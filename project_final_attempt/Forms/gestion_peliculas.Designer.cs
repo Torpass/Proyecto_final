@@ -69,7 +69,7 @@
             // 
             this.peliculas.Controls.Add(this.insidePanel);
             this.peliculas.Location = new System.Drawing.Point(0, 1);
-            this.peliculas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.peliculas.Margin = new System.Windows.Forms.Padding(2);
             this.peliculas.Name = "peliculas";
             this.peliculas.Size = new System.Drawing.Size(725, 433);
             this.peliculas.TabIndex = 0;
@@ -98,7 +98,7 @@
             this.insidePanel.Controls.Add(this.btnRegresar);
             this.insidePanel.Controls.Add(this.siticoneSeparator1);
             this.insidePanel.Location = new System.Drawing.Point(0, 0);
-            this.insidePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.insidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.insidePanel.Name = "insidePanel";
             this.insidePanel.Size = new System.Drawing.Size(725, 434);
             this.insidePanel.TabIndex = 1;
@@ -115,8 +115,8 @@
             this.btnActualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
             this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(230, 360);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Location = new System.Drawing.Point(230, 301);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(267, 55);
             this.btnActualizar.TabIndex = 54;
@@ -137,8 +137,8 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageSize = new System.Drawing.Size(26, 26);
-            this.btnEditar.Location = new System.Drawing.Point(509, 366);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Location = new System.Drawing.Point(507, 308);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.btnEditar.Size = new System.Drawing.Size(49, 42);
@@ -158,8 +158,8 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEliminar.Location = new System.Drawing.Point(167, 366);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(168, 308);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
             this.btnEliminar.Size = new System.Drawing.Size(49, 42);
@@ -178,7 +178,7 @@
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageSize = new System.Drawing.Size(28, 28);
             this.btnBuscar.Location = new System.Drawing.Point(658, 16);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(48, 43);
             this.btnBuscar.TabIndex = 51;
@@ -195,8 +195,8 @@
             this.btnEnviar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
             this.btnEnviar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(230, 360);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnviar.Location = new System.Drawing.Point(230, 301);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(267, 55);
             this.btnEnviar.TabIndex = 50;
@@ -209,7 +209,7 @@
             this.siticoneHtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel6.ForeColor = System.Drawing.Color.White;
             this.siticoneHtmlLabel6.Location = new System.Drawing.Point(271, 229);
-            this.siticoneHtmlLabel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel6.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel6.Name = "siticoneHtmlLabel6";
             this.siticoneHtmlLabel6.Size = new System.Drawing.Size(131, 17);
             this.siticoneHtmlLabel6.TabIndex = 49;
@@ -224,7 +224,7 @@
             this.txtPersonajes.FormattingEnabled = true;
             this.txtPersonajes.ItemHeight = 15;
             this.txtPersonajes.Location = new System.Drawing.Point(269, 256);
-            this.txtPersonajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPersonajes.Margin = new System.Windows.Forms.Padding(2);
             this.txtPersonajes.Name = "txtPersonajes";
             this.txtPersonajes.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.txtPersonajes.Size = new System.Drawing.Size(187, 75);
@@ -249,7 +249,7 @@
             0,
             0});
             this.txtMonto.Location = new System.Drawing.Point(20, 249);
-            this.txtMonto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(2);
             this.txtMonto.Maximum = new decimal(new int[] {
             1215752192,
             23,
@@ -267,7 +267,7 @@
             this.siticoneHtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel4.ForeColor = System.Drawing.Color.White;
             this.siticoneHtmlLabel4.Location = new System.Drawing.Point(27, 229);
-            this.siticoneHtmlLabel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel4.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
             this.siticoneHtmlLabel4.Size = new System.Drawing.Size(98, 17);
             this.siticoneHtmlLabel4.TabIndex = 46;
@@ -280,7 +280,7 @@
             this.siticoneHtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel3.ForeColor = System.Drawing.Color.White;
             this.siticoneHtmlLabel3.Location = new System.Drawing.Point(489, 229);
-            this.siticoneHtmlLabel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel3.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel3.Name = "siticoneHtmlLabel3";
             this.siticoneHtmlLabel3.Size = new System.Drawing.Size(128, 17);
             this.siticoneHtmlLabel3.TabIndex = 45;
@@ -295,7 +295,7 @@
             this.txtDirectores.FormattingEnabled = true;
             this.txtDirectores.ItemHeight = 15;
             this.txtDirectores.Location = new System.Drawing.Point(490, 256);
-            this.txtDirectores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDirectores.Margin = new System.Windows.Forms.Padding(2);
             this.txtDirectores.Name = "txtDirectores";
             this.txtDirectores.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.txtDirectores.Size = new System.Drawing.Size(216, 75);
@@ -314,7 +314,7 @@
             this.txtPresentacion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPresentacion.ForeColor = System.Drawing.Color.Gray;
             this.txtPresentacion.Location = new System.Drawing.Point(261, 133);
-            this.txtPresentacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPresentacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtPresentacion.Maximum = new decimal(new int[] {
             2023,
             0,
@@ -342,7 +342,7 @@
             this.siticoneHtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel7.ForeColor = System.Drawing.Color.White;
             this.siticoneHtmlLabel7.Location = new System.Drawing.Point(269, 106);
-            this.siticoneHtmlLabel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel7.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel7.Name = "siticoneHtmlLabel7";
             this.siticoneHtmlLabel7.Size = new System.Drawing.Size(112, 17);
             this.siticoneHtmlLabel7.TabIndex = 42;
@@ -368,7 +368,7 @@
             "Marvel",
             "DC"});
             this.txtUniverso.Location = new System.Drawing.Point(487, 133);
-            this.txtUniverso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUniverso.Margin = new System.Windows.Forms.Padding(2);
             this.txtUniverso.Name = "txtUniverso";
             this.txtUniverso.Size = new System.Drawing.Size(220, 36);
             this.txtUniverso.TabIndex = 41;
@@ -380,7 +380,7 @@
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel5.ForeColor = System.Drawing.Color.White;
             this.siticoneHtmlLabel5.Location = new System.Drawing.Point(490, 106);
-            this.siticoneHtmlLabel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel5.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(121, 17);
             this.siticoneHtmlLabel5.TabIndex = 40;
@@ -393,7 +393,7 @@
             this.siticoneHtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel2.ForeColor = System.Drawing.Color.White;
             this.siticoneHtmlLabel2.Location = new System.Drawing.Point(27, 106);
-            this.siticoneHtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel2.Name = "siticoneHtmlLabel2";
             this.siticoneHtmlLabel2.Size = new System.Drawing.Size(119, 17);
             this.siticoneHtmlLabel2.TabIndex = 39;
@@ -415,7 +415,7 @@
             this.txtNombre.ForeColor = System.Drawing.Color.Gray;
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombre.Location = new System.Drawing.Point(26, 133);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -464,7 +464,7 @@
             this.btnRegresar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegresar.Image")));
             this.btnRegresar.ImageSize = new System.Drawing.Size(30, 30);
             this.btnRegresar.Location = new System.Drawing.Point(16, 8);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(52, 50);
             this.btnRegresar.TabIndex = 36;
@@ -473,7 +473,7 @@
             // siticoneSeparator1
             // 
             this.siticoneSeparator1.Location = new System.Drawing.Point(17, 68);
-            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneSeparator1.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneSeparator1.Name = "siticoneSeparator1";
             this.siticoneSeparator1.Size = new System.Drawing.Size(690, 8);
             this.siticoneSeparator1.TabIndex = 34;
@@ -486,7 +486,7 @@
             this.ClientSize = new System.Drawing.Size(725, 434);
             this.Controls.Add(this.peliculas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "gestion_peliculas";
             this.Text = "gestion_peliculas";
             this.peliculas.ResumeLayout(false);

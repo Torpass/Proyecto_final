@@ -95,7 +95,7 @@
             this.insidePanel.Location = new System.Drawing.Point(1, 2);
             this.insidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.insidePanel.Name = "insidePanel";
-            this.insidePanel.Size = new System.Drawing.Size(727, 434);
+            this.insidePanel.Size = new System.Drawing.Size(727, 441);
             this.insidePanel.TabIndex = 1;
             // 
             // ID
@@ -248,7 +248,7 @@
             this.siticonePanel1.Location = new System.Drawing.Point(0, 173);
             this.siticonePanel1.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(725, 253);
+            this.siticonePanel1.Size = new System.Drawing.Size(725, 266);
             this.siticonePanel1.TabIndex = 13;
             // 
             // btnActualizar
@@ -262,7 +262,7 @@
             this.btnActualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
             this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(230, 190);
+            this.btnActualizar.Location = new System.Drawing.Point(230, 163);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(267, 55);
@@ -284,7 +284,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageSize = new System.Drawing.Size(26, 26);
-            this.btnEditar.Location = new System.Drawing.Point(509, 196);
+            this.btnEditar.Location = new System.Drawing.Point(513, 173);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
@@ -305,7 +305,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEliminar.Location = new System.Drawing.Point(167, 196);
+            this.btnEliminar.Location = new System.Drawing.Point(164, 170);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
@@ -323,7 +323,7 @@
             this.btnEnviar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
             this.btnEnviar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(230, 190);
+            this.btnEnviar.Location = new System.Drawing.Point(230, 163);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(267, 55);
@@ -345,7 +345,7 @@
             this.txtIdentidad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtIdentidad.ForeColor = System.Drawing.Color.Gray;
             this.txtIdentidad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdentidad.Location = new System.Drawing.Point(498, 55);
+            this.txtIdentidad.Location = new System.Drawing.Point(498, 36);
             this.txtIdentidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.PasswordChar = '\0';
@@ -361,7 +361,7 @@
             this.siticoneHtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel9.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel9.Location = new System.Drawing.Point(498, 31);
+            this.siticoneHtmlLabel9.Location = new System.Drawing.Point(498, 12);
             this.siticoneHtmlLabel9.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel9.Name = "siticoneHtmlLabel9";
             this.siticoneHtmlLabel9.Size = new System.Drawing.Size(126, 17);
@@ -389,7 +389,7 @@
             "Mujer",
             "Alien",
             "Desconocido"});
-            this.txtSexo.Location = new System.Drawing.Point(259, 131);
+            this.txtSexo.Location = new System.Drawing.Point(259, 112);
             this.txtSexo.Margin = new System.Windows.Forms.Padding(2);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Size = new System.Drawing.Size(211, 36);
@@ -400,7 +400,7 @@
             this.siticoneHtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel8.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel8.Location = new System.Drawing.Point(272, 112);
+            this.siticoneHtmlLabel8.Location = new System.Drawing.Point(272, 93);
             this.siticoneHtmlLabel8.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel8.Name = "siticoneHtmlLabel8";
             this.siticoneHtmlLabel8.Size = new System.Drawing.Size(101, 17);
@@ -419,7 +419,7 @@
             this.txtEdad.FocusedState.UpDownButtonForeColor = System.Drawing.Color.Transparent;
             this.txtEdad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEdad.ForeColor = System.Drawing.Color.Gray;
-            this.txtEdad.Location = new System.Drawing.Point(272, 55);
+            this.txtEdad.Location = new System.Drawing.Point(272, 36);
             this.txtEdad.Margin = new System.Windows.Forms.Padding(2);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(210, 22);
@@ -432,7 +432,7 @@
             this.siticoneHtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel7.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel7.Location = new System.Drawing.Point(272, 31);
+            this.siticoneHtmlLabel7.Location = new System.Drawing.Point(272, 12);
             this.siticoneHtmlLabel7.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel7.Name = "siticoneHtmlLabel7";
             this.siticoneHtmlLabel7.Size = new System.Drawing.Size(102, 17);
@@ -459,7 +459,7 @@
             "Heroe",
             "Antiheroe",
             "Villano"});
-            this.txtActitud.Location = new System.Drawing.Point(488, 131);
+            this.txtActitud.Location = new System.Drawing.Point(488, 112);
             this.txtActitud.Margin = new System.Windows.Forms.Padding(2);
             this.txtActitud.Name = "txtActitud";
             this.txtActitud.Size = new System.Drawing.Size(222, 36);
@@ -470,7 +470,7 @@
             this.siticoneHtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel6.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel6.Location = new System.Drawing.Point(498, 112);
+            this.siticoneHtmlLabel6.Location = new System.Drawing.Point(498, 93);
             this.siticoneHtmlLabel6.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel6.Name = "siticoneHtmlLabel6";
             this.siticoneHtmlLabel6.Size = new System.Drawing.Size(115, 17);
@@ -496,7 +496,7 @@
             this.txtUniverso.Items.AddRange(new object[] {
             "Marvel",
             "DC"});
-            this.txtUniverso.Location = new System.Drawing.Point(12, 131);
+            this.txtUniverso.Location = new System.Drawing.Point(12, 112);
             this.txtUniverso.Margin = new System.Windows.Forms.Padding(2);
             this.txtUniverso.Name = "txtUniverso";
             this.txtUniverso.Size = new System.Drawing.Size(220, 36);
@@ -507,7 +507,7 @@
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel5.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(20, 112);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(20, 93);
             this.siticoneHtmlLabel5.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(122, 17);
@@ -520,7 +520,7 @@
             this.siticoneHtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(18, 31);
+            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(18, 12);
             this.siticoneHtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneHtmlLabel2.Name = "siticoneHtmlLabel2";
             this.siticoneHtmlLabel2.Size = new System.Drawing.Size(120, 17);
@@ -542,7 +542,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNombre.ForeColor = System.Drawing.Color.Gray;
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.Location = new System.Drawing.Point(18, 55);
+            this.txtNombre.Location = new System.Drawing.Point(18, 36);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
