@@ -40,6 +40,7 @@ namespace project_final_attempt.Forms
         public gestion_personajes()
         {
             InitializeComponent();
+            if (!Directory.Exists(@".\data\imagenes")) { Directory.CreateDirectory(@".\data\imagenes"); }
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

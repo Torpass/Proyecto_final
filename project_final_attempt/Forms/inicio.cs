@@ -52,6 +52,7 @@ namespace project_final_attempt.Forms
             }
             else
             {
+                
                 File.Create(@".\data\DatosPersonaje.txt");
                 File.Create(@".\data\DatosPeliculas.txt");
                 totalPeliculas.Text = Convert.ToString(peliculas.Count());
