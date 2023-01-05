@@ -38,11 +38,8 @@ namespace project_final_attempt.Forms
             fh.Show();
         }
 
-        
-
-        public inicio()
+        private void inicio_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
             if (File.Exists(@".\data\DatosPersonaje.txt") && File.Exists(@".\data\DatosPeliculas.txt"))
             {
                 personajes = lista_Personajes.personajes_desceralizados();
@@ -50,8 +47,8 @@ namespace project_final_attempt.Forms
                 var (Dc, Marvel) = total_personajes(personajes);
                 totalPeliculas.Text = Convert.ToString(peliculas.Count());
                 totalPersonajes.Text = Convert.ToString(personajes.Count());
-                TotalMarvel.Text =Convert.ToString(Marvel);
-                TotalDC.Text =Convert.ToString(Dc);
+                TotalMarvel.Text = Convert.ToString(Marvel);
+                TotalDC.Text = Convert.ToString(Dc);
             }
             else
             {
@@ -64,6 +61,12 @@ namespace project_final_attempt.Forms
             lista_Personajes.garbage_colector(@".\data\Backup\Backup-imagenes\", @".\data\Backup\Backup-datosPersonajes.txt");
         }
 
+
+        public inicio()
+        {
+            InitializeComponent();
+        }
+
  
         private void btnGestionPersonajes_Click(object sender, EventArgs e)
         {
@@ -72,12 +75,15 @@ namespace project_final_attempt.Forms
 
         private void btnGestionPeliculas_Click_1(object sender, EventArgs e)
         {
-            if (TotalDC.Text != "0" && TotalMarvel.Text != "0")
+            try
             {
-                Abrirform(new gestion_peliculas());
+                if (TotalDC.Text != "0" && TotalMarvel.Text != "0")
+                {
+                    Abrirform(new gestion_peliculas());
+                }
+                else { MessageBox.Show("Para poder empezar a agregar peliculas, tienes que agregar por lo menos un personaje de Marvel y uno de DC", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
-            else { MessageBox.Show("Para poder empezar a agregar peliculas, tienes que agregar por lo menos un personaje de Marvel y uno de DC", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-
+            catch (Exception x) { Abrirform(new inicio()); }
         }
 
         private (int, int) total_personajes(List<Personaje> personajes)
@@ -95,5 +101,6 @@ namespace project_final_attempt.Forms
             return (dc, marvel);
         }
 
+        
     }
 }

@@ -1,2 +1,0 @@
-<p>Fantasticos</p><p>2023</p><d>|Angel Manuel Soto|Ben Affleck|David Ayer</d><p>3000</p><p>Marvel</p><c>Maravilla|32|Secreta|Heroe|Hombre|Marvel|True|Maravilla.jpeg|a35cfeaa-06a4-4268-a8d3-e38932842c0e</c>
-<p>hola</p><p>1954</p><d>|Angel Manuel Soto|Cathy Yan|David Ayer</d><p>2000</p><p>DC</p><c>ola|32|secreta|Heroe|Hombre|DC|True|ola.jpeg|033f1032-ffcb-41d3-91a3-8af38d73a626</c><c>yefry|3|asd|Antiheroe|Hombre|DC|True|yefry.jpeg|732390a5-0234-45d2-a567-e7a434f3d0ee</c>

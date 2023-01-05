@@ -42,7 +42,11 @@ namespace project_final_attempt
 
         private void btnPersonajes_Click(object sender, EventArgs e)
         {
-            Abrirform_(new visualizar_personajes());
+            try
+            {
+                Abrirform_(new visualizar_personajes());
+            }
+            catch(Exception x) { Abrirform_(new inicio()); }
         }
 
 
