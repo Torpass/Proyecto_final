@@ -77,10 +77,9 @@
             this.insidePanel.Controls.Add(this.siticonePanel4);
             this.insidePanel.Controls.Add(this.siticonePanel3);
             this.insidePanel.Controls.Add(this.siticoneHtmlLabel1);
-            this.insidePanel.Location = new System.Drawing.Point(1, 1);
-            this.insidePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.insidePanel.Location = new System.Drawing.Point(1, 2);
             this.insidePanel.Name = "insidePanel";
-            this.insidePanel.Size = new System.Drawing.Size(725, 433);
+            this.insidePanel.Size = new System.Drawing.Size(1036, 722);
             this.insidePanel.TabIndex = 0;
             // 
             // siticonePanel2
@@ -91,10 +90,9 @@
             this.siticonePanel2.Controls.Add(this.totalPeliculas);
             this.siticonePanel2.Controls.Add(this.siticoneHtmlLabel5);
             this.siticonePanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticonePanel2.Location = new System.Drawing.Point(491, 63);
-            this.siticonePanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel2.Location = new System.Drawing.Point(701, 105);
             this.siticonePanel2.Name = "siticonePanel2";
-            this.siticonePanel2.Size = new System.Drawing.Size(210, 60);
+            this.siticonePanel2.Size = new System.Drawing.Size(300, 100);
             this.siticonePanel2.TabIndex = 19;
             // 
             // totalPeliculas
@@ -102,10 +100,9 @@
             this.totalPeliculas.BackColor = System.Drawing.Color.Transparent;
             this.totalPeliculas.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.totalPeliculas.ForeColor = System.Drawing.Color.Red;
-            this.totalPeliculas.Location = new System.Drawing.Point(186, 11);
-            this.totalPeliculas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.totalPeliculas.Location = new System.Drawing.Point(266, 18);
             this.totalPeliculas.Name = "totalPeliculas";
-            this.totalPeliculas.Size = new System.Drawing.Size(9, 42);
+            this.totalPeliculas.Size = new System.Drawing.Size(13, 62);
             this.totalPeliculas.TabIndex = 3;
             this.totalPeliculas.Text = ".";
             // 
@@ -114,10 +111,9 @@
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel5.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(8, 22);
-            this.siticoneHtmlLabel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(11, 37);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
-            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(106, 17);
+            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(157, 27);
             this.siticoneHtmlLabel5.TabIndex = 2;
             this.siticoneHtmlLabel5.Text = "Peliculas agregadas";
             // 
@@ -126,10 +122,9 @@
             this.siticoneHtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel9.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel9.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel9.Location = new System.Drawing.Point(382, 145);
-            this.siticoneHtmlLabel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel9.Location = new System.Drawing.Point(574, 242);
             this.siticoneHtmlLabel9.Name = "siticoneHtmlLabel9";
-            this.siticoneHtmlLabel9.Size = new System.Drawing.Size(226, 39);
+            this.siticoneHtmlLabel9.Size = new System.Drawing.Size(334, 56);
             this.siticoneHtmlLabel9.TabIndex = 21;
             this.siticoneHtmlLabel9.Text = "Gestionar Peliculas";
             // 
@@ -138,10 +133,9 @@
             this.siticoneHtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel8.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel8.Location = new System.Drawing.Point(27, 145);
-            this.siticoneHtmlLabel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel8.Location = new System.Drawing.Point(67, 242);
             this.siticoneHtmlLabel8.Name = "siticoneHtmlLabel8";
-            this.siticoneHtmlLabel8.Size = new System.Drawing.Size(250, 39);
+            this.siticoneHtmlLabel8.Size = new System.Drawing.Size(371, 56);
             this.siticoneHtmlLabel8.TabIndex = 20;
             this.siticoneHtmlLabel8.Text = "Gestionar Personajes";
             // 
@@ -155,10 +149,9 @@
             this.siticoneCustomGradientPanel2.FillColor2 = System.Drawing.Color.Black;
             this.siticoneCustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
             this.siticoneCustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticoneCustomGradientPanel2.Location = new System.Drawing.Point(25, 188);
-            this.siticoneCustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneCustomGradientPanel2.Location = new System.Drawing.Point(67, 313);
             this.siticoneCustomGradientPanel2.Name = "siticoneCustomGradientPanel2";
-            this.siticoneCustomGradientPanel2.Size = new System.Drawing.Size(321, 221);
+            this.siticoneCustomGradientPanel2.Size = new System.Drawing.Size(402, 345);
             this.siticoneCustomGradientPanel2.TabIndex = 16;
             // 
             // btnGestionPersonajes
@@ -182,12 +175,11 @@
             this.btnGestionPersonajes.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnGestionPersonajes.Image = ((System.Drawing.Image)(resources.GetObject("btnGestionPersonajes.Image")));
             this.btnGestionPersonajes.ImageSize = new System.Drawing.Size(225, 225);
-            this.btnGestionPersonajes.Location = new System.Drawing.Point(2, 2);
-            this.btnGestionPersonajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGestionPersonajes.Location = new System.Drawing.Point(9, 3);
             this.btnGestionPersonajes.Name = "btnGestionPersonajes";
             this.btnGestionPersonajes.PressedColor = System.Drawing.Color.DeepSkyBlue;
             this.btnGestionPersonajes.PressedDepth = 10;
-            this.btnGestionPersonajes.Size = new System.Drawing.Size(319, 219);
+            this.btnGestionPersonajes.Size = new System.Drawing.Size(393, 342);
             this.btnGestionPersonajes.TabIndex = 3;
             this.btnGestionPersonajes.Click += new System.EventHandler(this.btnGestionPersonajes_Click);
             // 
@@ -201,10 +193,9 @@
             this.siticoneCustomGradientPanel1.FillColor2 = System.Drawing.Color.Black;
             this.siticoneCustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
             this.siticoneCustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(382, 188);
-            this.siticoneCustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(574, 313);
             this.siticoneCustomGradientPanel1.Name = "siticoneCustomGradientPanel1";
-            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(321, 221);
+            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(395, 345);
             this.siticoneCustomGradientPanel1.TabIndex = 14;
             // 
             // btnGestionPeliculas
@@ -228,12 +219,11 @@
             this.btnGestionPeliculas.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btnGestionPeliculas.Image = ((System.Drawing.Image)(resources.GetObject("btnGestionPeliculas.Image")));
             this.btnGestionPeliculas.ImageSize = new System.Drawing.Size(310, 270);
-            this.btnGestionPeliculas.Location = new System.Drawing.Point(0, 2);
-            this.btnGestionPeliculas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGestionPeliculas.Location = new System.Drawing.Point(0, 3);
             this.btnGestionPeliculas.Name = "btnGestionPeliculas";
             this.btnGestionPeliculas.PressedColor = System.Drawing.Color.DeepSkyBlue;
             this.btnGestionPeliculas.PressedDepth = 10;
-            this.btnGestionPeliculas.Size = new System.Drawing.Size(319, 219);
+            this.btnGestionPeliculas.Size = new System.Drawing.Size(401, 322);
             this.btnGestionPeliculas.TabIndex = 2;
             this.btnGestionPeliculas.Click += new System.EventHandler(this.btnGestionPeliculas_Click_1);
             // 
@@ -247,10 +237,9 @@
             this.siticonePanel4.Controls.Add(this.TotalMarvel);
             this.siticonePanel4.Controls.Add(this.siticoneHtmlLabel4);
             this.siticonePanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticonePanel4.Location = new System.Drawing.Point(259, 61);
-            this.siticonePanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel4.Location = new System.Drawing.Point(370, 102);
             this.siticonePanel4.Name = "siticonePanel4";
-            this.siticonePanel4.Size = new System.Drawing.Size(210, 60);
+            this.siticonePanel4.Size = new System.Drawing.Size(300, 100);
             this.siticonePanel4.TabIndex = 19;
             // 
             // TotalDC
@@ -258,10 +247,9 @@
             this.TotalDC.BackColor = System.Drawing.Color.Transparent;
             this.TotalDC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TotalDC.ForeColor = System.Drawing.Color.Yellow;
-            this.TotalDC.Location = new System.Drawing.Point(183, 36);
-            this.TotalDC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TotalDC.Location = new System.Drawing.Point(261, 60);
             this.TotalDC.Name = "TotalDC";
-            this.TotalDC.Size = new System.Drawing.Size(6, 23);
+            this.TotalDC.Size = new System.Drawing.Size(8, 34);
             this.TotalDC.TabIndex = 7;
             this.TotalDC.Text = ".";
             // 
@@ -270,10 +258,9 @@
             this.siticoneHtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel11.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel11.Location = new System.Drawing.Point(13, 36);
-            this.siticoneHtmlLabel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel11.Location = new System.Drawing.Point(19, 60);
             this.siticoneHtmlLabel11.Name = "siticoneHtmlLabel11";
-            this.siticoneHtmlLabel11.Size = new System.Drawing.Size(94, 17);
+            this.siticoneHtmlLabel11.Size = new System.Drawing.Size(141, 27);
             this.siticoneHtmlLabel11.TabIndex = 6;
             this.siticoneHtmlLabel11.Text = "Personajes de DC\r\n";
             // 
@@ -282,10 +269,9 @@
             this.TotalMarvel.BackColor = System.Drawing.Color.Transparent;
             this.TotalMarvel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TotalMarvel.ForeColor = System.Drawing.Color.Yellow;
-            this.TotalMarvel.Location = new System.Drawing.Point(183, 7);
-            this.TotalMarvel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TotalMarvel.Location = new System.Drawing.Point(261, 12);
             this.TotalMarvel.Name = "TotalMarvel";
-            this.TotalMarvel.Size = new System.Drawing.Size(6, 23);
+            this.TotalMarvel.Size = new System.Drawing.Size(8, 34);
             this.TotalMarvel.TabIndex = 5;
             this.TotalMarvel.Text = ".";
             // 
@@ -294,10 +280,9 @@
             this.siticoneHtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel4.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(13, 7);
-            this.siticoneHtmlLabel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(19, 12);
             this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
-            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(114, 17);
+            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(170, 27);
             this.siticoneHtmlLabel4.TabIndex = 4;
             this.siticoneHtmlLabel4.Text = "Personajes de Marvel";
             // 
@@ -309,10 +294,9 @@
             this.siticonePanel3.Controls.Add(this.totalPersonajes);
             this.siticonePanel3.Controls.Add(this.siticoneHtmlLabel2);
             this.siticonePanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(74)))));
-            this.siticonePanel3.Location = new System.Drawing.Point(24, 63);
-            this.siticonePanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePanel3.Location = new System.Drawing.Point(34, 105);
             this.siticonePanel3.Name = "siticonePanel3";
-            this.siticonePanel3.Size = new System.Drawing.Size(210, 60);
+            this.siticonePanel3.Size = new System.Drawing.Size(300, 100);
             this.siticonePanel3.TabIndex = 17;
             // 
             // totalPersonajes
@@ -320,10 +304,9 @@
             this.totalPersonajes.BackColor = System.Drawing.Color.Transparent;
             this.totalPersonajes.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.totalPersonajes.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.totalPersonajes.Location = new System.Drawing.Point(184, 11);
-            this.totalPersonajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.totalPersonajes.Location = new System.Drawing.Point(263, 18);
             this.totalPersonajes.Name = "totalPersonajes";
-            this.totalPersonajes.Size = new System.Drawing.Size(9, 42);
+            this.totalPersonajes.Size = new System.Drawing.Size(13, 62);
             this.totalPersonajes.TabIndex = 1;
             this.totalPersonajes.Text = ".";
             // 
@@ -332,10 +315,9 @@
             this.siticoneHtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(8, 22);
-            this.siticoneHtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(11, 37);
             this.siticoneHtmlLabel2.Name = "siticoneHtmlLabel2";
-            this.siticoneHtmlLabel2.Size = new System.Drawing.Size(117, 17);
+            this.siticoneHtmlLabel2.Size = new System.Drawing.Size(177, 27);
             this.siticoneHtmlLabel2.TabIndex = 0;
             this.siticoneHtmlLabel2.Text = "Personajes agregados";
             // 
@@ -344,10 +326,9 @@
             this.siticoneHtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.siticoneHtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(25, 6);
-            this.siticoneHtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(36, 10);
             this.siticoneHtmlLabel1.Name = "siticoneHtmlLabel1";
-            this.siticoneHtmlLabel1.Size = new System.Drawing.Size(179, 49);
+            this.siticoneHtmlLabel1.Size = new System.Drawing.Size(264, 72);
             this.siticoneHtmlLabel1.TabIndex = 15;
             this.siticoneHtmlLabel1.Text = "Estadisticas";
             // 
@@ -358,7 +339,7 @@
             this.siticoneHtmlLabel7.ForeColor = System.Drawing.Color.White;
             this.siticoneHtmlLabel7.Location = new System.Drawing.Point(40, 37);
             this.siticoneHtmlLabel7.Name = "siticoneHtmlLabel7";
-            this.siticoneHtmlLabel7.Size = new System.Drawing.Size(85, 17);
+            this.siticoneHtmlLabel7.Size = new System.Drawing.Size(128, 27);
             this.siticoneHtmlLabel7.TabIndex = 4;
             this.siticoneHtmlLabel7.Text = "Copas de messi";
             // 
@@ -369,19 +350,18 @@
             this.siticoneHtmlLabel6.ForeColor = System.Drawing.Color.Red;
             this.siticoneHtmlLabel6.Location = new System.Drawing.Point(209, 18);
             this.siticoneHtmlLabel6.Name = "siticoneHtmlLabel6";
-            this.siticoneHtmlLabel6.Size = new System.Drawing.Size(35, 42);
+            this.siticoneHtmlLabel6.Size = new System.Drawing.Size(51, 62);
             this.siticoneHtmlLabel6.TabIndex = 5;
             this.siticoneHtmlLabel6.Text = "10";
             // 
             // inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(40)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(727, 435);
+            this.ClientSize = new System.Drawing.Size(1039, 725);
             this.Controls.Add(this.insidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "inicio";
             this.Text = "inicio";
             this.insidePanel.ResumeLayout(false);
