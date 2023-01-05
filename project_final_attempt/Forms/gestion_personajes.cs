@@ -53,7 +53,7 @@ namespace project_final_attempt.Forms
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Imagenes|*.jpg; *.png; *.jpge";
             dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
-            dialog.Title = "Selecionar Imagen";
+            dialog.Title = "Seleccionar Imagen";
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
