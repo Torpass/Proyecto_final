@@ -10,7 +10,6 @@ namespace project_final_attempt
                 this.insidePanel.Controls.Clear();
 
             Form fh = form as Form;
-            fh.AutoSize = true;
             fh.TopLevel = false;
             fh.Dock = insidePanel.Dock;
             this.insidePanel.Controls.Add(fh);
@@ -25,7 +24,6 @@ namespace project_final_attempt
                 this.insidePanel.Controls.Clear();
 
             Form fh = form as Form;
-            fh.AutoSize = true;
             fh.TopLevel = false;
             insidePanel.Dock = fh.Dock;
             this.insidePanel.Controls.Add(fh);
